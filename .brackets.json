@@ -1,0 +1,6 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Applications/MAMP/htdocs/thesis/SnackStreet/www/js/controllers.js",
+        "/Applications/MAMP/htdocs/thesis/SnackStreet/platforms/ios/www/plugins/org.apache.cordova.camera/www/Camera.js"
+    ]
+}

@@ -1,0 +1,16 @@
+<ion-view view-title="Guides">
+  <ion-content>
+    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+      <ion-slide ng-repeat="guide in guides">
+        <div class="box">
+            <h1>{{guide.title}}</h1>
+            <ion-list>
+                <ion-item ng-repeat="dishes in guide.name" href="#/app/{{guide.name}}/{{dishes.id}}">
+                    {{dishes.title}}
+                </ion-item>
+            </ion-list>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-content>
+</ion-view>
