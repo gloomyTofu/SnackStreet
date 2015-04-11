@@ -46,7 +46,7 @@ var snackApp = angular.module('starter', ['ionic', 'ngCordova', 'starter.control
     }
     })
     .state('app.laos', {
-      url: "/laos",
+      url: "/guides/laos",
       views: {
         'menuContent': {
           templateUrl: "templates/laos.html",
@@ -55,13 +55,22 @@ var snackApp = angular.module('starter', ['ionic', 'ngCordova', 'starter.control
       }
     })
     .state('app.single', {
-    url: "/laos/:dishesId",
+    url: "/guides/laos/:dishesName",
     views: {
       'menuContent': {
         templateUrl: "templates/dishes.html",
         controller: 'DishesCtrl'
+          }
+        }
+    })
+    .state('app.purchase', {
+      url: "/guides/purchase",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/purchase.html",
+          controller: 'PurchaseCtrl'
+        }
       }
-    }
     });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/guides');

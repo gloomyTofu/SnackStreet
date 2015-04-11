@@ -7602,5 +7602,28 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.list.card .item-image {
+  background: #e5e5e5;
+  height: 25em; }
+
+.center {
+  text-align: center !important; }
+
+.margin-top {
+  margin-top: 1em !important; }
+
 .menu-left .item {
   border: 0; }
+
+.slider-pager {
+  bottom: 0;
+  margin-bottom: 2px; }
+
+.slider-slide {
+  padding-top: 3em; }
+
+.slider-slides .card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); }
+
+.slider-slides .item.activated {
+  background-color: transparent; }

@@ -1,16 +1,14 @@
 <ion-view view-title="Guides">
-  <ion-content>
-    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+    <ion-slide-box show-pager="true" on-slide-changed="slideHasChanged($index)">
       <ion-slide ng-repeat="guide in guides">
-        <div class="box">
-            <h1>{{guide.title}}</h1>
-            <ion-list>
-                <ion-item ng-repeat="dishes in guide.name" href="#/app/{{guide.name}}/{{dishes.id}}">
-                    {{dishes.title}}
-                </ion-item>
-            </ion-list>
+        <div class="list card">
+          <a class="item center" href="#/app/guides/{{guide.name}}">
+            <div class="item item-image">
+              <img ng-src="{{guide.images[0].illustration}}">
+            </div>
+            <button class="button button-light margin-top">{{guide.title}}</button>
+          </a>
         </div>
       </ion-slide>
     </ion-slide-box>
-  </ion-content>
 </ion-view>

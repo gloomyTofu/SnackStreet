@@ -33,21 +33,34 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('GuidesCtrl', function($scope) {
+.controller('GuidesCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
   $scope.guides = [
-    { title: 'Laos', name: 'laos' },
-    { title: 'Thailand', name: 'thailand'  },
-    { title: 'Vietnam', name: 'vietnam'  }
+    { 
+        title: 'Laos', 
+        name: 'laos',
+        images: [
+          {
+            illustration: '',
+            photo: ''
+          }
+        ]
+    },
+    { title: 'Thailand', name: 'purchase' },
+    { title: 'Vietnam', name: 'purchase' }
   ];
+  // Called each time the slide changes
+  $scope.slideChanged = function(index) {
+    $scope.slideIndex = index;
+  };
 })
 .controller('LaosCtrl', function($scope) {
   $scope.laos = [
-    { title: 'Laap', id: 1 },
-    { title: 'Papaya Salad', id: 2 },
-    { title: 'Seafood Salad', id: 3 },
-    { title: 'Waffle', id: 4 },
-    { title: 'Curry Red Soup Noodle', id: 5 },
-    { title: 'Buffalo Jerky', id: 6 }
+    { title: 'Laap', name: 'laap' },
+    { title: 'Papaya Salad', name: 'papaya-salad' },
+    { title: 'Seafood Salad', name: 'seafood-salad' },
+    { title: 'Waffle', name: 'waffle' },
+    { title: 'Curry Red Soup Noodle', name: 'curry-red-soup-noodle' },
+    { title: 'Buffalo Jerky', name: 'buffalo-jerky' }
   ];
 })
 
