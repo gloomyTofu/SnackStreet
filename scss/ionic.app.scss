@@ -22,24 +22,116 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 
 
+// MIXINS
+// -------------------------------
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+// p { @include font-size(14px) }
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }  
+  @-ms-keyframes $animation-name {
+    @content;
+  }
+  @-o-keyframes $animation-name {
+    @content;
+  }  
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+// @include transition(color .3s ease);
+
+@include keyframes(slide-down) {
+  0% { opacity: 1; }
+  90% { opacity: 0; }
+}
+//@include animation('slide-down 5s 3');
+
+
+@mixin margin($side, $x){
+    margin-#{$side}: $x;
+}
+
+$image-placeholder: #e5e5e5;
 
 // WIREFRAME STYLES
-.list.card .item-image {background:#e5e5e5; height:25em; }
+.list.card .item-image {background:$image-placeholder; height:25rem; }
+.side-menu-profile {
+    text-align:center;
+    .profile-image {
+        background:$image-placeholder;
+        width:10rem;
+        height:10rem;
+        border-radius:50%;
+        margin:3rem auto 0;
+    }
+}
 
 // PROTOTYPE STYLES
 
 // Position
 // -------------------------------
 .center {text-align:center !important; }
-.margin-top {margin-top:1em !important; }
+.margin {margin:1rem !important; }
+.margin-top {margin-top:1rem !important; }
+.margin-left {margin-left:1rem !important; }
+
+// Buttons
+// -------------------------------
+.button.button-light {
+  color: #444;
+  @include transition(color .3s ease);
+  &:hover {
+    color: #444;
+    background-color: #fafafa;
+  }
+}
 
 // Left Menu
 // -------------------------------
 .menu-left .item {border:0; }
+.item-content i.icon {
+    @include margin(left, 2rem);
+}
 
 // Guides Page
 // -------------------------------
 .slider-pager {bottom:0; margin-bottom:2px; }
-.slider-slide {padding-top: 3em; }
-.slider-slides .card {box-shadow: 0 1px 3px rgba(0,0,0,.12); }
-.slider-slides .item.activated {background-color:transparent; }
+.slider-slide {
+    padding-top: 3em;
+    .card {
+        box-shadow: 0 1px 3px rgba(0,0,0,.12); 
+    }
+    .item.activated {
+        background-color:transparent; 
+    }
+}

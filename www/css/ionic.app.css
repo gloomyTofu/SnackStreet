@@ -7606,8 +7606,20 @@ a.button {
   background: #e5e5e5;
   height: 25em; }
 
+.side-menu-profile {
+  text-align: center; }
+  .side-menu-profile .profile-image {
+    background: #e5e5e5;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    margin: 1em auto; }
+
 .center {
   text-align: center !important; }
+
+.margin {
+  margin: 1em !important; }
 
 .margin-top {
   margin-top: 1em !important; }
@@ -7621,9 +7633,7 @@ a.button {
 
 .slider-slide {
   padding-top: 3em; }
-
-.slider-slides .card {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); }
-
-.slider-slides .item.activated {
-  background-color: transparent; }
+  .slider-slide .card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); }
+  .slider-slide .item.activated {
+    background-color: transparent; }
