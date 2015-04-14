@@ -4,15 +4,15 @@ in ionic's _variables.scss file.
 
 For example, you might change some of the default colors:
 
-$light:                           #fff !default;
-$stable:                          #f8f8f8 !default;
-$positive:                        #387ef5 !default;
-$calm:                            #11c1f3 !default;
-$balanced:                        #33cd5f !default;
-$energized:                       #ffc900 !default;
-$assertive:                       #ef473a !default;
-$royal:                           #886aea !default;
-$dark:                            #444 !default;
+$light: #fff !default;
+$stable: #f8f8f8 !default;
+$positive: #387ef5 !default;
+$calm: #11c1f3 !default;
+$balanced: #33cd5f !default;
+$energized: #ffc900 !default;
+$assertive: #ef473a !default;
+$royal: #886aea !default;
+$dark: #444 !default;
 */
 
 // The path for our ionicons font files, relative to the built CSS in www/css
@@ -21,117 +21,143 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+@import 
+  "www/scss/mixins",
+  "www/scss/variables",
+  "www/scss/menu";
 
-// MIXINS
-// -------------------------------
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return $remSize * 1rem;
-}
-
-@mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
-}
-// p { @include font-size(14px) }
-
-@mixin keyframes($animation-name) {
-  @-webkit-keyframes $animation-name {
-    @content;
-  }
-  @-moz-keyframes $animation-name {
-    @content;
-  }  
-  @-ms-keyframes $animation-name {
-    @content;
-  }
-  @-o-keyframes $animation-name {
-    @content;
-  }  
-  @keyframes $animation-name {
-    @content;
-  }
-}
-
-@mixin animation($str) {
-  -webkit-animation: #{$str};
-  -moz-animation: #{$str};
-  -ms-animation: #{$str};
-  -o-animation: #{$str};
-  animation: #{$str};      
-}
-
-@mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
-}
-// @include transition(color .3s ease);
-
-@include keyframes(slide-down) {
-  0% { opacity: 1; }
-  90% { opacity: 0; }
-}
-//@include animation('slide-down 5s 3');
-
-
-@mixin margin($side, $x){
-    margin-#{$side}: $x;
-}
-
-$image-placeholder: #e5e5e5;
 
 // WIREFRAME STYLES
-.list.card .item-image {background:$image-placeholder; height:25rem; }
+.list.card .item-image {background:$image-placeholder; height:15rem; }
 .side-menu-profile {
     text-align:center;
-    .profile-image {
-        background:$image-placeholder;
-        width:10rem;
-        height:10rem;
-        border-radius:50%;
-        margin:3rem auto 0;
+.profile-image {
+    background:$image-placeholder;
+    width:10rem;
+    height:10rem;
+    border-radius:50%;
+    margin:3rem auto 0;
     }
 }
 
 // PROTOTYPE STYLES
 
+// Styling
+// -------------------------------
+.uppercase {text-transform:uppercase !important; letter-spacing:0.06em; }
+.subheadline { 
+    letter-spacing:0.12em; 
+    text-transform:uppercase; 
+    color:scale-color($base-color,$lightness:60%);
+    @include padding(top,0.5em);
+    @include padding(left,1em);
+}
+.box-shadow { box-shadow: 1px 1px 10px rgba(0,0,0,.12); }
+
+
 // Position
 // -------------------------------
-.center {text-align:center !important; }
-.margin {margin:1rem !important; }
-.margin-top {margin-top:1rem !important; }
-.margin-left {margin-left:1rem !important; }
+.center { text-align:center !important; }
 
-// Buttons
+.padding { padding:1rem !important; }
+.padding-bottom { padding-bottom:1rem !important; }
+
+.margin { margin:1rem !important; }
+.margin-top { margin-top:1rem !important; }
+.margin-left { margin-left:1rem !important; }
+.margin-vertical {margin:1rem 0 !important; }
+.margin-horizontal {margin:0 1rem !important; }
+
+
+// Download/Remove Guides
 // -------------------------------
-.button.button-light {
-  color: #444;
-  @include transition(color .3s ease);
-  &:hover {
-    color: #444;
-    background-color: #fafafa;
-  }
+a.tab-item.download-cancel, a.purchase-guide {
+  position: absolute;
+  top: 20%;
+  right: 9%;
+  height: auto;
+  z-index: 2;
 }
 
-// Left Menu
+@include keyframes(slide-right) {
+  0% { opacity: 0; right:10px;  }
+  80% {opacity: 0; }
+  90% { opacity: 1; right:0; }
+}
+
+a.purchase-guide {
+    top:19%; 
+    right:10px;
+    text-decoration:none; 
+    @include animation('slide-right 1s ease-in 500ms infinite'); 
+}
+a.purchase-guide h4 {
+    @include button-text-color($primary-color);
+    padding:1rem 2rem 1rem 1.5rem;
+    @extend .box-shadow;
+}
+
+.download-cancel i.icon.icon-right {
+    background-image:url('../img/icon/cancel.svg');
+    width:30px;
+    height:30px;
+    fill:$base-color;
+    &:hover { fill:scale-color($base-color,$lightness:50%); }
+}
+
+i.icon.icon-right.removeGuide {
+    background-image:url('../img/icon/download.svg');
+}
+
+.progress-bar {
+    position:relative;
+    height:16px;
+    @include transition(width, background-color 0.4s linear);
+}
+
+.progress-bar:before, .progress-bar:after {
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+}
+.progress-bar:before {
+    bottom:0;
+    background-color:$primary-color;
+}
+.progress > .progress-bar { width:75%; background-color:base-light-color; }
+
+// Button
 // -------------------------------
-.menu-left .item {border:0; }
-.item-content i.icon {
-    @include margin(left, 2rem);
+.button-outline-headline {
+    @extend .button-outline;
+    @extend .uppercase;
+    padding:0.25rem 2rem;
+    font-size:1.25rem;
+    color:$base-color;
+    font-weight:bold;
+    border-color:$base-color;
+}
+
+// Search
+// -------------------------------
+.item-input-wrapper {
+    @include padding(left, 25px);
 }
 
 // Guides Page
 // -------------------------------
-.slider-pager {bottom:0; margin-bottom:2px; }
-.slider-slide {
+.guides .slider-pager { bottom:0; margin-bottom:2px; }
+.guides .slider-slide {
     padding-top: 3em;
-    .card {
-        box-shadow: 0 1px 3px rgba(0,0,0,.12); 
-    }
     .item.activated {
-        background-color:transparent; 
+        background-color:transparent;
     }
 }
+.guides .card {
+    @include margin(top, 55px);
+    @include margin(bottom, 40px);
+    @extend .box-shadow;
+}
+.guides .item { border-color:transparent; }

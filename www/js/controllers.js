@@ -38,15 +38,17 @@ angular.module('starter.controllers', [])
     { 
         title: 'Laos', 
         name: 'laos',
+        description: 'Fiery and fragrant, with a touch of sour, Lao food owes its distinctive taste to fermented fish sauce, lemongrass, coriander leaves, chillies and lime juice.',
         images: [
           {
             illustration: '',
             photo: ''
           }
-        ]
+        ],
+        canDownload:true
     },
-    { title: 'Thailand', name: 'purchase' },
-    { title: 'Vietnam', name: 'purchase' }
+    { title: 'Thailand', name: 'purchase', description: 'Five fundamental tastes are identified in Thai cuisine – spiciness, sourness, bitterness, saltiness and sweetness...', canDownload:false },
+    { title: 'Vietnam', name: 'purchase', description: 'Light, subtle in flavour and astonishing in their variety, Vietnamese dishes are boiled or steamed rather than stir-fried, and a huge emphasis is placed on herbs and seasoning.', canDownload:false }
   ];
   // Called each time the slide changes
   $scope.slideChanged = function(index) {

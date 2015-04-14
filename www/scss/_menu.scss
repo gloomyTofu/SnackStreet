@@ -1,0 +1,15 @@
+
+/**
+ * Menus
+ * --------------------------------------------------
+ * Side panel structure
+ */
+
+.menu-left {
+  padding:1rem;
+  .item {border:0; }
+  .item-content i.icon {
+    @include margin(left, 1rem);
+    @include margin(right, 0.5rem);
+  }
+}

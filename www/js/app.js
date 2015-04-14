@@ -49,7 +49,7 @@ var snackApp = angular.module('starter', ['ionic', 'ngCordova', 'starter.control
       url: "/guides/laos",
       views: {
         'menuContent': {
-          templateUrl: "templates/laos.html",
+          templateUrl: "templates/guides/laos.html",
           controller: 'LaosCtrl'
         }
       }
@@ -74,7 +74,18 @@ var snackApp = angular.module('starter', ['ionic', 'ngCordova', 'starter.control
     });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/guides');
-});
+})
+.directive('toggleClass', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            element.bind('click', function() {
+                element.toggleClass(attrs.toggleClass);
+            });
+        }
+    };
+})
+;
 
 
 // Cordova Camera

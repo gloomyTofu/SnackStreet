@@ -1,0 +1,41 @@
+
+// Colors
+// -------------------------------
+
+$image-placeholder:               #e5e5e5;
+
+$base-background-color:           #fff !default;
+$base-color:                      #000 !default;
+$primary-color:                   #404040 !default; // blue
+$primary-light-color:             rgba(64, 64, 64, 0.49) !default; // light blue
+$contrast-color:                  #b4b4b4 !default; // orange
+$base-light-color:                #D2D2D2 !default;  // light gray
+
+//$base-background-color:           rgb(245,245,245) !default;
+//$base-color:                      #4D4D4D !default; // dark gray
+//$primary-color:                   #007FC6 !default; // blue
+//$primary-light-color:             #66B7E3 !default; // light blue
+//$contrast-color:                  #FF8B00 !default; // orange
+//$base-light-color:                #D2D2D2 !default;  // light gray
+
+// Base
+// -------------------------------
+
+$font-family-sans-serif:          "Helvetica Neue", "Roboto", sans-serif !default;
+$font-family-light-sans-serif:    "HelveticaNeue-Light", "Roboto-Light", sans-serif-light !default;
+$font-family-serif:               serif !default;
+$font-family-monospace:           monospace !default;
+
+$link-color:                      $positive !default;
+$link-hover-color:                darken($link-color, 15%) !default;
+
+$content-padding:                 10px !default;
+
+$padding-base-vertical:           6px !default;
+$padding-base-horizontal:         12px !default;
+
+$padding-large-vertical:          10px !default;
+$padding-large-horizontal:        16px !default;
+
+$padding-small-vertical:          5px !default;
+$padding-small-horizontal:        10px !default;
