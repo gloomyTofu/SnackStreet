@@ -7673,65 +7673,16 @@ a.tab-item.download-cancel, a.purchase-guide {
   height: auto;
   z-index: 2; }
 
-@-webkit-keyframes slide-right {
-  0% {
-    opacity: 0;
-    right: 10px; }
+.download-cancel i.icon.icon-right {
+  background-image: url('../img/icon/cancel.svg');
+  width: 30px;
+  height: 30px;
+  fill: #000; }
+  .download-cancel i.icon.icon-right:hover {
+    fill: #808080; }
 
-  80% {
-    opacity: 0; }
-
-  90% {
-    opacity: 1;
-    right: 0; } }
-
-@-moz-keyframes slide-right {
-  0% {
-    opacity: 0;
-    right: 10px; }
-
-  80% {
-    opacity: 0; }
-
-  90% {
-    opacity: 1;
-    right: 0; } }
-
-@-ms-keyframes slide-right {
-  0% {
-    opacity: 0;
-    right: 10px; }
-
-  80% {
-    opacity: 0; }
-
-  90% {
-    opacity: 1;
-    right: 0; } }
-
-@-o-keyframes slide-right {
-  0% {
-    opacity: 0;
-    right: 10px; }
-
-  80% {
-    opacity: 0; }
-
-  90% {
-    opacity: 1;
-    right: 0; } }
-
-@keyframes slide-right {
-  0% {
-    opacity: 0;
-    right: 10px; }
-
-  80% {
-    opacity: 0; }
-
-  90% {
-    opacity: 1;
-    right: 0; } }
+i.icon.icon-right.removeGuide {
+  background-image: url('../img/icon/download.svg'); }
 
 a.purchase-guide {
   top: 19%;
@@ -7748,25 +7699,65 @@ a.purchase-guide h4 {
   color: #FFFFFF;
   padding: 1rem 2rem 1rem 1.5rem; }
 
-.download-cancel i.icon.icon-right {
-  background-image: url('../img/icon/cancel.svg');
-  width: 30px;
-  height: 30px;
-  fill: #000; }
-  .download-cancel i.icon.icon-right:hover {
-    fill: #808080; }
+@-webkit-keyframes slide-right {
+  0% {
+    opacity: 0;
+    right: 10px; }
 
-i.icon.icon-right.removeGuide {
-  background-image: url('../img/icon/download.svg'); }
+  90% {
+    opacity: 1;
+    right: 0; } }
+
+@-moz-keyframes slide-right {
+  0% {
+    opacity: 0;
+    right: 10px; }
+
+  90% {
+    opacity: 1;
+    right: 0; } }
+
+@-ms-keyframes slide-right {
+  0% {
+    opacity: 0;
+    right: 10px; }
+
+  90% {
+    opacity: 1;
+    right: 0; } }
+
+@-o-keyframes slide-right {
+  0% {
+    opacity: 0;
+    right: 10px; }
+
+  90% {
+    opacity: 1;
+    right: 0; } }
+
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    right: 10px; }
+
+  90% {
+    opacity: 1;
+    right: 0; } }
 
 .progress-bar {
   position: relative;
-  height: 16px;
-  -webkit-transition: width, background-color 0.4s linear;
-  -moz-transition: width, background-color 0.4s linear;
-  -ms-transition: width, background-color 0.4s linear;
-  -o-transition: width, background-color 0.4s linear;
-  transition: width, background-color 0.4s linear; }
+  height: 8px;
+  width: 0%;
+  -webkit-transition: width 1s linear;
+  -moz-transition: width 1s linear;
+  -ms-transition: width 1s linear;
+  -o-transition: width 1s linear;
+  transition: width 1s linear;
+  -webkit-animation: loading-bar 2s infinite alternate;
+  -moz-animation: loading-bar 2s infinite alternate;
+  -ms-animation: loading-bar 2s infinite alternate;
+  -o-animation: loading-bar 2s infinite alternate;
+  animation: loading-bar 2s infinite alternate; }
 
 .progress-bar:before, .progress-bar:after {
   content: '';
@@ -7777,11 +7768,67 @@ i.icon.icon-right.removeGuide {
 
 .progress-bar:before {
   bottom: 0;
-  background-color: #404040; }
+  background-color: #e9e9e9; }
 
-.progress > .progress-bar {
-  width: 75%;
-  background-color: base-light-color; }
+@-webkit-keyframes loading-bar {
+  0% {
+    width: 0%;
+    opacity: 0; }
+
+  75% {
+    width: 100%; }
+
+  100% {
+    width: 100%;
+    opacity: 1; } }
+
+@-moz-keyframes loading-bar {
+  0% {
+    width: 0%;
+    opacity: 0; }
+
+  75% {
+    width: 100%; }
+
+  100% {
+    width: 100%;
+    opacity: 1; } }
+
+@-ms-keyframes loading-bar {
+  0% {
+    width: 0%;
+    opacity: 0; }
+
+  75% {
+    width: 100%; }
+
+  100% {
+    width: 100%;
+    opacity: 1; } }
+
+@-o-keyframes loading-bar {
+  0% {
+    width: 0%;
+    opacity: 0; }
+
+  75% {
+    width: 100%; }
+
+  100% {
+    width: 100%;
+    opacity: 1; } }
+
+@keyframes loading-bar {
+  0% {
+    width: 0%;
+    opacity: 0; }
+
+  75% {
+    width: 100%; }
+
+  100% {
+    width: 100%;
+    opacity: 1; } }
 
 .button-outline-headline {
   padding: 0.25rem 2rem;

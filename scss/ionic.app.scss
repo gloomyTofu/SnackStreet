@@ -79,24 +79,6 @@ a.tab-item.download-cancel, a.purchase-guide {
   z-index: 2;
 }
 
-@include keyframes(slide-right) {
-  0% { opacity: 0; right:10px;  }
-  80% {opacity: 0; }
-  90% { opacity: 1; right:0; }
-}
-
-a.purchase-guide {
-    top:19%; 
-    right:10px;
-    text-decoration:none; 
-    @include animation('slide-right 1s ease-in 500ms infinite'); 
-}
-a.purchase-guide h4 {
-    @include button-text-color($primary-color);
-    padding:1rem 2rem 1rem 1.5rem;
-    @extend .box-shadow;
-}
-
 .download-cancel i.icon.icon-right {
     background-image:url('../img/icon/cancel.svg');
     width:30px;
@@ -109,10 +91,34 @@ i.icon.icon-right.removeGuide {
     background-image:url('../img/icon/download.svg');
 }
 
+// Slide-Right Price Animation
+// -------------------------------
+a.purchase-guide {
+    top:19%; 
+    right:10px;
+    text-decoration:none; 
+    @include animation('slide-right 1s ease-in 500ms infinite'); 
+}
+a.purchase-guide h4 {
+    @include button-text-color($primary-color);
+    padding:1rem 2rem 1rem 1.5rem;
+    @extend .box-shadow;
+}
+
+@include keyframes(slide-right) {
+  0% { opacity: 0; right:10px;  }
+  90% { opacity: 1; right:0; }
+}
+
+
+// Progress Bar / Loading Animation
+// -------------------------------
 .progress-bar {
     position:relative;
-    height:16px;
-    @include transition(width, background-color 0.4s linear);
+    height:8px;
+    width:0%;
+    @include transition(width 1s linear);
+    @include animation('loading-bar 2s infinite alternate');
 }
 
 .progress-bar:before, .progress-bar:after {
@@ -124,9 +130,14 @@ i.icon.icon-right.removeGuide {
 }
 .progress-bar:before {
     bottom:0;
-    background-color:$primary-color;
+    background-color:scale-color($base-light-color,$lightness:50%);
 }
-.progress > .progress-bar { width:75%; background-color:base-light-color; }
+
+@include keyframes(loading-bar) {
+  0% { width:0%; opacity:0; }
+  75% { width:100%; }
+  100% { width:100%; opacity:1; }
+}
 
 // Button
 // -------------------------------
