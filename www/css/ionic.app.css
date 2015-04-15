@@ -7628,9 +7628,18 @@ a.button {
     border-radius: 50%;
     margin: 3rem auto 0; }
 
+a {
+  text-decoration: none; }
+
+a h1 {
+  line-height: 1; }
+
 .uppercase, .button-outline-headline {
   text-transform: uppercase !important;
   letter-spacing: 0.06em; }
+
+.small-text {
+  font-size: 11px; }
 
 .subheadline {
   letter-spacing: 0.12em;
@@ -7645,11 +7654,17 @@ a.button {
 .center {
   text-align: center !important; }
 
+.no-padding {
+  padding: 0 !important; }
+
 .padding {
   padding: 1rem !important; }
 
 .padding-bottom {
   padding-bottom: 1rem !important; }
+
+.no-margin {
+  margin: 0 !important; }
 
 .margin {
   margin: 1rem !important; }
@@ -7666,7 +7681,7 @@ a.button {
 .margin-horizontal {
   margin: 0 1rem !important; }
 
-a.tab-item.download-cancel, a.purchase-guide {
+a.tab-item.download-cancel, a.purchase-guide.fade-in {
   position: absolute;
   top: 20%;
   right: 9%;
@@ -7674,7 +7689,7 @@ a.tab-item.download-cancel, a.purchase-guide {
   z-index: 2; }
 
 .download-cancel i.icon.icon-right {
-  background-image: url('../img/icon/cancel.svg');
+  background-image: url('../img/icon/download.svg');
   width: 30px;
   height: 30px;
   fill: #000; }
@@ -7682,17 +7697,23 @@ a.tab-item.download-cancel, a.purchase-guide {
     fill: #808080; }
 
 i.icon.icon-right.removeGuide {
-  background-image: url('../img/icon/download.svg'); }
+  background-image: url('../img/icon/cancel.svg'); }
 
-a.purchase-guide {
+a.purchase-guide.fade-in {
   top: 19%;
   right: 10px;
+  opacity: 1;
   text-decoration: none;
-  -webkit-animation: slide-right 1s ease-in 500ms infinite;
-  -moz-animation: slide-right 1s ease-in 500ms infinite;
-  -ms-animation: slide-right 1s ease-in 500ms infinite;
-  -o-animation: slide-right 1s ease-in 500ms infinite;
-  animation: slide-right 1s ease-in 500ms infinite; }
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+  -webkit-animation: slide-right 1s ease-in 2s;
+  -moz-animation: slide-right 1s ease-in 2s;
+  -ms-animation: slide-right 1s ease-in 2s;
+  -o-animation: slide-right 1s ease-in 2s;
+  animation: slide-right 1s ease-in 2s; }
 
 a.purchase-guide h4 {
   background: #404040;
@@ -7701,48 +7722,48 @@ a.purchase-guide h4 {
 
 @-webkit-keyframes slide-right {
   0% {
-    opacity: 0;
-    right: 10px; }
+    right: 0;
+    opacity: 0; }
 
-  90% {
-    opacity: 1;
-    right: 0; } }
+  100% {
+    right: 10px;
+    opacity: 1; } }
 
 @-moz-keyframes slide-right {
   0% {
-    opacity: 0;
-    right: 10px; }
+    right: 0;
+    opacity: 0; }
 
-  90% {
-    opacity: 1;
-    right: 0; } }
+  100% {
+    right: 10px;
+    opacity: 1; } }
 
 @-ms-keyframes slide-right {
   0% {
-    opacity: 0;
-    right: 10px; }
+    right: 0;
+    opacity: 0; }
 
-  90% {
-    opacity: 1;
-    right: 0; } }
+  100% {
+    right: 10px;
+    opacity: 1; } }
 
 @-o-keyframes slide-right {
   0% {
-    opacity: 0;
-    right: 10px; }
+    right: 0;
+    opacity: 0; }
 
-  90% {
-    opacity: 1;
-    right: 0; } }
+  100% {
+    right: 10px;
+    opacity: 1; } }
 
 @keyframes slide-right {
   0% {
-    opacity: 0;
-    right: 10px; }
+    right: 0;
+    opacity: 0; }
 
-  90% {
-    opacity: 1;
-    right: 0; } }
+  100% {
+    right: 10px;
+    opacity: 1; } }
 
 .progress-bar {
   position: relative;
@@ -7753,11 +7774,11 @@ a.purchase-guide h4 {
   -ms-transition: width 1s linear;
   -o-transition: width 1s linear;
   transition: width 1s linear;
-  -webkit-animation: loading-bar 2s infinite alternate;
-  -moz-animation: loading-bar 2s infinite alternate;
-  -ms-animation: loading-bar 2s infinite alternate;
-  -o-animation: loading-bar 2s infinite alternate;
-  animation: loading-bar 2s infinite alternate; }
+  -webkit-animation: loading-bar 2s;
+  -moz-animation: loading-bar 2s;
+  -ms-animation: loading-bar 2s;
+  -o-animation: loading-bar 2s;
+  animation: loading-bar 2s; }
 
 .progress-bar:before, .progress-bar:after {
   content: '';
@@ -7830,6 +7851,59 @@ a.purchase-guide h4 {
     width: 100%;
     opacity: 1; } }
 
+.fade-in-repeat.ng-enter, .fade-in-repeat.ng-move {
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+  opacity: 0; }
+
+.fade-in-repeat.ng-enter.ng-enter-active, .fade-in-repeat.ng-move.ng-enter-active {
+  opacity: 1; }
+
+.fade-in-repeat.ng-leave {
+  -webkit-animation: fade-in 1s ease-in;
+  -moz-animation: fade-in 1s ease-in;
+  -ms-animation: fade-in 1s ease-in;
+  -o-animation: fade-in 1s ease-in;
+  animation: fade-in 1s ease-in; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
 .button-outline-headline {
   padding: 0.25rem 2rem;
   font-size: 1.25rem;
@@ -7855,3 +7929,21 @@ a.purchase-guide h4 {
 
 .guides .item {
   border-color: transparent; }
+
+a.tab-item.highlightLoved {
+  height: 48px; }
+
+.dishes .highlightSaved i.icon, .dishes .highlightTried i.icon, .dishes .highlightLoved i.icon, .dishes .small-text {
+  color: #b4b4b4; }
+
+.dishes .unlove {
+  position: relative;
+  width: 42px;
+  height: 44px;
+  top: -28px;
+  left: 1px; }
+
+.unlove .small-text {
+  position: absolute;
+  left: 7px;
+  bottom: -5px; }

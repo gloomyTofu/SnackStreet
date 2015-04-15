@@ -44,7 +44,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Styling
 // -------------------------------
-.uppercase {text-transform:uppercase !important; letter-spacing:0.06em; }
+a { text-decoration:none; }
+a h1 { line-height:1; }
+.uppercase { text-transform:uppercase !important; letter-spacing:0.06em; }
+.small-text { font-size:$font-size-small; }
 .subheadline { 
     letter-spacing:0.12em; 
     text-transform:uppercase; 
@@ -59,9 +62,11 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // -------------------------------
 .center { text-align:center !important; }
 
+.no-padding {padding: 0 !important; }
 .padding { padding:1rem !important; }
 .padding-bottom { padding-bottom:1rem !important; }
 
+.no-margin {margin: 0 !important; }
 .margin { margin:1rem !important; }
 .margin-top { margin-top:1rem !important; }
 .margin-left { margin-left:1rem !important; }
@@ -71,7 +76,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Download/Remove Guides
 // -------------------------------
-a.tab-item.download-cancel, a.purchase-guide {
+a.tab-item.download-cancel, a.purchase-guide.fade-in {
   position: absolute;
   top: 20%;
   right: 9%;
@@ -80,7 +85,7 @@ a.tab-item.download-cancel, a.purchase-guide {
 }
 
 .download-cancel i.icon.icon-right {
-    background-image:url('../img/icon/cancel.svg');
+    background-image:url('../img/icon/download.svg');
     width:30px;
     height:30px;
     fill:$base-color;
@@ -88,16 +93,20 @@ a.tab-item.download-cancel, a.purchase-guide {
 }
 
 i.icon.icon-right.removeGuide {
-    background-image:url('../img/icon/download.svg');
+    background-image:url('../img/icon/cancel.svg');
 }
 
 // Slide-Right Price Animation
 // -------------------------------
-a.purchase-guide {
+
+// final stage
+a.purchase-guide.fade-in {
     top:19%; 
     right:10px;
+    opacity:1;
     text-decoration:none; 
-    @include animation('slide-right 1s ease-in 500ms infinite'); 
+    @include transition(all 1s linear);
+    @include animation('slide-right 1s ease-in 2s');
 }
 a.purchase-guide h4 {
     @include button-text-color($primary-color);
@@ -106,8 +115,8 @@ a.purchase-guide h4 {
 }
 
 @include keyframes(slide-right) {
-  0% { opacity: 0; right:10px;  }
-  90% { opacity: 1; right:0; }
+  0% { right:0; opacity: 0; }
+  100% { right:10px; opacity: 1; }
 }
 
 
@@ -118,7 +127,7 @@ a.purchase-guide h4 {
     height:8px;
     width:0%;
     @include transition(width 1s linear);
-    @include animation('loading-bar 2s infinite alternate');
+    @include animation('loading-bar 2s');
 }
 
 .progress-bar:before, .progress-bar:after {
@@ -137,6 +146,26 @@ a.purchase-guide h4 {
   0% { width:0%; opacity:0; }
   75% { width:100%; }
   100% { width:100%; opacity:1; }
+}
+
+// Fade in Repeated List
+// -------------------------------
+.fade-in-repeat.ng-enter, .fade-in-repeat.ng-move {
+    @include transition(all 1s linear);
+    opacity:0;
+}
+
+.fade-in-repeat.ng-enter.ng-enter-active, .fade-in-repeat.ng-move.ng-enter-active {
+    opacity:1;
+}
+
+.fade-in-repeat.ng-leave {
+    @include animation('fade-in 1s ease-in');
+}
+
+@include keyframes(fade-in) {
+  0% { opacity:0; }
+  100% { opacity:1; }
 }
 
 // Button
@@ -172,3 +201,15 @@ a.purchase-guide h4 {
     @extend .box-shadow;
 }
 .guides .item { border-color:transparent; }
+
+// Dishes
+// -------------------------------
+a.tab-item.highlightLoved {
+  height: 48px;
+}
+.dishes .highlightSaved i.icon,
+.dishes .highlightTried i.icon,
+.dishes .highlightLoved i.icon,
+.dishes .small-text { color:$contrast-color; }
+.dishes .unlove {position:relative; width:42px; height:44px; top:-28px; left:1px; }
+.unlove .small-text {position:absolute; left:7px; bottom:-5px; }

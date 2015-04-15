@@ -11,9 +11,9 @@
           </a>
           <p class="margin-horizontal">{{ guide.description }}</p>
           <div ng-show="guide.canDownload" class="progress text-right margin-horizontal">
-            <h6 ng-show="removed" class="subheadline">Purchased</h6>
-            <h6 ng-hide="removed" class="subheadline">Downloaded</h6>
-            <div class="progress-bar" toggle-class="removeGuide"></div>
+            <h6 ng-show="removed" class="subheadline">Downloaded</h6>
+            <h6 ng-hide="removed" class="subheadline">Free Guide</h6>
+            <div class="progress-bar" ng-show="removed"></div>
           </div>
           <div ng-hide="guide.canDownload" class="progress text-right margin-horizontal">
             <h6 ng-hide="guide.canDownload" class="subheadline">Purchase</h6>
