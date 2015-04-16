@@ -8,7 +8,7 @@
     </div>
     
     <div class="sortDishes padding-horizontal">
-      <select ng-model="sortExpression">
+      <select ng-model="query">
         <option value="loves">Loved</option>
         <option value="local">Local</option>
         <option value="adventurous">Adventurous</option>
@@ -16,14 +16,14 @@
       <h2 class="no-margin">Dishes</h2>
     </div>
     
-    <div class="list card fade-in-repeat" ng-repeat="dishes in laos | filter:searchText | orderBy:sortExpression:true">
+    <div class="list card fade-in-repeat" ng-repeat="dish in dishes | filter:searchText | orderBy:query:true">
         <div class="item item-body">
             <div class="item item-image">
-                <a href="#/app/guides/laos/{{dishes.name}}"><img ng-src="{{dishes.images[0].full}}"></a>
+                <a href="#/app/guides/laos/{{dish.id}}"><img ng-src="{{dish.images[0].full}}"></a>
             </div>
             <div class="row">
                 <div class="col col-50">
-                    <a href="#/app/guides/laos/{{dishes.name}}"><h1 class="no-margin">{{dishes.title}}</h1></a>
+                    <a href="#/app/guides/laos/{{dish.id}}"><h1 class="no-margin">{{dish.title}}</h1></a>
                 </div>
                 <div class="col no-padding">
                     <div class="row no-padding">
@@ -41,7 +41,7 @@
                     </div>
                     <div class="col">
                         <a class="tab-item" href="#" ng-click="highlightLoved=!highlightLoved" toggle-class="highlightLoved">
-                          <i ng-click="count = count + 1" ng-init="count = dishes.loves" class="icon ion-ios-heart-outline"></i>
+                          <i ng-click="count = count + 1" ng-init="count = dish.loves" class="icon ion-ios-heart-outline"></i>
                           <div class="unlove" ng-click="count = count - 1" ng-show="highlightLoved">
                               <span class="small-text">Liked</span>
                           </div>
@@ -52,7 +52,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <p class="no-margin">{{dishes.shortDescription}}</p>
+                    <p class="no-margin">{{dish.shortDescription}}</p>
                     <p><i class="icon ion-ios-heart"></i> {{ count }} Loved This</p>
                 </div>
             </div>

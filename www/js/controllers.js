@@ -55,94 +55,19 @@ angular.module('starter.controllers', [])
     $scope.slideIndex = index;
   };
 })
-.controller('LaosCtrl', ['$scope', function($scope) {
-  $scope.laos = [
-    { 
-        title: 'laap', 
-        name: 'minced-meat-salad', 
-        shortDescription: 'A salad of minced meat, fish, seafood, or tofu. If there was a national dish of Laos, Laap would be a strong contender.', 
-        keywords: ["spicy", "vegetarian-option", "local"],
-        images: [
-          {
-            full: ''
-          }
-        ],
-        loves: 10,
-        local: 10,
-        adventurous: 6
-    },
-    { 
-        title: 'tam màk hung', 
-        name: 'papaya-salad',
-        shortDescription: 'A quintessentially Lao dish: spicy papaya salad.', 
-        keywords: ["spicy", "vegetarian-option", "local"],
-        images: [
-          {
-            full: ''
-          }
-        ],
-        loves: 20,
-        local: 9,
-        adventurous: 5
-    },
-    { 
-        title: 'mók pa', 
-        name: 'fish-steamed-banana-leaves',
-        shortDescription: 'Fish steamed in banana leaves. Well worth ordering if you can find it.', 
-        keywords: ["local"],
-        images: [
-          {
-            full: ''
-          }
-        ],
-        loves: 3,
-        local: 8,
-        adventurous: 7
-    },
-    { 
-        title: 'Waffle', 
-        name: 'waffle',
-        shortDescription: 'A popular street food in Vietnam, Pandan Waffles are Vietnamese-style waffles made with pandan and coconut milk.', 
-        keywords: ["vegetarian-option", "sweet"],
-        images: [
-          {
-            full: ''
-          }
-        ],
-        loves: 2,
-        local: 4,
-        adventurous: 3
-    },
-    { 
-        title: 'pîng kai', 
-        name: 'grilled-chicken',
-        shortDescription: 'A grilled favorite.', 
-        keywords: ["spicy", "vegetarian-option", "local"],
-        images: [
-          {
-            full: ''
-          }
-        ],
-        loves: 1,
-        local: 9,
-        adventurous: 5
-    },
-    { 
-        title: 'seen hang',     
-        name: 'buffalo-jerky',
-        shortDescription: 'Beef jerky that has been flash fried.', 
-        keywords: ["local"],
-        images: [
-          {
-            full: ''
-          }
-        ],
-        loves: 4,
-        local: 8,
-        adventurous: 6
-    }
-  ];
-   $scope.sortExpression = 'loves';
+.controller('LaosCtrl', ['$scope', 'Dish', function($scope, Dish) {
+  $scope.dishes = Dish.query();
+  $scope.query = 'loves';
+  console.log($scope.dishes); 
 }])
-.controller('DishesCtrl', function($scope, $stateParams) {
-});
+.controller('DishesCtrl', ['$scope', '$stateParams', 'Dish', function($scope, $stateParams, Dish) {
+  $scope.dish = Dish.get({dishId: $stateParams.dishId }, function(dish){
+    $scope.mainImageUrl = dish.images[0];
+  });
+    
+  $scope.setImage = function(imageUrl){
+    $scope.mainImageUrl = imageUrl;
+  }
+  $scope.id = $stateParams.dishId;
+  console.log($scope.id);
+}]);

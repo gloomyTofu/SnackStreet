@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var snackApp = angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers'])
+var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -55,13 +55,13 @@ var snackApp = angular.module('starter', ['ionic', 'ngCordova', 'starter.control
       }
     })
     .state('app.single', {
-    url: "/guides/laos/:dishesName",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/dishes.html",
-        controller: 'DishesCtrl'
-          }
+      url: "/guides/laos/:dishId",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/guides/dishes.html",
+          controller: 'DishesCtrl'
         }
+      }
     })
     .state('app.purchase', {
       url: "/guides/purchase",
@@ -73,7 +73,7 @@ var snackApp = angular.module('starter', ['ionic', 'ngCordova', 'starter.control
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/guides');
+  $urlRouterProvider.otherwise('/app/guides/laos');
 })
 .directive('toggleClass', function() {
     return {
@@ -85,14 +85,12 @@ var snackApp = angular.module('starter', ['ionic', 'ngCordova', 'starter.control
         }
     };
 })
-.filter('reverseAnything', function() {
-  return function(items) {
-    if(typeof items === 'undefined') { return; }
-    return angular.isArray(items) ? 
-      items.slice().reverse() : // If it is an array, split and reverse it
-      (items + '').split('').reverse().join(''); // else make it a string (if it isn't already), and reverse it
-  };
-})
+.factory('Dish', ['$resource',
+  function($resource){
+    return $resource('dishes/:dishId.json', {}, {
+      query: {method:'GET', params:{dishId:'dishes'}, isArray:true}
+    });
+}])
 ;
 
 
