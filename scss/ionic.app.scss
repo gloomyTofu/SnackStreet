@@ -28,7 +28,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 
 // WIREFRAME STYLES
-.list.card .item-image {background:$image-placeholder; height:15rem; }
+.item-image {background:$image-placeholder; height:15rem; }
 .side-menu-profile {
     text-align:center;
 .profile-image {
@@ -63,6 +63,7 @@ a h1 { line-height:1; }
 .center { text-align:center !important; }
 
 .no-padding {padding: 0 !important; }
+.no-padding-vertical {padding-top:0 !important; padding-bottom:0 !important; }
 .padding { padding:1rem !important; }
 .padding-bottom { padding-bottom:1rem !important; }
 
@@ -160,7 +161,7 @@ a.purchase-guide h4 {
 }
 
 .fade-in-repeat.ng-leave {
-    @include animation('fade-in 1s ease-in');
+    @include animation('fade-in 0.25s ease-in');
 }
 
 @include keyframes(fade-in) {

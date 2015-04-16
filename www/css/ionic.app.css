@@ -7615,7 +7615,7 @@ a.button {
     margin-left: 1rem;
     margin-right: 0.5rem; }
 
-.list.card .item-image {
+.item-image {
   background: #e5e5e5;
   height: 15rem; }
 
@@ -7656,6 +7656,10 @@ a h1 {
 
 .no-padding {
   padding: 0 !important; }
+
+.no-padding-vertical {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; }
 
 .padding {
   padding: 1rem !important; }
@@ -7863,11 +7867,11 @@ a.purchase-guide h4 {
   opacity: 1; }
 
 .fade-in-repeat.ng-leave {
-  -webkit-animation: fade-in 1s ease-in;
-  -moz-animation: fade-in 1s ease-in;
-  -ms-animation: fade-in 1s ease-in;
-  -o-animation: fade-in 1s ease-in;
-  animation: fade-in 1s ease-in; }
+  -webkit-animation: fade-in 0.25s ease-in;
+  -moz-animation: fade-in 0.25s ease-in;
+  -ms-animation: fade-in 0.25s ease-in;
+  -o-animation: fade-in 0.25s ease-in;
+  animation: fade-in 0.25s ease-in; }
 
 @-webkit-keyframes fade-in {
   0% {
@@ -7947,3 +7951,6 @@ a.tab-item.highlightLoved {
   position: absolute;
   left: 7px;
   bottom: -5px; }
+
+.dishes.dish-detail .item {
+  border-color: transparent; }

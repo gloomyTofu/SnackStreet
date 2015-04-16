@@ -58,7 +58,6 @@ angular.module('starter.controllers', [])
 .controller('LaosCtrl', ['$scope', 'Dish', function($scope, Dish) {
   $scope.dishes = Dish.query();
   $scope.query = 'loves';
-  console.log($scope.dishes); 
 }])
 .controller('DishesCtrl', ['$scope', '$stateParams', 'Dish', function($scope, $stateParams, Dish) {
   $scope.dish = Dish.get({dishId: $stateParams.dishId }, function(dish){
@@ -69,5 +68,5 @@ angular.module('starter.controllers', [])
     $scope.mainImageUrl = imageUrl;
   }
   $scope.id = $stateParams.dishId;
-  console.log($scope.id);
+  //console.log($scope.id);
 }]);

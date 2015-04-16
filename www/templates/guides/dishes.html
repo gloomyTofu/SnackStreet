@@ -1,42 +1,44 @@
-<ion-view class="dishes" view-title="{{dish.title}}">
+<ion-view class="dishes dish-detail" view-title="{{dish.title}}">
   <ion-content>
-    <div class="item item-image">
-        <img ng-src="{{dish.images[0].full}}">
-    </div>
-    <div class="row">
-        <div class="col col-50">
-            <h1 class="no-margin">{{dish.title}}</h1>
-        </div>
-        <div class="col no-padding">
-            <div class="row no-padding">
-                <div class="col">
-                    <a class="tab-item" ng-click="highlightSaved=!highlightSaved" toggle-class="highlightSaved" href="#">
-                      <i class="icon ion-ios-star-outline"></i>
-                        <span ng-show="highlightSaved" class="small-text">Saved</span>
-                    </a>
-                </div>
-            <div class="col">
-                <a class="tab-item" ng-click="highlightTried=!highlightTried" toggle-class="highlightTried" href="#">
-                  <i class="icon ion-ios-checkmark-outline"></i>
-                  <span ng-show="highlightTried" class="small-text">Tried</span>
-                </a>
-            </div>
-            <div class="col">
-                <a class="tab-item" href="#" ng-click="highlightLoved=!highlightLoved" toggle-class="highlightLoved">
-                  <i ng-click="count = count + 1" ng-init="count = loves" class="icon ion-ios-heart-outline"></i>
-                  <div class="unlove" ng-click="count = count - 1" ng-show="highlightLoved">
-                      <span class="small-text">Liked</span>
-                  </div>
-                </a>
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <p class="no-margin">{{shortDescription}}</p>
-            <p><i class="icon ion-ios-heart"></i> {{ count }} Loved This</p>
-        </div>
-    </div>
+		<div class="item item-image">
+				<img ng-src="{{dish.images[0].full}}">
+		</div>
+		<div class="item item-body no-padding-vertical fade-in-repeat">
+			<div class="row">
+					<div class="col col-50 no-padding-vertical">
+							<h1 class="no-margin">{{dish.title}}</h1>
+					</div>
+					<div class="col no-padding">
+							<div class="row no-padding">
+									<div class="col">
+											<a class="tab-item" ng-click="highlightSaved=!highlightSaved" toggle-class="highlightSaved" href="#">
+												<i class="icon ion-ios-star-outline"></i>
+													<span ng-show="highlightSaved" class="small-text">Saved</span>
+											</a>
+									</div>
+							<div class="col">
+									<a class="tab-item" ng-click="highlightTried=!highlightTried" toggle-class="highlightTried" href="#">
+										<i class="icon ion-ios-checkmark-outline"></i>
+										<span ng-show="highlightTried" class="small-text">Tried</span>
+									</a>
+							</div>
+							<div class="col">
+									<a class="tab-item" href="#" ng-click="highlightLoved=!highlightLoved" toggle-class="highlightLoved">
+										<i ng-click="count = count + 1" ng-init="count = dish.loves" class="icon ion-ios-heart-outline"></i>
+										<div class="unlove" ng-click="count = count - 1" ng-show="highlightLoved">
+												<span class="small-text">Liked</span>
+										</div>
+									</a>
+							</div>
+							</div>
+					</div>
+			</div>
+			<div class="row">
+					<div class="col">
+							<p class="no-margin">{{dish.shortDescription}}</p>
+							<p><i class="icon ion-ios-heart"></i> {{ count }} Loved This</p>
+					</div>
+			</div>
+		</div>
   </ion-content>
 </ion-view>
