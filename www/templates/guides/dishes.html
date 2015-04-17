@@ -1,8 +1,13 @@
-<ion-view class="dishes dish-detail" view-title="{{dish.title}}">
+<ion-view class="dishes dish-detail">
+	<ion-nav-title>{{dish.title}}</ion-nav-title>
   <ion-content>
-		<div class="item item-image">
-				<img ng-src="{{dish.images[0].full}}">
-		</div>
+		<ion-slide-box on-slide-changed="slideHasChanged($index)">
+  		<ion-slide class="dish-image" ng-repeat="image in dish.images">
+				<div class="item item-image">
+						<img class="dish" ng-src="{{image}}">
+				</div>
+			</ion-slide>
+		</ion-slide-box>
 		<div class="item item-body no-padding-vertical fade-in-repeat">
 			<div class="row">
 					<div class="col col-50 no-padding-vertical">
@@ -24,7 +29,7 @@
 							</div>
 							<div class="col">
 									<a class="tab-item" href="#" ng-click="highlightLoved=!highlightLoved" toggle-class="highlightLoved">
-										<i ng-click="count = count + 1" ng-init="count = dish.loves" class="icon ion-ios-heart-outline"></i>
+										<i ng-click="count = count + 1" ng-init="count" class="icon ion-ios-heart-outline"></i>
 										<div class="unlove" ng-click="count = count - 1" ng-show="highlightLoved">
 												<span class="small-text">Liked</span>
 										</div>
@@ -33,12 +38,18 @@
 							</div>
 					</div>
 			</div>
-			<div class="row">
+			<div class="row padding-bottom">
 					<div class="col">
 							<p class="no-margin">{{dish.shortDescription}}</p>
-							<p><i class="icon ion-ios-heart"></i> {{ count }} Loved This</p>
+						  <p><i class="icon ion-ios-heart"></i> {{count + dish.loves}} Loved This</p>
 					</div>
+			</div>			
+		</div>
+		<div class="list">
+			<div class="item item-divider">
+				Ingredients
 			</div>
+			
 		</div>
   </ion-content>
 </ion-view>

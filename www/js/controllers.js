@@ -67,6 +67,4 @@ angular.module('starter.controllers', [])
   $scope.setImage = function(imageUrl){
     $scope.mainImageUrl = imageUrl;
   }
-  $scope.id = $stateParams.dishId;
-  //console.log($scope.id);
 }]);

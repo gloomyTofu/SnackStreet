@@ -7952,5 +7952,7 @@ a.tab-item.highlightLoved {
   left: 7px;
   bottom: -5px; }
 
-.dishes.dish-detail .item {
-  border-color: transparent; }
+.dish-image {
+  width: 100%;
+  overflow: hidden;
+  position: relative; }

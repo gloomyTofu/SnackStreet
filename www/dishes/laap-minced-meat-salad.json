@@ -2,12 +2,11 @@
 	"title": "laap",
 	"id": "laap-minced-meat-salad",
 	"name": "laap-minced-meat-salad", 
-	"shortDescription": "A salad of minced meat, fish, seafood, or tofu. If there was a national dish of Laos, Laap would be a strong contender.", 
+	"shortDescription": "If Laos were to nominate a national dish, a strong contender would be larp, a “salad” of minced meat or fish mixed with garlic, chillies, shallots, galangal, ground sticky rice and fish sauce.", 
 	"keywords": ["spicy", "vegetarian-option", "local"],
 	"images": [
-		{
-			"full": ""
-		}
+		"img/laap/5799807438_b424c46e3a_z.jpg",
+		"img/laap/14132395078_1135e6d532_z.jpg"
 	],
 	"loves": 10,
 	"local": 10,

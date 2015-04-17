@@ -19,7 +19,9 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
     }
   });
 })
-
+.config(['$compileProvider', function($compileProvider) {
+            $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|content):|data:image\//);
+}])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('app', {
@@ -75,6 +77,12 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/guides/laos');
 })
+.factory('Dish', ['$resource',
+  function($resource){
+    return $resource('dishes/:dishId.json', {}, {
+      query: {method:'GET', params:{dishId:'dishes'}, isArray:true}
+    });
+}])
 .directive('toggleClass', function() {
     return {
         restrict: 'A',
@@ -85,12 +93,6 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
         }
     };
 })
-.factory('Dish', ['$resource',
-  function($resource){
-    return $resource('dishes/:dishId.json', {}, {
-      query: {method:'GET', params:{dishId:'dishes'}, isArray:true}
-    });
-}])
 ;
 
 
