@@ -2,13 +2,45 @@
 	"title": "laap",
 	"id": "laap-minced-meat-salad",
 	"name": "laap-minced-meat-salad", 
-	"shortDescription": "If Laos were to nominate a national dish, a strong contender would be larp, a “salad” of minced meat or fish mixed with garlic, chillies, shallots, galangal, ground sticky rice and fish sauce.", 
+	"shortDescription": "If Laos were to nominate a national dish, a strong contender would be laap (sometimes spelled larp or lahb), a “salad” of minced meat or fish mixed with garlic, chillies, shallots, galangal, ground sticky rice and fish sauce.", 
 	"keywords": ["spicy", "vegetarian-option", "local"],
 	"images": [
-		"img/laap/5799807438_b424c46e3a_z.jpg",
-		"img/laap/14132395078_1135e6d532_z.jpg"
+			"img/laap/5799807438_b424c46e3a_z.jpg",
+			"img/laap/14132395078_1135e6d532_z.jpg",
+			"img/laap/rasamalaysia-laap.jpg",
+			"img/laap/seriouseats-laap.jpg",
+			"img/laap/thehungrypup-laap.jpg"
 	],
 	"loves": 10,
 	"local": 10,
-	"adventurous": 6
+	"adventurous": 6,
+	"reviews": [
+		{
+			"user": "Alpha",
+			"note": "Delicious with a bowl of rice :)",
+			"helpful": 2
+		},
+		{
+			"user": "nanto",
+			"note": "So good, but can be very spicy!!",
+			"helpful": 1
+		}
+	],
+	"ingredients": [
+		{
+			"src": "img/ingredients/green-onions.jpg"
+		},
+		{
+			"src": "img/ingredients/garlic.jpg"
+		},
+		{
+			"src": "img/ingredients/chili-peppers.jpg"
+		},
+		{
+			"src": "img/ingredients/galangal.jpg"
+		},
+		{
+			"src": "img/ingredients/minced-meat.jpg"
+		}
+	]
 }

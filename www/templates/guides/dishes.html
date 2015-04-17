@@ -41,13 +41,78 @@
 			<div class="row padding-bottom">
 					<div class="col">
 							<p class="no-margin">{{dish.shortDescription}}</p>
-						  <p><i class="icon ion-ios-heart"></i> {{count + dish.loves}} Loved This</p>
 					</div>
-			</div>			
+			</div>
+		</div>
+		<div class="over-image-info padding">
+			<p>
+				<i class="icon ion-ios-heart"></i> {{count + dish.loves}} Loved This
+			</p>
 		</div>
 		<div class="list">
 			<div class="item item-divider">
+				How to Order
+			</div>
+			<div class="item order-dish no-padding-top item-button-right">
+				<label class="item-order-dish">
+					<div class="input-label">
+						{{dish.title}}
+					</div>
+					<select class="ion-input-select">
+						<option>Beef</option>
+						<option selected>Fish</option>
+						<option>Pork</option>
+						<option>Chicken</option>
+						<option>Tofu</option>
+					</select>
+				</label>
+				<label class="item-order-dish">
+					<select class="ion-input-select">
+						<option>Spicy</option>
+						<option selected>Not Spicy</option>
+					</select>
+				</label>
+				<label class="item-order-dish">
+					<button class="button button-light">
+						Order <i class="ion-ios-arrow-right padding-left"></i> 
+					</button>
+				</label>
+			</div>
+			<div class="item item-divider">
 				Ingredients
+			</div>
+			<a class="item item-list-detail item-ingredients">
+				<ion-scroll direction="x">
+					<img ng-repeat="ingredient in dish.ingredients" ng-src="{{ingredient.src}}" ng-click="showImages($index)" class="image-list-thumb"/>
+				</ion-scroll>
+			</a>
+			<div class="item item-divider">
+				Notes
+			</div>
+			<div ng-repeat="review in dish.reviews" class="item item-user-reviews">
+				<div class="row no-padding">
+					<div class="col no-padding">
+						<div class="profile-image user">
+								<!--<img src="#">-->  
+						</div>
+					</div>
+					<div class="col col-67 no-padding">
+						<a class="underline" href="#"><h2>{{review.user}}</h2></a>
+						<p>{{review.note}}</p>
+						<div class="row margin-top">
+							<div class="col col-20 col-offset-67">
+								<a class="tab-item" href="#">
+									<i class="icon ion-checkmark-round"><span class="badge-text">{{review.helpful}}</span></i>
+								</a>
+							</div>
+							<div class="col col-20 padding-left">
+								<a class="tab-item" href="#">
+									<i class="icon ion-flag"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			
 		</div>

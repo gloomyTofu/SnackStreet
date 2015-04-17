@@ -1,6 +1,6 @@
 {
   "name": "SnackStreet",
-  "app_id": "",
+  "app_id": "18965987",
   "gulpStartupTasks": [
     "sass",
     "watch"

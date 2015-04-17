@@ -29,15 +29,21 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // WIREFRAME STYLES
 .item-image {background:$image-placeholder; height:15rem; }
+.dishes .slider {background:$image-placeholder; }
 .side-menu-profile {
     text-align:center;
+}
 .profile-image {
     background:$image-placeholder;
     width:10rem;
     height:10rem;
     border-radius:50%;
     margin:3rem auto 0;
-    }
+	  &.user {
+			width:5rem;
+			height:5rem;
+			margin:0 1rem 0 0.5rem;
+		}
 }
 
 // PROTOTYPE STYLES
@@ -45,6 +51,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Styling
 // -------------------------------
 a { text-decoration:none; }
+a.underline { text-decoration:underline; }
 a h1 { line-height:1; }
 .uppercase { text-transform:uppercase !important; letter-spacing:0.06em; }
 .small-text { font-size:$font-size-small; }
@@ -63,6 +70,7 @@ a h1 { line-height:1; }
 .center { text-align:center !important; }
 
 .no-padding {padding: 0 !important; }
+.no-padding-top {padding-top: 0 !important; }
 .no-padding-vertical {padding-top:0 !important; padding-bottom:0 !important; }
 .padding { padding:1rem !important; }
 .padding-bottom { padding-bottom:1rem !important; }
@@ -70,6 +78,7 @@ a h1 { line-height:1; }
 .no-margin {margin: 0 !important; }
 .margin { margin:1rem !important; }
 .margin-top { margin-top:1rem !important; }
+.margin-bottom { margin-bottom:1rem !important; }
 .margin-left { margin-left:1rem !important; }
 .margin-vertical {margin:1rem 0 !important; }
 .margin-horizontal {margin:0 1rem !important; }
@@ -219,4 +228,116 @@ a.tab-item.highlightLoved {
 	width:100%;
 	overflow:hidden;
 	position:relative;
+}
+
+.dishes .over-image-info {
+	position:absolute;
+	top:0;
+	right:0;
+	color:scale-color($base-light-color,$lightness:-25%);
+}
+
+// Order Dish
+// -------------------------------
+.dishes .ion-input-select {
+  -webkit-appearance:none;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0);  
+  border:thin solid #dddddd;
+  font-weight:300;
+  display:inline;
+  vertical-align:middle;
+  color:#333;
+  padding: auto 0;
+  overflow:hidden;
+  box-sizing:border-box;
+
+}
+
+.dishes .ion-input-select {
+  width:113px;
+  font-size:1rem;
+  background-image: url(http://i.imgur.com/nA9xx1X.png);
+	background-position: -85px 3px;
+  text-indent:15px;
+  padding: 10px 0;
+}
+
+.dishes option {
+  background:#444;
+}
+
+.dishes select::-ms-expand {
+    display: none;
+}
+
+.dishes :focus {
+  outline:none;
+}
+
+.order-dish .button {
+	@include button-text-color($primary-color);
+	margin-left:0.5rem;
+	font-weight:300;
+	display:inline;
+	width:95px;
+	font-size: 1rem;
+	min-height:40px;
+}
+
+// Ingredient Gallery
+img.image-list-thumb {
+	width:100px;
+	height:100px;
+}
+
+.image-modal {
+    width: 100% !important;
+    height: 100%;
+    top: 0 !important;
+    left: 0 !important;
+}
+ 
+image-modal.transparent {
+    background: transparent !important;
+}
+ 
+.image-modal .fullscreen-image {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+ 
+.image-modal .slider {
+    width: 100%;
+    height: 100%;
+}
+
+// User Reviews/Comments on Dish
+.item-user-reviews .tab-item .icon {
+	font-size:1rem;
+	height:1rem;
+}
+.item-user-reviews .tab-item {overflow:visible; }
+.item-user-reviews .badge-text {
+		z-index:1;
+		display:inline;
+		border-radius:10px;
+		text-align:center;
+		vertical-align: baseline;
+		white-space: nowrap;
+		color:#444; 
+		border:1px solid $contrast-color;
+		position:relative;
+		padding:1px 6px;
+		height:auto;
+		font-size:0.9rem;
+		line-height:1.5;
+		margin-left:5px;
 }

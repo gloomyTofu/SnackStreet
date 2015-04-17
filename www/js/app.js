@@ -20,7 +20,7 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
   });
 })
 .config(['$compileProvider', function($compileProvider) {
-            $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|content):|data:image\//);
+        	$compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|content):|data:image\//);
 }])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
