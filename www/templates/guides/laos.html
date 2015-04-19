@@ -1,0 +1,40 @@
+<ion-view view-title="Laos" class="dishes">
+	<ion-content>
+		<div class="list list-inset">
+			<label class="item item-input">
+				<i class="icon ion-search placeholder-icon"></i>
+				<input ng-model="searchText" type="text" placeholder="Search">
+			</label>
+		</div>
+
+		<div class="sortDishes padding-horizontal">
+			<select ng-model="query" class="ion-input-select">
+				<option value="loves">Loved</option>
+				<option value="local">Local</option>
+				<option value="adventurous">Adventurous</option>
+			</select>
+			<h2 class="no-margin">Dishes</h2>
+		</div>
+
+		<div class="list card fade-in-repeat" ng-repeat="dish in dishes | filter:searchText | orderBy:query:true">
+			<div class="item item-body">
+				<div class="item item-image">
+					<a href="#/app/guides/laos/{{dish.id}}">
+						<img ng-src="{{dish.images[0].full}}">
+					</a>
+				</div>
+				<save-dish></save-dish>
+				<div class="row no-padding-vertical">
+					<div class="col">
+						<p class="no-margin">{{dish.shortDescription}}</p>
+						<div class="float-left">
+							<p><i class="icon ion-ios-heart"></i> {{ count }} Loved This</p>
+						</div>
+						<div class="float-right text-right condensed-keywords">
+							<keywords-list></keywords-list>
+						</div>
+					</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
