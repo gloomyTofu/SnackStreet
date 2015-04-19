@@ -1,0 +1,29 @@
+<div class="row relative">
+		<div class="col col-50">
+				<a href="#/app/guides/laos/{{dish.id}}"><h1 class="no-margin">{{dish.title}}</h1></a>
+		</div>
+		<div class="col save-icons absolute">
+				<div class="row no-padding">
+						<div class="col">
+								<a class="tab-item" ng-click="highlightSaved=!highlightSaved" toggle-class="highlightSaved" href="#">
+									<i class="icon ion-ios-star-outline"></i>
+										<span ng-show="highlightSaved" class="small-text">Saved</span>
+								</a>
+						</div>
+				<div class="col">
+						<a class="tab-item" ng-click="highlightTried=!highlightTried" toggle-class="highlightTried" href="#">
+							<i class="icon ion-ios-checkmark-outline"></i>
+							<span ng-show="highlightTried" class="small-text">Tried</span>
+						</a>
+				</div>
+				<div class="col">
+						<a class="tab-item" href="#" ng-click="highlightLoved=!highlightLoved" toggle-class="highlightLoved">
+							<i ng-click="count = count + 1" ng-init="count = dish.loves" class="icon ion-ios-heart-outline"></i>
+							<div class="unlove" ng-click="count = count - 1" ng-show="highlightLoved">
+									<span class="small-text">Liked</span>
+							</div>
+						</a>
+				</div>
+			</div>
+		</div>
+</div>

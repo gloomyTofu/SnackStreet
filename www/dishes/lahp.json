@@ -1,0 +1,75 @@
+{
+	"title": "lahp ລາບ",
+	"id": "lahp",
+	"name": "Spicy Meat or Fish Salad", 
+	"shortDescription": "One of Laos' most famous dishes. Lahp (also spelt larb or laap) is usually made with minced meat or fish Ingredients are variable depending on region, personal preferences, and whatever is readily available.", 
+	"keywords": [
+		{ "name": "Local", "isTrue": "true", "class": "ion-location" },
+		{ "name": "Spicy", "isTrue": "true", "class": "ion-fireball" },
+		{ "name": "Vegetarian Option", "isTrue": "true", "class": "ion-ios-nutrition" }
+	],
+	"loves": 10,
+	"local": 10,
+	"adventurous": 6,
+	"images": [
+		{ 
+			"src": "img/laap/5799807438_b424c46e3a_z.jpg" 
+		},
+		{ 
+			"src": "img/laap/14132395078_1135e6d532_z.jpg" 
+		},
+		{ 
+			"src": "img/laap/rasamalaysia-laap.jpg" 
+		},
+		{ 
+			"src": "img/laap/seriouseats-laap.jpg" 
+		},
+		{ 
+			"src": "img/laap/thehungrypup-laap.jpg"
+		}
+	],
+	"tips": [
+		{ "name": "raw, uncooked meat or fish", "isTrue": "true", "class": "ion-alert-circled" }
+	],
+	"proteins": [
+		"chicken", "pork", "beef", "fish", "tofu", "duck" 
+	],
+	"spice": [
+		"spicy", "not spicy"
+	],
+	"myReview": [],
+	"reviews": [
+		{
+			"user": "nanto",
+			"note": "So good, but can be very spicy!!",
+			"helpful": 1
+		},
+		{
+			"user": "Alpha",
+			"note": "Delicious with a bowl of rice :)",
+			"helpful": 2
+		}
+	],
+	"ingredients": [
+		{
+			"src": "img/ingredients/green-onions.jpg"
+		},
+		{
+			"src": "img/ingredients/garlic.jpg"
+		},
+		{
+			"src": "img/ingredients/chili-peppers.jpg"
+		},
+		{
+			"id": "galangal",
+			"name": "Galangal",
+			"src": "img/ingredients/galangal.jpg",
+			"translation": "ຂ່າ",
+			"pronunciation": "ka",
+			"description": "A rhizome of plants in the ginger family. Galangal is related to and resembles ginger. While ginger tastes a little like galangal, most cooks who use both rhizomes would never substitute one for the other and expect the same flavor profile."
+		},
+		{
+			"src": "img/ingredients/minced-meat.jpg"
+		}
+	]
+}

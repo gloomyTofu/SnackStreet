@@ -1,92 +1,116 @@
 [
     { 
-        "title": "laap",
-        "id": "laap-minced-meat-salad",
-        "name": "laap-minced-meat-salad", 
-        "shortDescription": "A salad of minced meat, fish, seafood, or tofu. If there was a national dish of Laos, Laap would be a strong contender.", 
-        "keywords": ["spicy", "vegetarian-option", "local"],
-        "images": [
+        "title": "lahp ລາບ",
+				"id": "lahp",
+				"name": "Spicy meat or fish salad.", 
+        "shortDescription": "A salad of minced meat, fish, seafood, or tofu. If there was a national dissh of Laos, Laap would be a strong contender.", 
+        "keywords": [
+					{ "name": "local", "isTrue": "true" },
+					{ "name": "spicy", "isTrue": "true" },
+					{ "name": "vegetarian-option", "isTrue": "true" }
+				],
+        "loves": 150,
+        "local": 10,
+        "adventurous": 6,
+				"images": [
           {
             "full": ""
           }
-        ],
-        "loves": 10,
-        "local": 10,
-        "adventurous": 6
+        ]
     },
     { 
         "title": "tam màk hung",
         "id": "tam-mak-hung-papaya-salad",
         "name": "tam-mak-hung-papaya-salad",
         "shortDescription": "A quintessentially Lao dish: spicy papaya salad.", 
-        "keywords": ["spicy", "vegetarian-option", "local"],
-        "images": [
+        "keywords": [
+					{ "name": "local", "isTrue": "true" },
+					{ "name": "spicy", "isTrue": "true" },
+					{ "name": "vegetarian-option", "isTrue": "true" }
+				],
+        "loves": 20,
+        "local": 9,
+        "adventurous": 5,
+				"images": [
           {
             "full": ""
           }
-        ],
-        "loves": 20,
-        "local": 9,
-        "adventurous": 5
+        ]
     },
     { 
         "title": "mók pa", 
         "id": "mok-pa-fish-steamed-banana-leaves",
         "name": "mok-pa-fish-steamed-banana-leaves",
         "shortDescription": "Fish steamed in banana leaves. Well worth ordering if you can find it.", 
-        "keywords": ["local"],
-        "images": [
-          {
-            "full": ""
-          }
-        ],
+        "keywords": [
+					{ "name": "local", "isTrue": "true" },
+					{ "name": "spicy", "isTrue": "false" },
+					{ "name": "vegetarian-option", "isTrue": "false" }
+				],
         "loves": 3,
         "local": 8,
-        "adventurous": 7
+        "adventurous": 7,
+				"images": [
+					{
+						"full": ""
+					}
+				]
     },
     { 
         "title": "Waffle",
         "id": "waffle",
         "name": "waffle",
         "shortDescription": "A popular street food in Vietnam, Pandan Waffles are Vietnamese-style waffles made with pandan and coconut milk.", 
-        "keywords": ["vegetarian-option", "sweet"],
-        "images": [
-          {
-            "full": ""
-          }
-        ],
+        "keywords": [
+					{ "name": "local", "isTrue": "true" },
+					{ "name": "spicy", "isTrue": "false" },
+					{ "name": "vegetarian-option", "isTrue": "true" }
+				],
         "loves": 2,
         "local": 4,
-        "adventurous": 3
+        "adventurous": 3,
+				"images": [
+					{
+						"full": ""
+					}
+				]
     },
     { 
         "title": "pîng kai",
         "id": "ping-kai-grilled-chicken", 
         "name": "ping-kai-grilled-chicken",
         "shortDescription": "A grilled favorite.", 
-        "keywords": ["spicy", "vegetarian-option", "local"],
-        "images": [
-          {
-            "full": ""
-          }
-        ],
+        "keywords": [
+					{ "name": "local", "isTrue": "true" },
+					{ "name": "spicy", "isTrue": "true" },
+					{ "name": "vegetarian-option", "isTrue": "true" }
+				],
         "loves": 1,
         "local": 9,
-        "adventurous": 5
+        "adventurous": 5,
+				"images": [
+					{
+						"full": ""
+					}
+				]
     },
     { 
         "title": "seen hang",
         "id": "buffalo-jerky",
         "name": "buffalo-jerky",
         "shortDescription": "Beef jerky that has been flash fried.", 
-        "keywords": ["local"],
-        "images": [
-          {
-            "full": ""
-          }
-        ],
+        "keywords": [
+					{ "name": "local", "isTrue": "true" },
+					{ "name": "spicy", "isTrue": "false" },
+					{ "name": "vegetarian-option", "isTrue": "false" }
+				],
         "loves": 4,
         "local": 8,
-        "adventurous": 6
+        "adventurous": 6,
+				"images": [
+					{
+						"full": ""
+					}
+				]
     }
   ]

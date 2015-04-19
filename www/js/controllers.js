@@ -50,26 +50,17 @@ angular.module('starter.controllers', [])
     { title: 'Thailand', name: 'purchase', description: 'Five fundamental tastes are identified in Thai cuisine – spiciness, sourness, bitterness, saltiness and sweetness...', canDownload:false },
     { title: 'Vietnam', name: 'purchase', description: 'Light, subtle in flavour and astonishing in their variety, Vietnamese dishes are boiled or steamed rather than stir-fried, and a huge emphasis is placed on herbs and seasoning.', canDownload:false }
   ];
-  // Called each time the slide changes
-  $scope.slideChanged = function(index) {
-    $scope.slideIndex = index;
-  };
 })
-.controller('LaosCtrl', ['$scope', 'Dish', function($scope, Dish) {
+.controller('GuideCtrl', ['$scope', 'Dish', function($scope, Dish) {
   $scope.dishes = Dish.query();
   $scope.query = 'loves';
 }])
 .controller('DishesCtrl', ['$scope', '$stateParams', 'Dish','$ionicModal', function($scope, $stateParams, Dish, $ionicModal) {
-  $scope.dish = Dish.get({dishId: $stateParams.dishId }, function(dish){
-    $scope.mainImageUrl = dish.images[0];
-  });
-    
-  $scope.setImage = function(imageUrl){
-    $scope.mainImageUrl = imageUrl;
-  }
+  $scope.dish = Dish.get({dishId: $stateParams.dishId });
+	
 	$scope.showImages = function(index) {
 		$scope.activeSlide = index;
-		$scope.showModal('templates/modal/popover.html');
+		$scope.showModal('templates/modal/image-popover.html');
 	}
  
 	$scope.showModal = function(templateUrl) {
@@ -87,4 +78,19 @@ angular.module('starter.controllers', [])
 		$scope.modal.hide();
 		$scope.modal.remove()
 	};
-}]);
+}])
+.controller('NoteController', function($scope) {
+    this.myReview = {};
+
+    this.addMyReview = function(dish) {
+      dish.myReview.push(this.myReview);
+			
+      this.myReview = {};
+    };
+})
+.controller('MyCtrl', function($scope) {
+ $scope.shouldShowDelete = false;
+ $scope.shouldShowReorder = false;
+ $scope.listCanSwipe = true
+})
+;

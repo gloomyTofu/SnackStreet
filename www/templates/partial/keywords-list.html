@@ -1,0 +1,5 @@
+<ul class="no-margin">
+	<li class="inline" ng-repeat="keyword in dish.keywords | filter:{ isTrue:true }">
+		<span class="small-text"><i class="icon {{keyword.class}}"> &nbsp;{{keyword.name}}</i></span>
+	</li>
+</ul>

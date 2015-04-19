@@ -1,0 +1,76 @@
+<div class="item item-divider">
+	My Notes
+</div>
+<form name="createNotes" ng-controller="NoteController as noteCtrl" ng-submit="noteCtrl.addMyReview(dish)">
+	
+	<!-- LIVE PREVIEW --> 
+	<ion-list ng-controller="MyCtrl" show-delete="shouldShowDelete" can-swipe="listCanSwipe">
+		<ion-item ng-repeat="myReview in dish.myReview" class="item item-my-reviews">
+			<div class="row no-padding">
+				<div class="col no-padding">
+					<div class="profile-image user">
+							<!--<img src="#">-->  
+					</div>
+				</div>
+				<div class="col col-67 no-padding">
+					<a class="underline" href="#"><h2>gloomyTofu</h2></a>
+					<p>{{myReview.note}}</p>
+					<div class="row">
+						<div class="col col-20 col-offset-67">
+							<a class="tab-item" href="#" ng-click="myReview.helpful = count + 1" ng-init="count = 1" toggle-class="unhide" >
+								<i class="icon ion-checkmark-round"><span class="badge-text">{{ count }}</span></i>
+							</a>
+						</div>
+						<div class="col col-20 padding-left">
+							<a class="tab-item" href="#">
+								<i class="icon ion-flag"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			<ion-option-button class="button button-info" ng-click="edit(item)">
+				<i class="icon ion-edit"></i>
+			</ion-option-button>
+			<ion-option-button class="button button-info" ng-click="delete(item)">
+				<i class="icon ion-ios-trash"></i>
+			</ion-option-button>
+			<ion-option-button class="button-positive" ng-click="share(item)">
+				<i class="icon ion-ios-upload-outline"></i>
+			</ion-option-button>
+			</div>
+		</ion-item>
+	</ion-list>
+	<fieldset class="form-group textarea">
+		<textarea ng-model="noteCtrl.myReview.note" class="form-control" placeholder="What did you think of the dish?" title="Food Notes">
+		</textarea>
+		<input class="float-right button button-light save-button" type="submit" value="Save">
+	</fieldset>
+</form>
+<div class="item item-divider">
+	Notes
+</div>
+<div ng-repeat="review in dish.reviews | orderBy:'-helpful'" class="item item-user-reviews">
+	<div class="row no-padding">
+		<div class="col no-padding">
+			<div class="profile-image user">
+					<!--<img src="#">-->  
+			</div>
+		</div>
+		<div class="col col-67 no-padding">
+			<a class="underline" href="#"><h2>{{review.user}}</h2></a>
+			<p>{{review.note}}</p>
+			<div class="row">
+				<div class="col col-20 col-offset-67">
+					<a class="tab-item" href="#" ng-click="count = count + 1" ng-init="count = review.helpful" >
+						<i class="icon ion-checkmark-round"><span class="badge-text">{{ count }}</span></i>
+					</a>
+				</div>
+				<div class="col col-20 padding-left">
+					<a class="tab-item" href="#">
+						<i class="icon ion-flag"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

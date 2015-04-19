@@ -52,7 +52,7 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
       views: {
         'menuContent': {
           templateUrl: "templates/guides/laos.html",
-          controller: 'LaosCtrl'
+          controller: 'GuideCtrl'
         }
       }
     })
@@ -83,6 +83,24 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
       query: {method:'GET', params:{dishId:'dishes'}, isArray:true}
     });
 }])
+.directive('saveDish', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'templates/partial/save-dish.html'
+	};
+})
+.directive('keywordsList', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'templates/partial/keywords-list.html'
+	};
+})
+.directive('dishReview', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'templates/partial/dish-review.html'
+	};
+})
 .directive('toggleClass', function() {
     return {
         restrict: 'A',
@@ -94,7 +112,6 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
     };
 })
 ;
-
 
 // Cordova Camera
 snackApp.controller("SnackController", function($scope, $cordovaCamera) {

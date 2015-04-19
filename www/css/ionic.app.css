@@ -7615,57 +7615,16 @@ a.button {
     margin-left: 1rem;
     margin-right: 0.5rem; }
 
-.item-image {
-  background: #e5e5e5;
-  height: 15rem; }
+.relative {
+  position: relative !important; }
 
-.dishes .slider {
-  background: #e5e5e5; }
-
-.side-menu-profile {
-  text-align: center; }
-
-.profile-image {
-  background: #e5e5e5;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  margin: 3rem auto 0; }
-  .profile-image.user {
-    width: 5rem;
-    height: 5rem;
-    margin: 0 1rem 0 0.5rem; }
-
-a {
-  text-decoration: none; }
-
-a.underline {
-  text-decoration: underline; }
-
-a h1 {
-  line-height: 1; }
-
-.uppercase, .button-outline-headline {
-  text-transform: uppercase !important;
-  letter-spacing: 0.06em; }
-
-.small-text {
-  font-size: 11px; }
-
-.subheadline {
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #999999;
-  padding-top: 0.5em;
-  padding-left: 1em; }
-
-.box-shadow, a.purchase-guide h4, .guides .card {
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.12); }
+.absolute {
+  position: absolute !important; }
 
 .center {
   text-align: center !important; }
 
-.no-padding {
+.no-padding, .save-icons {
   padding: 0 !important; }
 
 .no-padding-top {
@@ -7702,10 +7661,104 @@ a h1 {
 .margin-horizontal {
   margin: 0 1rem !important; }
 
+.float-left {
+  float: left !important; }
+
+.float-right {
+  float: right !important; }
+
+.item-image {
+  background: #e5e5e5;
+  height: 15rem; }
+
+.dishes .slider {
+  background: #e5e5e5; }
+
+.side-menu-profile {
+  text-align: center; }
+
+.profile-image {
+  background: #e5e5e5;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin: 3rem auto 0; }
+  .profile-image.user {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 1rem 0 0.5rem; }
+
+a {
+  text-decoration: none; }
+
+a.underline {
+  text-decoration: underline; }
+
+a h1 {
+  line-height: 1; }
+
+.uppercase, .button-outline-headline {
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em; }
+
+span.small-text {
+  position: relative;
+  top: -4px; }
+
+.small-text {
+  font-size: 11px; }
+
+.subheadline {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999999;
+  padding-top: 0.5em;
+  padding-left: 1em; }
+
+.box-shadow, a.purchase-guide h4, .guides .card {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.12); }
+
+.item-complex .item-content {
+  padding-right: 20px; }
+
+ion-option-button.button {
+  min-width: 40px; }
+  ion-option-button.button .button-positive {
+    border-color: #a0a0a0;
+    background-color: #404040;
+    background: #404040;
+    color: #FFFFFF; }
+
+ion-option-button.button.button-info .ion-edit:before {
+  font-size: 20px; }
+
+fieldset.form-group.textarea {
+  border: 0;
+  padding-top: 0.75rem;
+  padding-left: 1rem; }
+
+textarea.form-control {
+  width: 75%;
+  height: 30px;
+  resize: none;
+  float: left; }
+
+fieldset.textarea .button.save-button {
+  background: #b4b4b4;
+  color: #000;
+  background: #b4b4b4;
+  min-height: 40px;
+  font-weight: 300;
+  margin-right: 10px; }
+
+.item-my-reviews p, .item-user-reviews p {
+  padding-top: 0.12rem;
+  padding-bottom: 0.5rem; }
+
 a.tab-item.download-cancel, a.purchase-guide.fade-in {
   position: absolute;
-  top: 20%;
-  right: 9%;
+  top: 7%;
+  right: 10%;
   height: auto;
   z-index: 2; }
 
@@ -7718,10 +7771,27 @@ a.tab-item.download-cancel, a.purchase-guide.fade-in {
     fill: #808080; }
 
 i.icon.icon-right.removeGuide {
-  background-image: url('../img/icon/cancel.svg'); }
+  background-image: url('../img/icon/cancel.svg');
+  width: 30px;
+  height: 30px;
+  fill: #000; }
+  i.icon.icon-right.removeGuide:hover {
+    fill: #808080; }
+
+a.close-modal-button {
+  position: absolute;
+  top: 2%;
+  right: 8%;
+  height: auto;
+  z-index: 2; }
+
+a.tab-item.close-modal-button .icon {
+  font-size: 50px;
+  height: 35px;
+  color: #000; }
 
 a.purchase-guide.fade-in {
-  top: 19%;
+  top: 6%;
   right: 10px;
   opacity: 1;
   text-decoration: none;
@@ -7939,17 +8009,25 @@ a.purchase-guide h4 {
   bottom: 0;
   margin-bottom: 2px; }
 
-.guides .slider-slide {
-  padding-top: 3em; }
-  .guides .slider-slide .item.activated {
-    background-color: transparent; }
+.guides .slider-slide .item.activated {
+  background-color: transparent; }
 
 .guides .card {
-  margin-top: 55px;
+  margin-top: 10px;
   margin-bottom: 40px; }
 
 .guides .item {
   border-color: transparent; }
+
+.save-icons {
+  width: 150px;
+  right: 0; }
+
+.item-my-reviews a.tab-item span.badge-text {
+  visibility: hidden; }
+
+.item-my-reviews a.tab-item.unhide span.badge-text {
+  visibility: visible; }
 
 a.tab-item.highlightLoved {
   height: 48px; }
@@ -7966,8 +8044,8 @@ a.tab-item.highlightLoved {
 
 .unlove .small-text {
   position: absolute;
-  left: 7px;
-  bottom: -5px; }
+  left: 6px;
+  top: 25px; }
 
 .dish-image {
   width: 100%;
@@ -7979,6 +8057,21 @@ a.tab-item.highlightLoved {
   top: 0;
   right: 0;
   color: #9d9d9d; }
+
+.condensed-keywords {
+  margin-top: 18px; }
+  .condensed-keywords li {
+    padding-left: 5px; }
+
+.keywords li {
+  padding-right: 5px; }
+.keywords li span {
+  background: #f6f6f6;
+  padding: 0.35rem;
+  border-radius: 5px;
+  border: thin solid #cccccc; }
+.keywords .small-text {
+  color: #808080; }
 
 .dishes .ion-input-select {
   -webkit-appearance: none;
@@ -8001,6 +8094,10 @@ a.tab-item.highlightLoved {
   text-indent: 15px;
   padding: 10px 0; }
 
+.sortDishes .ion-input-select {
+  width: 145px;
+  background-position: -55px 3px; }
+
 .dishes option {
   background: #444; }
 
@@ -8011,8 +8108,8 @@ a.tab-item.highlightLoved {
   outline: none; }
 
 .order-dish .button {
-  background: #404040;
-  color: #FFFFFF;
+  background: #b4b4b4;
+  color: #000;
   margin-left: 0.5rem;
   font-weight: 300;
   display: inline;
@@ -8048,14 +8145,14 @@ image-modal.transparent {
   width: 100%;
   height: 100%; }
 
-.item-user-reviews .tab-item .icon {
+.item-my-reviews .tab-item .icon, .item-user-reviews .tab-item .icon {
   font-size: 1rem;
   height: 1rem; }
 
-.item-user-reviews .tab-item {
+.item-my-reviews .tab-item, .item-user-reviews .tab-item {
   overflow: visible; }
 
-.item-user-reviews .badge-text {
+.item-my-reviews .badge-text, .item-user-reviews .badge-text {
   z-index: 1;
   display: inline;
   border-radius: 10px;

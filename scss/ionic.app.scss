@@ -24,7 +24,8 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import 
   "www/scss/mixins",
   "www/scss/variables",
-  "www/scss/menu";
+  "www/scss/menu",
+	"www/scss/positioning";
 
 
 // WIREFRAME STYLES
@@ -54,6 +55,8 @@ a { text-decoration:none; }
 a.underline { text-decoration:underline; }
 a h1 { line-height:1; }
 .uppercase { text-transform:uppercase !important; letter-spacing:0.06em; }
+
+span.small-text { position:relative; top:-4px; }
 .small-text { font-size:$font-size-small; }
 .subheadline { 
     letter-spacing:0.12em; 
@@ -64,46 +67,62 @@ a h1 { line-height:1; }
 }
 .box-shadow { box-shadow: 1px 1px 10px rgba(0,0,0,.12); }
 
+.item-complex .item-content { padding-right:20px; }
+ion-option-button.button {
+	min-width:40px;
+	.button-positive {
+		border-color:scale-color($primary-color,$lightness:50%);
+		background-color:$primary-color;
+		@include button-text-color($primary-color);
+	}
+}
+ion-option-button.button.button-info .ion-edit:before {font-size:20px; }
 
-// Position
-// -------------------------------
-.center { text-align:center !important; }
 
-.no-padding {padding: 0 !important; }
-.no-padding-top {padding-top: 0 !important; }
-.no-padding-vertical {padding-top:0 !important; padding-bottom:0 !important; }
-.padding { padding:1rem !important; }
-.padding-bottom { padding-bottom:1rem !important; }
-
-.no-margin {margin: 0 !important; }
-.margin { margin:1rem !important; }
-.margin-top { margin-top:1rem !important; }
-.margin-bottom { margin-bottom:1rem !important; }
-.margin-left { margin-left:1rem !important; }
-.margin-vertical {margin:1rem 0 !important; }
-.margin-horizontal {margin:0 1rem !important; }
-
+fieldset.form-group.textarea { border:0; padding-top:0.75rem; padding-left:1rem; }
+textarea.form-control { width:75%; height:30px; resize:none; float:left; }
+fieldset.textarea .button.save-button {
+	@include button-text-color($contrast-color);
+	background:$contrast-color;
+	min-height: 40px;
+	font-weight: 300;
+	margin-right:10px;
+}
+.item-my-reviews p, .item-user-reviews p {padding-top:0.12rem; padding-bottom:0.5rem; }
 
 // Download/Remove Guides
 // -------------------------------
 a.tab-item.download-cancel, a.purchase-guide.fade-in {
   position: absolute;
-  top: 20%;
-  right: 9%;
+  top: 7%;
+  right: 10%;
   height: auto;
   z-index: 2;
 }
 
 .download-cancel i.icon.icon-right {
-    background-image:url('../img/icon/download.svg');
-    width:30px;
-    height:30px;
-    fill:$base-color;
-    &:hover { fill:scale-color($base-color,$lightness:50%); }
+    //background-image:url('../img/icon/download.svg');
+    @include svg-icon(download);
 }
 
 i.icon.icon-right.removeGuide {
-    background-image:url('../img/icon/cancel.svg');
+    //background-image:url('../img/icon/cancel.svg');
+		@include svg-icon(cancel);
+}
+
+// Close Button
+a.close-modal-button {
+	position:absolute;
+	top:2%;
+	right:8%;
+	height:auto;
+	z-index: 2;
+}
+
+a.tab-item.close-modal-button .icon {
+	font-size:50px;
+	height:35px;
+	color:$base-color;
 }
 
 // Slide-Right Price Animation
@@ -111,7 +130,7 @@ i.icon.icon-right.removeGuide {
 
 // final stage
 a.purchase-guide.fade-in {
-    top:19%; 
+    top:6%; 
     right:10px;
     opacity:1;
     text-decoration:none; 
@@ -200,17 +219,32 @@ a.purchase-guide h4 {
 // -------------------------------
 .guides .slider-pager { bottom:0; margin-bottom:2px; }
 .guides .slider-slide {
-    padding-top: 3em;
     .item.activated {
         background-color:transparent;
     }
 }
 .guides .card {
-    @include margin(top, 55px);
+		@include margin(top, 10px);
     @include margin(bottom, 40px);
     @extend .box-shadow;
 }
 .guides .item { border-color:transparent; }
+
+// Save Dish Icons
+.save-icons {
+	@extend .no-padding;
+	width:150px;
+	right:0;
+}
+
+// Hide Helpful Count
+.item-my-reviews a.tab-item span.badge-text {
+	visibility:hidden;
+}
+
+.item-my-reviews a.tab-item.unhide span.badge-text {
+	visibility:visible;
+}
 
 // Dishes
 // -------------------------------
@@ -222,7 +256,7 @@ a.tab-item.highlightLoved {
 .dishes .highlightLoved i.icon,
 .dishes .small-text { color:$contrast-color; }
 .dishes .unlove {position:relative; width:42px; height:44px; top:-28px; left:1px; }
-.unlove .small-text {position:absolute; left:7px; bottom:-5px; }
+.unlove .small-text {position:absolute; left:6px; top:25px; }
 
 .dish-image {
 	width:100%;
@@ -235,6 +269,23 @@ a.tab-item.highlightLoved {
 	top:0;
 	right:0;
 	color:scale-color($base-light-color,$lightness:-25%);
+}
+
+.condensed-keywords {
+	margin-top:18px; 
+	li {padding-left:5px; }
+}
+.keywords {
+	li {padding-right:5px; }
+	li span {
+  	background:scale-color($base-light-color,$lightness:80%);
+  	padding: 0.35rem;
+  	border-radius: 5px;
+		border:thin solid scale-color($base-color,$lightness:80%);
+	}
+	.small-text {
+		color:scale-color($base-color,$lightness:50%);	
+	}
 }
 
 // Order Dish
@@ -263,6 +314,11 @@ a.tab-item.highlightLoved {
   padding: 10px 0;
 }
 
+.sortDishes .ion-input-select {
+	width:145px;
+	background-position: -55px 3px;
+}
+
 .dishes option {
   background:#444;
 }
@@ -276,7 +332,7 @@ a.tab-item.highlightLoved {
 }
 
 .order-dish .button {
-	@include button-text-color($primary-color);
+	@include button-text-color($contrast-color);
 	margin-left:0.5rem;
 	font-weight:300;
 	display:inline;
@@ -320,12 +376,12 @@ image-modal.transparent {
 }
 
 // User Reviews/Comments on Dish
-.item-user-reviews .tab-item .icon {
+.item-my-reviews .tab-item .icon, .item-user-reviews .tab-item .icon {
 	font-size:1rem;
 	height:1rem;
 }
-.item-user-reviews .tab-item {overflow:visible; }
-.item-user-reviews .badge-text {
+.item-my-reviews .tab-item , .item-user-reviews .tab-item {overflow:visible; }
+.item-my-reviews .badge-text, .item-user-reviews .badge-text {
 		z-index:1;
 		display:inline;
 		border-radius:10px;

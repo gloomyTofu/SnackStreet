@@ -67,3 +67,11 @@
     background:$color;
     color:set-button-text-color($color);
 }
+
+@mixin svg-icon($url){
+		background-image:url('../img/icon/#{$url}.svg');
+    width:30px;
+    height:30px;
+    fill:$base-color;
+    &:hover { fill:scale-color($base-color,$lightness:50%); }
+}
