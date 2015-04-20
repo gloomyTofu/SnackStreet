@@ -75,7 +75,7 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
       }
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/guides/laos');
+  $urlRouterProvider.otherwise('/app/guides');
 })
 .factory('Dish', ['$resource',
   function($resource){

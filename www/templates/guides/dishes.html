@@ -1,10 +1,10 @@
 <ion-view class="dishes dish-detail">
-	<ion-nav-title>{{dish.title}}</ion-nav-title>
+	<ion-nav-title>{{ dish.title }}</ion-nav-title>
   <ion-content>
-		<ion-slide-box on-slide-changed="slideHasChanged($index)">
+		<ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="activeSlide">
   		<ion-slide class="dish-image" ng-repeat="image in dish.images">
 				<div class="item item-image">
-						<img class="dish" ng-src="{{image.src}}">
+					<img class="dish" ng-src="{{image.src}}">
 				</div>
 			</ion-slide>
 		</ion-slide-box>
@@ -12,10 +12,10 @@
 			<save-dish></save-dish>
 			<div class="row">
 					<div class="col">
-							<p class="no-margin margin-bottom">{{dish.shortDescription}}</p>
+							<p class="no-margin margin-bottom">{{ dish.shortDescription }}</p>
 							<ul class="margin-bottom">
 								<li ng-repeat="tip in dish.tips">
-									<i class="icon {{tip.class}}"> <span>&nbsp;Avoid {{tip.name}}</span></i>
+									<i class="icon {{tip.class}}"> <span>&nbsp;Avoid {{ tip.name }}</span></i>
 								</li>
 							</ul>
 					</div>
@@ -26,7 +26,7 @@
 		</div>
 		<div class="over-image-info padding">
 			<p>
-				<i class="icon ion-ios-heart"></i> {{count + dish.loves}} Loved This
+				<i class="icon ion-ios-heart"></i> {{ count + dish.loves }} Loved This
 			</p>
 		</div>
 		<div class="list">
@@ -36,19 +36,19 @@
 			<div class="item order-dish no-padding-top item-button-right">
 				<label class="item-order-dish">
 					<div class="input-label">
-						{{dish.title}}
+						{{ dish.title }}
 					</div>
+					<select class="ion-input-select" ng-show="dish.proteins">
+						<option ng-repeat="protein in dish.proteins">{{ protein }}</option>
+					</select>
+				</label>
+				<label class="item-order-dish" ng-show="dish.spice">
 					<select class="ion-input-select">
-						<option ng-repeat="protein in dish.proteins">{{protein}}</option>
+						<option ng-repeat="spicy in dish.spice">{{ spicy }}</option>
 					</select>
 				</label>
 				<label class="item-order-dish">
-					<select class="ion-input-select">
-						<option ng-repeat="spicy in dish.spice">{{spicy}}</option>
-					</select>
-				</label>
-				<label class="item-order-dish">
-					<button class="button button-light">
+					<button ng-controller="OpenModal" class="button button-light" ng-click="openModal()">
 						Order <i class="ion-ios-arrow-right padding-left"></i> 
 					</button>
 				</label>
@@ -58,7 +58,7 @@
 			</div>
 			<a class="item item-list-detail item-ingredients">
 				<ion-scroll direction="x" scrollbar-x="false">
-					<img ng-repeat="ingredient in dish.ingredients" ng-src="{{ingredient.src}}" ng-click="showImages($index)" class="image-list-thumb">
+					<img ng-repeat="ingredient in dish.ingredients" ng-src="{{ ingredient.src }}" ng-click="showImages($index)" class="image-list-thumb">
 				</ion-scroll>
 			</a>
 			<dish-review></dish-review>

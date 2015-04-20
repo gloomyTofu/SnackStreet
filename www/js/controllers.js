@@ -55,12 +55,35 @@ angular.module('starter.controllers', [])
   $scope.dishes = Dish.query();
   $scope.query = 'loves';
 }])
-.controller('DishesCtrl', ['$scope', '$stateParams', 'Dish','$ionicModal', function($scope, $stateParams, Dish, $ionicModal) {
+.controller('DishesCtrl', ['$scope', '$stateParams', 'Dish', '$ionicModal', function($scope, $stateParams, Dish, $ionicModal) {
   $scope.dish = Dish.get({dishId: $stateParams.dishId });
+	$scope.query = 'loves';
 	
 	$scope.showImages = function(index) {
 		$scope.activeSlide = index;
 		$scope.showModal('templates/modal/image-popover.html');
+	}
+ 
+	$scope.showModal = function(templateUrl) {
+		$ionicModal.fromTemplateUrl(templateUrl, {
+			scope: $scope,
+			animation: 'slide-in-up'
+		}).then(function(modal) {
+			$scope.modal = modal;
+			$scope.modal.show();
+		});
+	}
+ 
+	// Close the modal
+	$scope.closeModal = function() {
+		$scope.modal.hide();
+		$scope.modal.remove()
+	};
+}])
+.controller('OpenModal', ['$scope', '$ionicModal', function($scope, $ionicModal){
+	
+	$scope.openModal = function() {
+		$scope.showModal('templates/modal/popover.html');
 	}
  
 	$scope.showModal = function(templateUrl) {
