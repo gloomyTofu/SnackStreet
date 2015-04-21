@@ -55,9 +55,13 @@ angular.module('starter.controllers', [])
   $scope.dishes = Dish.query();
   $scope.query = 'loves';
 }])
-.controller('DishesCtrl', ['$scope', '$stateParams', 'Dish', '$ionicModal', function($scope, $stateParams, Dish, $ionicModal) {
+.controller('DishesCtrl', ['$scope', '$stateParams', 'Dish', '$ionicModal', '$ionicSlideBoxDelegate', function($scope, $stateParams, Dish, $ionicModal, $ionicSlideBoxDelegate) {
   $scope.dish = Dish.get({dishId: $stateParams.dishId });
 	$scope.query = 'loves';
+	
+	$scope.updateSlider = function () {
+  	$ionicSlideBoxDelegate.update(); //or just return the function
+  }
 	
 	$scope.showImages = function(index) {
 		$scope.activeSlide = index;
