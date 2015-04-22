@@ -4,8 +4,8 @@
 <form name="createNotes" ng-controller="NoteController as noteCtrl" ng-submit="noteCtrl.addMyReview(dish)">
 	
 	<!-- LIVE PREVIEW --> 
-	<ion-list ng-controller="MyCtrl" show-delete="shouldShowDelete" can-swipe="listCanSwipe">
-		<ion-item ng-repeat="myReview in dish.myReview" class="item item-my-reviews">
+	<ion-list show-delete="shouldShowDelete" can-swipe="listCanSwipe">
+		<ion-item ng-repeat="myReview in dish.myReview" class="item item-my-reviews no-padding-bottom" item="myReview">
 			<div class="row no-padding">
 				<div class="col no-padding">
 					<div class="profile-image user">
@@ -28,13 +28,13 @@
 						</div>
 					</div>
 				</div>
-			<ion-option-button class="button button-info" ng-click="edit(item)">
+			<ion-option-button class="button button-info" ng-click="edit(myReview)">
 				<i class="icon ion-edit"></i>
 			</ion-option-button>
-			<ion-option-button class="button button-info" ng-click="delete(item)">
+			<ion-option-button class="button button-info" ng-click="onItemDelete(myReview)">
 				<i class="icon ion-ios-trash"></i>
 			</ion-option-button>
-			<ion-option-button class="button-positive" ng-click="share(item)">
+			<ion-option-button class="button-positive" ng-click="share(myReview)">
 				<i class="icon ion-ios-upload-outline"></i>
 			</ion-option-button>
 			</div>

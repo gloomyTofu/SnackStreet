@@ -78,7 +78,7 @@ ion-option-button.button {
 }
 ion-option-button.button.button-info .ion-edit:before {font-size:20px; }
 
-
+.order-dish fieldset.form-group {border:0; }
 fieldset.form-group.textarea { border:0; padding-top:0.75rem; padding-left:1rem; }
 textarea.form-control { width:75%; height:30px; resize:none; float:left; }
 fieldset.textarea .button.save-button {
@@ -140,7 +140,6 @@ i.icon.icon-right.removeGuide {
     height: 100%;
 }
 
-ion-slide.dish-image.slider-slide .item-image {width:100%; }
 .slider-slides img.dish {
   width: 100% !important;
 }
@@ -378,10 +377,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .order-dish .button {
 	@include button-text-color($contrast-color);
-	margin-left:0.5rem;
 	font-weight:300;
 	display:inline;
-	width:95px;
 	font-size: 1rem;
 	min-height:40px;
 }

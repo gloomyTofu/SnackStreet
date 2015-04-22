@@ -1,6 +1,6 @@
 <ion-view class="dishes dish-detail">
-	<ion-nav-title>{{ dish.title }}</ion-nav-title>
-  <ion-content>
+	<ion-nav-title>{{ dish.title }} {{ dish.lang }}</ion-nav-title>
+  <ion-content has-bouncing="false">
 		<ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="activeSlide" show-pager="false">
   		<ion-slide class="dish-image" ng-repeat="image in dish.images" ng-init="updateSlider()">
 				<div class="item item-image">
@@ -33,26 +33,32 @@
 			<div class="item item-divider">
 				How to Order
 			</div>
-			<div class="item order-dish no-padding-top item-button-right">
-				<label class="item-order-dish">
-					<div class="input-label">
-						{{ dish.title }}
-					</div>
-					<select class="ion-input-select" ng-show="dish.proteins">
-						<option ng-repeat="protein in dish.proteins">{{ protein }}</option>
-					</select>
-				</label>
-				<label class="item-order-dish" ng-show="dish.spice">
-					<select class="ion-input-select">
-						<option ng-repeat="spicy in dish.spice">{{ spicy }}</option>
-					</select>
-				</label>
-				<label class="item-order-dish">
-					<button ng-controller="OpenModal" class="button button-light" ng-click="openModal()">
-						Order <i class="ion-ios-arrow-right padding-left"></i> 
-					</button>
-				</label>
-			</div>
+			<form name="createOrder" ng-controller="OrderController as orderCtrl" ng-submit="orderCtrl.addMyOrder(dish)">
+				<div class="item order-dish no-padding-top">
+				<fieldset class="form-group no-padding">
+					<label class="item-order-dish">
+						<div class="input-label">
+							{{ dish.title }}
+						</div>
+							<select ng-model="orderCtrl.myOrder.protein" class="ion-input-select" ng-show="dish.proteins">
+								<option value="">protein</option>
+								<option ng-repeat="protein in dish.proteins" value="{{ protein | json }}">{{ protein.name }}</option>
+							</select>
+						</label>
+						<label class="item-order-dish" ng-show="dish.spice">
+								<select ng-model="orderCtrl.myOrder.spice" class="ion-input-select">
+									<option value="">spicy?</option>
+									<option ng-repeat="spicy in dish.spice" value="{{ spicy | json }}">{{ spicy.level }}</option>
+								</select>
+						</label>
+						<label class="item-order-dish">
+								<button ng-controller="OpenModal" type="submit" class="button button-light" ng-click="openModal()">
+									Translate <i class="ion-ios-arrow-right padding-left"></i> 
+								</button>
+						</label>
+					</fieldset>
+				</div>
+			</form>
 			<div class="item item-divider">
 				Ingredients
 			</div>

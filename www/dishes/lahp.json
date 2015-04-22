@@ -1,5 +1,6 @@
 {
-	"title": "lahp ລາບ",
+	"title": "lahp",
+	"lang": "ລາບ",
 	"id": "lahp",
 	"name": "Spicy Meat or Fish Salad", 
 	"shortDescription": "One of Laos' most famous dishes. Lahp (also spelt larb or laap) is usually made with minced meat or fish Ingredients are variable depending on region, personal preferences, and whatever is readily available.", 
@@ -32,11 +33,18 @@
 		{ "name": "raw, uncooked meat or fish", "isTrue": "true", "class": "ion-alert-circled" }
 	],
 	"proteins": [
-		"chicken", "pork", "beef", "fish", "tofu", "duck" 
+		{ "name": "chicken", "lang": "ໄກ່", "pronounce": "kai" },
+		{ "name": "pork", "lang": "ໝູ", "pronounce": "mu" }, 
+		{ "name": "beef", "lang": "ຊີ້ນງົວ", "pronounce": "sinngua" }, 
+		{ "name": "fish", "lang": "ປາ", "pronounce": "pa" },
+		{ "name": "tofu", "lang": "ເຕົ້າຫູ້", "pronounce": "tofu" },
+		{ "name": "duck", "lang": "ເປັດ", "pronounce": "ped" }
 	],
 	"spice": [
-		"spicy", "not spicy"
+		{ "level": "spicy", "lang": "ເຜັດ", "pronounce": "phed" },
+		{ "level": "not spicy", "lang": "ບໍ່ ເຜັດ", "pronounce": "bo phed" }
 	],
+	"myOrder": [],
 	"myReview": [],
 	"reviews": [
 		{

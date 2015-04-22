@@ -84,6 +84,34 @@ angular.module('starter.controllers', [])
 		$scope.modal.remove()
 	};
 }])
+.controller('NoteController', function($scope) {
+	this.myReview = {};
+
+	this.addMyReview = function(dish) {
+		dish.myReview.push(this.myReview);
+		this.myReview = {};
+	};
+
+	$scope.shouldShowDelete = false;
+	$scope.shouldShowReorder = false;
+	$scope.listCanSwipe = true;
+  
+  $scope.onItemDelete = function(item) {
+    $scope.items.splice($scope.items.indexOf(item), 1);
+  };
+  
+  $scope.items = [];
+})
+.controller('OrderController', function($scope) {
+	this.myOrder = {};
+
+	this.addMyOrder = function(dish) {
+		dish.myOrder.push(this.myOrder);
+		this.myOrder = {};
+	};
+	
+	console.log(this.myOrder);
+})
 .controller('OpenModal', ['$scope', '$ionicModal', function($scope, $ionicModal){
 	
 	$scope.openModal = function() {
@@ -106,18 +134,4 @@ angular.module('starter.controllers', [])
 		$scope.modal.remove()
 	};
 }])
-.controller('NoteController', function($scope) {
-    this.myReview = {};
-
-    this.addMyReview = function(dish) {
-      dish.myReview.push(this.myReview);
-			
-      this.myReview = {};
-    };
-})
-.controller('MyCtrl', function($scope) {
- $scope.shouldShowDelete = false;
- $scope.shouldShowReorder = false;
- $scope.listCanSwipe = true
-})
 ;

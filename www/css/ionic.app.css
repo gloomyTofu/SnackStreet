@@ -7646,6 +7646,9 @@ a.button {
 .no-padding-top {
   padding-top: 0 !important; }
 
+.no-padding-bottom {
+  padding-bottom: 0 !important; }
+
 .no-padding-vertical {
   padding-top: 0 !important;
   padding-bottom: 0 !important; }
@@ -7748,6 +7751,9 @@ ion-option-button.button {
 ion-option-button.button.button-info .ion-edit:before {
   font-size: 20px; }
 
+.order-dish fieldset.form-group {
+  border: 0; }
+
 fieldset.form-group.textarea {
   border: 0;
   padding-top: 0.75rem;
@@ -7817,9 +7823,6 @@ i.icon.icon-right.removeGuide {
 .image-modal .slider {
   width: 100%;
   height: 100%; }
-
-ion-slide.dish-image.slider-slide .item-image {
-  width: 100%; }
 
 .slider-slides img.dish {
   width: 100% !important; }
@@ -8166,10 +8169,8 @@ a.tab-item.highlightLoved {
 .order-dish .button {
   background: #b4b4b4;
   color: #000;
-  margin-left: 0.5rem;
   font-weight: 300;
   display: inline;
-  width: 95px;
   font-size: 1rem;
   min-height: 40px; }
 

@@ -1,7 +1,10 @@
 <ion-modal-view class="modal open-modal translation">
 	 <div class="row">
 			<div class="col">
-
+				<div ng-repeat="order in dish.myOrder" class="translation-card">
+					<h2 class="h1 center">{{ dish.lang }} {{ order.protein.lang }} {{ order.spice.lang }}</h2>
+					<p class="center">{{ dish.title }} {{ protein.pronounce }} {{ spice.pronounce }}</p>
+				</div>
 		 	</div>
 	  </div>
 		<a class="tab-item close-modal-button" ng-click="closeModal()">
