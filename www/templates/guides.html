@@ -23,7 +23,7 @@
 						<a class="tab-item download-cancel" ng-show="guide.canDownload" href="#">
 								<i class="icon icon-right" ng-click="removed=!removed" toggle-class="removeGuide"></i>
 						</a>
-						<a class="purchase-guide fade-in" ng-hide="guide.canDownload" href="#/app/guides/{{guide.name}}">
+						<a class="purchase-guide fade-in" ng-hide="guide.canDownload" ng-href="#/app/guides/{{guide.name}}">
 								<h4 class="purchase-guide">$1.99</h4>  
 						</a>
 					</ion-slide>

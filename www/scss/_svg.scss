@@ -1,0 +1,16 @@
+svg.icon {
+	display:block;
+	width: 30px;
+  height: 30px;
+}
+
+svg.icon path {
+	display:inline;
+	fill:$base-background-color;
+	stroke:$base-color;
+	stroke-width:2;
+}
+
+svg.icon g#favorite path {
+	
+}

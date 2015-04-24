@@ -1,0 +1,26 @@
+<ion-modal-view class="modal image-modal">
+		<ion-slide-box on-slide-changed="slideChanged(index)" show-pager="true" active-slide="activeSlide">
+			<ion-slide ng-repeat="safe in safety">
+				<div class="fullscreen-image">
+					<div class="row">
+						<div class="col center">
+							<img ng-src="{{safe.src}}">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<h3 class="subheadline">{{safe.name}}</h3>
+						</div>
+					</div>
+					<div class="row padding-horizontal">
+							<div class="col padding-left margin-horizontal">
+								<p>{{safe.description}}</p>
+							</div>
+					</div>
+				</div>
+			</ion-slide>
+	</ion-slide-box>
+	<a class="tab-item close-modal-button" ng-click="closeModal()">
+		<i class="icon ion-ios-close-empty"></i>
+	</a>
+</ion-modal-view>

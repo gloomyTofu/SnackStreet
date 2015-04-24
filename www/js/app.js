@@ -24,56 +24,80 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 }])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-    .state('app', {
-    url: "/app",
-    abstract: true,
-    templateUrl: "templates/menu.html",
-    controller: 'AppCtrl'
-    })
-    .state('app.camera', {
-    url: "/camera",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/camera.html"
-      }
-    }
-    })
-    .state('app.guides', {
-    url: "/guides",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/guides.html",
-        controller: 'GuidesCtrl'
-      }
-    }
-    })
-    .state('app.laos', {
-      url: "/guides/laos",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/guides/laos.html",
-          controller: 'GuideCtrl'
-        }
-      }
-    })
-    .state('app.single', {
-      url: "/guides/laos/:dishId",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/guides/dishes.html",
-          controller: 'DishesCtrl'
-        }
-      }
-    })
-    .state('app.purchase', {
-      url: "/guides/purchase",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/purchase.html",
-          controller: 'PurchaseCtrl'
-        }
-      }
-    });
+	.state('app', {
+		url: "/app",
+		abstract: true,
+		templateUrl: "templates/menu.html",
+		controller: 'AppCtrl'
+	})
+	.state('app.camera', {
+		url: "/camera",
+		views: {
+			'menuContent': {
+				templateUrl: "templates/camera.html"
+			}
+		}
+	})
+	.state('app.guides', {
+		url: "/guides",
+		views: {
+			'menuContent': {
+				templateUrl: "templates/guides.html",
+				controller: 'GuidesCtrl'
+			}
+		}
+	})
+	.state('app.laos', {
+		url: "/guides/laos",
+		views: {
+			'menuContent': {
+				templateUrl: "templates/guides/laos.html",
+				controller: 'GuideCtrl'
+			}
+		}
+	})
+	.state('app.single', {
+		url: "/guides/laos/:dishId",
+		views: {
+			'menuContent': {
+				templateUrl: "templates/guides/dishes.html",
+				controller: 'DishesCtrl'
+			}
+		}
+	})
+	.state('app.account', {
+		url: "/account",
+		views: {
+			'menuContent': {
+				templateUrl: "templates/account/profile.html"
+			}
+		}
+	})
+	.state('app.purchase', {
+		url: "/guides/purchase",
+		views: {
+			'menuContent': {
+				templateUrl: "templates/purchase.html"
+			}
+		}
+	})
+	.state('app.tabs', {
+		url: "/tabs",
+		views: {
+			'menuContent': {
+				templateUrl: "templates/travel-tips.html",
+			}
+		}
+	})
+	.state('app.lists', {
+		url: "/account/lists",
+		views: {
+			'menuContent': {
+				templateUrl: "templates/account/lists.html",
+			}
+		}
+	})
+	;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/guides');
 })
@@ -99,6 +123,24 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 	return {
 		restrict: 'E',
 		templateUrl: 'templates/partial/dish-review.html'
+	};
+})
+.directive('safety', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'templates/safety.html'
+	};
+})
+.directive('phrasebook', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'templates/phrasebook.html'
+	};
+})
+.directive('svgFavorite', function(){
+	return {
+		restrict: 'A',
+		templateUrl: 'templates/svg/svg-favorite.html'
 	};
 })
 .directive('toggleClass', function() {

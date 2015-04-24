@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicTabsDelegate) {
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -32,7 +32,89 @@ angular.module('starter.controllers', [])
     }, 1000);
   };
 })
-
+.controller('SafetyTipsController', function($scope, $ionicModal, $ionicSlideBoxDelegate){
+	$scope.safety = [
+		{
+			"name": "Water and Ice",
+			"description": "Avoid water and ice",
+			"src": "http://placehold.it/350x350"
+		},
+		{
+			"name": "Title",
+			"description": "Description",
+			"src": "http://placehold.it/350x350"
+		},
+		{
+			"name": "Title",
+			"description": "Description",
+			"src": "http://placehold.it/350x350"
+		},
+		{
+			"name": "Title",
+			"description": "Description",
+			"src": "http://placehold.it/350x350"
+		},
+		{
+			"name": "Title",
+			"description": "Description",
+			"src": "http://placehold.it/350x350"
+		},
+		{
+			"name": "Title",
+			"description": "Description",
+			"src": "http://placehold.it/350x350"
+		},
+		{
+			"name": "Title",
+			"description": "Description",
+			"src": "http://placehold.it/350x350"
+		},
+		{
+			"name": "Title",
+			"description": "Description",
+			"src": "http://placehold.it/350x350"
+		}
+	];
+	$scope.showImages = function(index) {
+		$scope.activeSlide = index;
+		$scope.showModal('templates/modal/safety-popover.html');
+	}
+	$scope.showModal = function(templateUrl) {
+		$ionicModal.fromTemplateUrl(templateUrl, {
+			scope: $scope,
+			animation: 'slide-in-up'
+		}).then(function(modal) {
+			$scope.modal = modal;
+			$scope.modal.show();
+		});
+	}
+ 
+	// Close the modal
+	$scope.closeModal = function() {
+		$scope.modal.hide();
+		$scope.modal.remove();
+	};
+})
+.controller('PhraseTipsController', function($scope) {
+	$scope.phrases = [
+		{
+			"english": "Hello",
+			"lang": "ສະບາຍດີ",
+			"pronounce": "sabai di",
+			"sound": "#"
+		}
+	];
+	$scope.togglePhrase = function(phrase) {
+    if ($scope.isPhraseShown(phrase)) {
+      $scope.shownPhrase = null;
+    } else {
+      $scope.shownPhrase = phrase;
+    }
+  };
+  $scope.isPhraseShown = function(phrase) {
+    return $scope.shownPhrase === phrase;
+  };
+})
 .controller('GuidesCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
   $scope.guides = [
     { 
@@ -67,6 +149,10 @@ angular.module('starter.controllers', [])
 		$scope.activeSlide = index;
 		$scope.showModal('templates/modal/image-popover.html');
 	}
+	
+	$scope.openModal = function() {
+		$scope.showModal('templates/modal/popover.html');
+	}
  
 	$scope.showModal = function(templateUrl) {
 		$ionicModal.fromTemplateUrl(templateUrl, {
@@ -81,7 +167,8 @@ angular.module('starter.controllers', [])
 	// Close the modal
 	$scope.closeModal = function() {
 		$scope.modal.hide();
-		$scope.modal.remove()
+		$scope.modal.remove();
+		$scope.myOrder = {};
 	};
 }])
 .controller('NoteController', function($scope) {
@@ -110,28 +197,6 @@ angular.module('starter.controllers', [])
 		this.myOrder = {};
 	};
 	
-	console.log(this.myOrder);
+	console.log($scope.myOrder);
 })
-.controller('OpenModal', ['$scope', '$ionicModal', function($scope, $ionicModal){
-	
-	$scope.openModal = function() {
-		$scope.showModal('templates/modal/popover.html');
-	}
- 
-	$scope.showModal = function(templateUrl) {
-		$ionicModal.fromTemplateUrl(templateUrl, {
-			scope: $scope,
-			animation: 'slide-in-up'
-		}).then(function(modal) {
-			$scope.modal = modal;
-			$scope.modal.show();
-		});
-	}
- 
-	// Close the modal
-	$scope.closeModal = function() {
-		$scope.modal.hide();
-		$scope.modal.remove()
-	};
-}])
 ;

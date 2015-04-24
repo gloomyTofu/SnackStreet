@@ -25,7 +25,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   "www/scss/mixins",
   "www/scss/variables",
   "www/scss/menu",
-	"www/scss/positioning";
+	"www/scss/positioning",
+	"www/scss/svg",
+	"www/scss/animations";
 
 
 // WIREFRAME STYLES
@@ -58,6 +60,7 @@ a h1 { line-height:1; }
 
 span.small-text { position:relative; top:-4px; }
 .small-text { font-size:$font-size-small; }
+.large-text {font-size:$font-size-large; }
 .subheadline { 
     letter-spacing:0.12em; 
     text-transform:uppercase; 
@@ -67,7 +70,21 @@ span.small-text { position:relative; top:-4px; }
 }
 .box-shadow { box-shadow: 1px 1px 10px rgba(0,0,0,.12); }
 
-.item-complex .item-content { padding-right:20px; }
+ion-item.item.item-accordion {
+	background:scale-color($base-light-color,$lightness:85%);
+}
+.item-icon-float-right {
+	i.icon {
+		float:right;
+		font-size: 1.25rem;
+  	padding-right: 5px;
+	}
+	button {
+		float:right;
+	}
+}
+
+.item-complex .item-content { padding-right:20px; padding-bottom:10px; }
 ion-option-button.button {
 	min-width:40px;
 	.button-positive {
@@ -77,6 +94,27 @@ ion-option-button.button {
 	}
 }
 ion-option-button.button.button-info .ion-edit:before {font-size:20px; }
+
+.block-grid {
+	overflow:hidden;
+	padding:0.25rem;
+	&:before {
+		content: "";
+		display:table;
+	}
+	li {
+		float:left;
+		width:50%;
+		padding: 0.25rem;
+	}
+	a {
+		text-align:center; 
+	}
+	img {
+		display:block;
+		width:100%;
+	}
+}
 
 .order-dish fieldset.form-group {border:0; }
 fieldset.form-group.textarea { border:0; padding-top:0.75rem; padding-left:1rem; }
@@ -89,6 +127,12 @@ fieldset.textarea .button.save-button {
 	margin-right:10px;
 }
 .item-my-reviews p, .item-user-reviews p {padding-top:0.12rem; padding-bottom:0.5rem; }
+
+button.button.button-icon.button-clear.ion-navicon.menu-toggle {
+	position:fixed;
+	z-index:11;
+	cursor:pointer;
+}
 
 // Download/Remove Guides
 // -------------------------------
@@ -244,6 +288,41 @@ a.purchase-guide h4 {
     border-color:$base-color;
 }
 
+.order-dish .button, .phrases .button {
+	@include button-text-color($contrast-color);
+	font-weight:300;
+	display:inline;
+	font-size: 1rem;
+	min-height:40px;
+}
+
+// Phrasebook
+ion-item.item-icon-float-right.item.ng-binding.active {
+	color:scale-color($base-color,$lightness:50%);
+	background-color:scale-color($base-light-color,$lightness:50%);
+}
+
+.phrases .button.activated {box-shadow:none; }
+.button.play-button, .button.favorite-button {
+	background-color:transparent; 
+	border:none;
+	min-height:35px;
+	min-width:9%; 
+	padding:0 0 0 3%;
+}
+.play-button i.icon.icon-right {
+	 @include svg-icon(play);
+	 display:block;
+}
+
+.play-button.pause i.icon.icon-right {
+	@include svg-icon(pause);
+}
+
+.button.favorite-button.save svg.icon path {
+	fill:$base-color;
+}
+
 // Search
 // -------------------------------
 .item-input-wrapper {
@@ -373,14 +452,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .dishes :focus {
   outline:none;
-}
-
-.order-dish .button {
-	@include button-text-color($contrast-color);
-	font-weight:300;
-	display:inline;
-	font-size: 1rem;
-	min-height:40px;
 }
 
 // Ingredient Gallery

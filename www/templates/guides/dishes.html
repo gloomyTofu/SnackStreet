@@ -38,21 +38,21 @@
 				<fieldset class="form-group no-padding">
 					<label class="item-order-dish">
 						<div class="input-label">
-							{{ dish.title }}
+							{{ dish.title }} {{ orderCtrl.myOrder.protein }} {{ orderCtrl.myOrder.spice }}
 						</div>
 							<select ng-model="orderCtrl.myOrder.protein" class="ion-input-select" ng-show="dish.proteins">
 								<option value="">protein</option>
-								<option ng-repeat="protein in dish.proteins" value="{{ protein | json }}">{{ protein.name }}</option>
+								<option ng-repeat="protein in dish.proteins" value="{{ protein.lang }}">{{ protein.name }}</option>
 							</select>
 						</label>
 						<label class="item-order-dish" ng-show="dish.spice">
 								<select ng-model="orderCtrl.myOrder.spice" class="ion-input-select">
 									<option value="">spicy?</option>
-									<option ng-repeat="spicy in dish.spice" value="{{ spicy | json }}">{{ spicy.level }}</option>
+									<option ng-repeat="spicy in dish.spice" value="{{ spicy.lang }}">{{ spicy.level }}</option>
 								</select>
 						</label>
 						<label class="item-order-dish">
-								<button ng-controller="OpenModal" type="submit" class="button button-light" ng-click="openModal()">
+								<button type="submit" class="button button-light" ng-click="openModal()">
 									Translate <i class="ion-ios-arrow-right padding-left"></i> 
 								</button>
 						</label>
