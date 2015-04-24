@@ -7697,9 +7697,6 @@ svg.icon path {
   stroke: #000;
   stroke-width: 2; }
 
-svg.icon g#favorite path {
-  fill: #000; }
-
 .slide-in-right {
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0); }
@@ -7722,12 +7719,13 @@ svg.icon g#favorite path {
   -o-transition: all ease-in-out 250ms;
   transition: all ease-in-out 250ms; }
 
-.list .item.item-accordion {
+.item.item-accordion {
   line-height: 2;
-  transition: 0.09s all linear; }
+  transition: 1s all ease-in-out; }
 
 .list .item.item-accordion.ng-hide {
-  line-height: 0; }
+  line-height: 0;
+  transition: 2s all ease-out; }
 
 .list .item.item-accordion.ng-hide-add, .list .item.item-accordion.ng-hide-remove {
   display: block !important; }
@@ -8315,3 +8313,22 @@ img.image-list-thumb {
   font-size: 0.9rem;
   line-height: 1.5;
   margin-left: 5px; }
+
+.item-image.saved-list .list-img, .item-image.saved-list img:first-child {
+  height: 100% !important;
+  width: auto !important; }
+
+.profile .has-tabs-top {
+  top: 0; }
+
+.profile .tabs-top > .tabs, .profile .tabs.tabs-top {
+  top: 292px; }
+
+.profile .list {
+  margin-top: 64px; }
+
+.profile h2 {
+  padding-top: 3px; }
+
+.profile a.item-content {
+  padding-top: 12px; }

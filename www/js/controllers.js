@@ -102,6 +102,42 @@ angular.module('starter.controllers', [])
 			"lang": "ສະບາຍດີ",
 			"pronounce": "sabai di",
 			"sound": "#"
+		},
+		{
+			"english": "How much is this?",
+			"lang": "ຫຼາຍປານໃດ",
+			"pronounce": "rai pandai",
+			"sound": "#"
+		},
+		{
+			"english": "Not spicy",
+			"lang": "ບໍ່ ເຜັດ",
+			"pronounce": "bo  phed",
+			"sound": "#"
+		},
+		{
+			"english": "I'm vegetarian",
+			"lang": "?? ກິນ ?? ຜັກ",
+			"pronounce": "khoi kin te phak",
+			"sound": "#"
+		},
+		{
+			"english": "I can't eat meat",
+			"lang": "?? ກິນ ຊີ້ນ ??",
+			"pronounce": "khoi kin sin baw dai",
+			"sound": "#"
+		},
+		{
+			"english": "Delicious!",
+			"lang": "ນົວ",
+			"pronounce": "saep",
+			"sound": "#"
+		},
+		{
+			"english": "Thank you",
+			"lang": "ຂໍຂອບໃຈທ່ານ",
+			"pronounce": "khokhobchaithan",
+			"sound": "#"
 		}
 	];
 	$scope.togglePhrase = function(phrase) {

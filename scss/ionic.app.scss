@@ -482,3 +482,17 @@ img.image-list-thumb {
 		line-height:1.5;
 		margin-left:5px;
 }
+
+// Saved List
+.item-image.saved-list .list-img, .item-image.saved-list img:first-child {
+  height: 100% !important;
+  width: auto !important; 
+}
+.profile .has-tabs-top {top:0; }
+.profile .tabs-top>.tabs, .profile .tabs.tabs-top {
+	top:292px;
+}
+
+.profile .list {margin-top:64px; }
+.profile h2 {padding-top:3px; }
+.profile a.item-content {padding-top:12px; }

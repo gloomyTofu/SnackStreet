@@ -18,13 +18,14 @@
   @include transition(all ease-in-out 250ms);
 }
 
-.list .item.item-accordion {
+.item.item-accordion {
 	line-height:2;
-	transition:0.09s all linear;
+	transition:1s all ease-in-out;
 }
 
 .list .item.item-accordion.ng-hide {
 	line-height:0;
+	transition:2s all ease-out;
 }
 
 .list .item.item-accordion.ng-hide-add, .list .item.item-accordion.ng-hide-remove {

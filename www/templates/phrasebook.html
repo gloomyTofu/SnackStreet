@@ -1,17 +1,11 @@
-<ion-view>
-	<ion-header-bar>
-    <h1 class="title">Phrasebook</h1>
-	</ion-header-bar>
+<ion-view view-title="Phrasebook">
 	<ion-content ng-controller="PhraseTipsController" class="phrases">
 		<ion-list ng-repeat="phrase in phrases">
 			<ion-item ng-click="togglePhrase(phrase)" ng-class="{active: isPhraseShown(phrase)}" class="item-icon-float-right">
 				{{phrase.english}} <i class="icon icon-right" ng-class="isPhraseShown(phrase) ? 'ion-ios-arrow-down' : 'ion-ios-arrow-right'"></i>
 			</ion-item>
 			<ion-item class="item-accordion item-icon-float-right" ng-show="isPhraseShown(phrase)">
-				<span class="large-text">{{phrase.lang}} <a href="#" ng-click="{active: isPhraseShow(phrase)}"> {{phrase.pronounce}}</a></span>
-				<button class="button favorite-button" ng-click="removed=!removed" toggle-class="save">
-					<svg svg-favorite viewBox="0 1 30 30" class="icon icon-right favorite">
-						
+				<span class="large-text">{{phrase.lang}} <a href="#" ng-click="{active: isPhraseShow(phrase)}"> {{phrase.pronounce}}</a></span>		
 					</svg>
 				</button>
 				<button class="button play-button" ng-click="removed=!removed" toggle-class="pause" href="{{say.sound}}">

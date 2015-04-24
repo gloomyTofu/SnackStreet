@@ -81,11 +81,19 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 			}
 		}
 	})
-	.state('app.tabs', {
-		url: "/tabs",
+	.state('app.safety', {
+		url: "/travel-tips/safety",
 		views: {
 			'menuContent': {
-				templateUrl: "templates/travel-tips.html",
+				templateUrl: "templates/safety.html"
+			}
+		}
+	})
+	.state('app.phrasebook', {
+		url: "/travel-tips/phrasebook",
+		views: {
+			'menuContent': {
+				templateUrl: "templates/phrasebook.html"
 			}
 		}
 	})
@@ -93,7 +101,7 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 		url: "/account/lists",
 		views: {
 			'menuContent': {
-				templateUrl: "templates/account/lists.html",
+				templateUrl: "templates/account/lists.html"
 			}
 		}
 	})
@@ -113,6 +121,36 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 		templateUrl: 'templates/partial/save-dish.html'
 	};
 })
+.directive('activityList', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'templates/account/activity-list.html'
+	};
+})
+.directive('savedList', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'templates/account/saved-list.html'
+	};
+})
+.directive('triedList', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'templates/account/tried-list.html'
+	};
+})
+.directive('likedList', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'templates/account/liked-list.html'
+	};
+})
+.directive('profileMain', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'templates/partial/profile-main.html'
+	};
+})
 .directive('keywordsList', function(){
 	return {
 		restrict: 'E',
@@ -123,18 +161,6 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 	return {
 		restrict: 'E',
 		templateUrl: 'templates/partial/dish-review.html'
-	};
-})
-.directive('safety', function(){
-	return {
-		restrict: 'E',
-		templateUrl: 'templates/safety.html'
-	};
-})
-.directive('phrasebook', function(){
-	return {
-		restrict: 'E',
-		templateUrl: 'templates/phrasebook.html'
 	};
 })
 .directive('svgFavorite', function(){

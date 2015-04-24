@@ -1,12 +1,16 @@
-<ion-view view-title="Profile">
-	<ion-content class="padding">
-		<div class="side-menu-profile margin">
-        <div class="profile-image">
-            <!--<img src="#">-->  
-        </div>
-        <div class="profile-name">
-            gloomyTofu  
-        </div>
-      </div>
-	</ion-content>
+<ion-view view-title="Profile" class="profile">
+	<ion-tabs class="tabs-striped tabs-top">
+		<ion-tab icon-on="" title="Activity">
+			<profile-main></profile-main>
+			<activity-list></activity-list>
+		</ion-tab>
+		<ion-tab icon-on="" title="Tried">
+			<profile-main></profile-main>
+			<tried-list></tried-list>
+		</ion-tab>
+		<ion-tab icon-on="" title="Liked">
+			<profile-main></profile-main>
+			<liked-list></liked-list>
+		</ion-tab>
+	</ion-tabs>
 </ion-view>
