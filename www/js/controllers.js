@@ -35,27 +35,27 @@ angular.module('starter.controllers', [])
 .controller('SafetyTipsController', function($scope, $ionicModal, $ionicSlideBoxDelegate){
 	$scope.safety = [
 		{
-			"name": "Water and Ice",
-			"description": "Avoid water and ice",
+			"name": "Tap Water/Ice",
+			"description": "Do not drink river or tap water. Chinese tea made from boiled water is generally safe, but travellers should shun ice that doesn’t look factory-made.",
 			"src": "http://placehold.it/350x350"
 		},
 		{
-			"name": "Title",
+			"name": "Bottled Water",
+			"description": "Safe bottled water is available almost anywhere, though when buying, check that the seal is unbroken as bottles are occasionally refilled from the tap.",
+			"src": "http://placehold.it/350x350"
+		},
+		{
+			"name": "Raw Fruits/Veggies",
 			"description": "Description",
 			"src": "http://placehold.it/350x350"
 		},
 		{
-			"name": "Title",
+			"name": "Peeled Fruit/Veggies",
 			"description": "Description",
 			"src": "http://placehold.it/350x350"
 		},
 		{
-			"name": "Title",
-			"description": "Description",
-			"src": "http://placehold.it/350x350"
-		},
-		{
-			"name": "Title",
+			"name": "Dried Products",
 			"description": "Description",
 			"src": "http://placehold.it/350x350"
 		},
@@ -110,7 +110,31 @@ angular.module('starter.controllers', [])
 			"sound": "#"
 		},
 		{
+			"english": "Can I order this?",
+			"lang": "ຫຼາຍປານໃດ",
+			"pronounce": "rai pandai",
+			"sound": "#"
+		},
+		{
+			"english": "Sticky rice",
+			"lang": "?? ກິນ ຊີ້ນ ??",
+			"pronounce": "baw sai phong su lot",
+			"sound": "#"
+		},
+		{
 			"english": "Not spicy",
+			"lang": "ບໍ່ ເຜັດ",
+			"pronounce": "bo  phed",
+			"sound": "#"
+		},
+		{
+			"english": "Medium spicy",
+			"lang": "ບໍ່ ເຜັດ",
+			"pronounce": "bo  phed",
+			"sound": "#"
+		},
+		{
+			"english": "Very spicy",
 			"lang": "ບໍ່ ເຜັດ",
 			"pronounce": "bo  phed",
 			"sound": "#"
@@ -122,9 +146,15 @@ angular.module('starter.controllers', [])
 			"sound": "#"
 		},
 		{
-			"english": "I can't eat meat",
+			"english": "Without fish sauce",
 			"lang": "?? ກິນ ຊີ້ນ ??",
-			"pronounce": "khoi kin sin baw dai",
+			"pronounce": "baw sai nam pa",
+			"sound": "#"
+		},
+		{
+			"english": "Without MSG",
+			"lang": "?? ກິນ ຊີ້ນ ??",
+			"pronounce": "baw sai phong su lot",
 			"sound": "#"
 		},
 		{

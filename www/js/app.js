@@ -66,10 +66,10 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 		}
 	})
 	.state('app.account', {
-		url: "/account",
+		url: "/profile",
 		views: {
 			'menuContent': {
-				templateUrl: "templates/account/profile.html"
+				templateUrl: "templates/profile.html"
 			}
 		}
 	})
@@ -98,10 +98,10 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 		}
 	})
 	.state('app.lists', {
-		url: "/account/lists",
+		url: "/lists",
 		views: {
 			'menuContent': {
-				templateUrl: "templates/account/lists.html"
+				templateUrl: "templates/lists.html"
 			}
 		}
 	})
@@ -124,25 +124,25 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 .directive('activityList', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'templates/account/activity-list.html'
+		templateUrl: 'templates/partial/activity-list.html'
 	};
 })
 .directive('savedList', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'templates/account/saved-list.html'
+		templateUrl: 'templates/partial/saved-list.html'
 	};
 })
 .directive('triedList', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'templates/account/tried-list.html'
+		templateUrl: 'templates/partial/tried-list.html'
 	};
 })
 .directive('likedList', function(){
 	return {
 		restrict: 'E',
-		templateUrl: 'templates/account/liked-list.html'
+		templateUrl: 'templates/partial/liked-list.html'
 	};
 })
 .directive('profileMain', function(){
