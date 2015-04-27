@@ -1,0 +1,11 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px"
+	 height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+<g id="heart">
+		<g display="inline">
+		<path fill="#FFFFFF" stroke="#4D4D4D" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M27.255,11.313
+			c-0.145-2.152-0.644-3.907-2.413-5.278C23.7,5.15,22.28,4.646,20.832,4.646c-2.539,0-4.727,1.591-5.769,3.729
+			C14.02,6.237,11.832,4.59,9.293,4.59c-2.756,0-5.511,1.96-6.228,4.661c-1.022,3.849,0.316,7.735,2.922,10.603
+			c2.041,2.246,4.653,3.969,7.375,5.278c0.231,0.111,1.258,0.77,1.527,0.673C14.897,25.802,27.908,21.115,27.255,11.313z"/>
+	</g>
+</g>
+</svg>
