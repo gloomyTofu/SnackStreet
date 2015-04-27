@@ -23,6 +23,11 @@
 						<img ng-src="{{dish.images[0].full}}">
 					</a>
 				</div>
+				<div ng-controller="ShareDish" class="over-image-info-share base-color">
+					<button class="button-icon" ng-click="showActionsheet()">
+						<i class="icon ion-ios-upload-outline"></i>				
+					</button>
+				</div>
 				<save-dish></save-dish>
 				<div class="row no-padding-vertical">
 					<div class="col">

@@ -20,7 +20,7 @@
 							</ul>
 					</div>
 			</div>
-			<div class="keywords margin-bottom">
+			<div class="keywords margin-bottom padding-horizontal">
 				<keywords-list></keywords-list>
 			</div>
 		</div>
@@ -28,6 +28,11 @@
 			<p>
 				<i class="icon ion-ios-heart"></i> {{ count + dish.loves }} Loved This
 			</p>
+		</div>
+		<div ng-controller="ShareDish" class="over-image-info-share">
+			<button class="button-icon" ng-click="showActionsheet()">
+				<i class="icon ion-ios-upload-outline"></i>				
+			</button>
 		</div>
 		<div class="list">
 			<div class="item item-divider">

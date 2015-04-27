@@ -29,10 +29,13 @@ svg.icon path {
 // account icon
 .bar-light .button.button-icon.svg-icon.login, .bar-light .button.button-clear.svg-icon.login, .bar-light.button.button-icon.svg-icon.login:before {
 	@include svg-icon(profile);
+	background-position: 0px 1px;
 	border-width:2px;
 }
 
 .bar-light .button.button-icon.svg-icon.camera, .bar-light .button.button-clear.svg-icon.camera, .bar-light.button.button-icon.svg-icon.camera:before {
 	@include svg-icon(camera);
+	background-position: 0px 3px;
 	border-width:0;
+	margin-right:5px;
 }

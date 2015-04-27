@@ -7711,6 +7711,7 @@ svg.icon path {
   width: 30px;
   height: 30px;
   fill: #000;
+  background-position: 0px 1px;
   border-width: 2px; }
   .bar-light .button.button-icon.svg-icon.login:hover, .bar-light svg.button.button-icon.login.icon:hover, .bar-light .button.button-clear.svg-icon.login:hover, .bar-light svg.button.button-clear.login.icon:hover, .bar-light.button.button-icon.svg-icon.login:before:hover, svg.bar-light.button.button-icon.login.icon:before:hover {
     fill: #808080; }
@@ -7720,7 +7721,9 @@ svg.icon path {
   width: 30px;
   height: 30px;
   fill: #000;
-  border-width: 2px; }
+  background-position: 0px 3px;
+  border-width: 0;
+  margin-right: 5px; }
   .bar-light .button.button-icon.svg-icon.camera:hover, .bar-light svg.button.button-icon.camera.icon:hover, .bar-light .button.button-clear.svg-icon.camera:hover, .bar-light svg.button.button-clear.camera.icon:hover, .bar-light.button.button-icon.svg-icon.camera:before:hover, svg.bar-light.button.button-icon.camera.icon:before:hover {
     fill: #808080; }
 
@@ -7937,6 +7940,11 @@ i.icon.icon-right.removeGuide {
   right: 0;
   top: 0; }
 
+.image-modal.camera-modal .fullscreen-image {
+  left: -40%;
+  overflow: visible;
+  position: relative; }
+
 .image-modal .slider {
   width: 100%;
   height: 100%; }
@@ -7956,6 +7964,47 @@ a.tab-item.close-modal-button .icon {
   font-size: 50px;
   height: 35px;
   color: #000; }
+
+.camera-controls .left-side svg-icon {
+  font-size: 3rem;
+  float: right;
+  margin-top: 45px;
+  margin-right: 15px;
+  color: #a6a6a6; }
+
+.camera-controls .right-side svg-icon {
+  font-size: 3rem;
+  float: left;
+  margin-top: 45px;
+  margin-left: 15px;
+  color: #a6a6a6; }
+
+.button.button-icon.svg-icon.images, svg.button.button-icon.images.icon {
+  background-image: url('../img/icon/images.svg');
+  width: 30px;
+  height: 30px;
+  fill: #000; }
+  .button.button-icon.svg-icon.images:hover, svg.button.button-icon.images.icon:hover {
+    fill: #808080; }
+
+.button.button-icon.svg-icon.blur, svg.button.button-icon.blur.icon {
+  background-image: url('../img/icon/blur.svg');
+  width: 30px;
+  height: 30px;
+  fill: #000; }
+  .button.button-icon.svg-icon.blur:hover, svg.button.button-icon.blur.icon:hover {
+    fill: #808080; }
+
+.camera-controls .button.circle-button {
+  background: #404040;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  margin: 0.5rem auto 0;
+  border: 5px solid #D2D2D2; }
+
+.camera-controls .button.circle-button.activated {
+  background: #a0a0a0; }
 
 a.purchase-guide.fade-in {
   top: 6%;
@@ -8258,6 +8307,26 @@ a.tab-item.highlightLoved {
   background: -ms-linear-gradient(10deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%);
   background: linear-gradient(10deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); }
+
+.dishes .over-image-info-share {
+  position: absolute;
+  top: 195px;
+  left: 5px;
+  z-index: 3; }
+
+.over-image-info-share.base-color {
+  top: 8px;
+  left: auto;
+  right: 8px; }
+
+.over-image-info-share i.icon {
+  color: #fff; }
+
+.over-image-info-share.base-color i.icon {
+  color: #a6a6a6; }
+
+.dishes .item-body {
+  padding: 8px; }
 
 .condensed-keywords {
   margin-top: 18px; }

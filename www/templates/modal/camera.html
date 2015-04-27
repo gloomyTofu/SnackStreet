@@ -1,4 +1,4 @@
-<ion-modal-view>
+<ion-modal-view class="modal image-modal camera-modal">
 	  <ion-header-bar>
     <h1 class="title">Camera</h1>
 		<a class="tab-item close-modal-button" ng-click="closeModal()">
@@ -6,6 +6,20 @@
 		</a>
   </ion-header-bar>
   <ion-content>
-    
+		<div class="fullscreen-image">
+			<img ng-src="img/tam-mak-hung/tai_7215_3.jpg">
+		</div>
+		<div class="row camera-controls">
+			<div class="col col-33 left-side">
+				<button class="button-icon svg-icon images"></button>
+			</div>
+			<div class="col col-33 center">
+				<button class="button circle-button">
+				</button>
+			</div>
+			<div class="col col-33 right-side">
+				<button class="button-icon svg-icon blur"></button>
+			</div>
+		</div>
   </ion-content>
 </ion-modal-view>

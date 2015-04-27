@@ -309,4 +309,25 @@ angular.module('starter.controllers', [])
 		$scope.modal.remove();
 	};
 }])
+.controller('ShareDish', ['$scope', '$ionicActionSheet', function($scope, $ionicActionSheet){
+		//Actionsheet
+	$scope.showActionsheet = function() {
+		$ionicActionSheet.show({
+			titleText: 'SHARE',
+			buttons: [
+				{ text: '<i class="icon ion-social-facebook"></i> Facebook' },
+				{ text: '<i class="icon ion-social-twitter"></i> Twitter' },
+				{ text: '<i class="icon ion-ios-more"></i> More' }
+			],
+			cancelText: 'Cancel',
+			cancel: function() {
+				console.log('CANCELLED');
+			},
+			buttonClicked: function(index) {
+				console.log('BUTTON CLICKED', index);
+				return true;
+			}
+		});
+  };
+}])
 ;
