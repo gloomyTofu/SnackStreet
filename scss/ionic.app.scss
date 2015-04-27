@@ -70,6 +70,10 @@ span.small-text { position:relative; top:-4px; }
 }
 .box-shadow { box-shadow: 1px 1px 10px rgba(0,0,0,.12); }
 
+.nav-bar-tabs-top .bar-light.bar.bar-header {
+	border: 1px solid rgba(221, 221, 221, 0.5);
+}
+
 ion-item.item.item-accordion {
 	background:scale-color($base-light-color,$lightness:85%);
 }
@@ -139,7 +143,7 @@ button.button.button-icon.button-clear.ion-navicon.menu-toggle {
 a.tab-item.download-cancel, a.purchase-guide.fade-in {
   position: absolute;
   top: 7%;
-  right: 10%;
+  right: 9%;
   height: auto;
   z-index: 2;
 }
@@ -302,24 +306,19 @@ ion-item.item-icon-float-right.item.ng-binding.active {
 	background-color:scale-color($base-light-color,$lightness:50%);
 }
 
-.phrases .button.activated {box-shadow:none; }
-.button.play-button, .button.favorite-button {
+.button.save, .button.play {
 	background-color:transparent; 
 	border:none;
 	min-height:35px;
 	min-width:9%; 
 	padding:0 0 0 3%;
 }
-.play-button i.icon.icon-right {
-	 @include svg-icon(play);
-	 display:block;
+
+.button.icon-favorite {
+	@extend .button.save;
 }
 
-.play-button.pause i.icon.icon-right {
-	@include svg-icon(pause);
-}
-
-.button.favorite-button.save svg.icon path {
+.button.save svg.icon path#activated, .button.save.activated svg.icon polygon {
 	fill:$base-color;
 }
 
@@ -378,6 +377,10 @@ a.tab-item.highlightLoved {
 	position:relative;
 }
 
+.dishes .card .item.item-image {
+  border: none;
+}
+
 .dishes .over-image-info {
 	position:absolute;
 	top:0;
@@ -409,6 +412,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	.small-text {
 		color:scale-color($base-color,$lightness:50%);	
 	}
+}
+
+.saveDish h2 {
+  font-size: 1.75rem;
 }
 
 // Order Dish
@@ -488,11 +495,49 @@ img.image-list-thumb {
   height: 100% !important;
   width: auto !important; 
 }
+.profile-name {
+	@extend h5;
+	margin-top:2px;
+}
+.main-profile i.icon {
+	font-size:1.12rem;
+	color:$base-color;
+}
 .profile .has-tabs-top {top:0; }
 .profile .tabs-top>.tabs, .profile .tabs.tabs-top {
 	top:292px;
 }
 
-.profile .list {margin-top:64px; }
+.profile .list {margin-top:36px; }
 .profile h2 {padding-top:3px; }
 .profile a.item-content {padding-top:12px; }
+
+.savedList .has-header {
+  top: 44px;
+}
+
+// Translation Cards
+.translation-card.tab-content {
+  margin-top: 15%;
+	text-align:center;
+}
+
+.translation-card {
+	.row {
+		width:80%; 
+		margin:0 auto;
+		text-align:center;
+	}
+	.col-content {width:100%; }
+	.col-buttons {width:100%; }
+	h1 {
+		font-size:5em;
+	}
+}
+
+.translation-card.lao.tab-content {
+	margin-top:10%; 
+	.row {
+		width:100%; 
+	}
+}

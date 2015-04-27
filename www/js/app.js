@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 'starter.controllers'])
+var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 'starter.controllers', 'ngSanitize'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,6 +22,9 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 .config(['$compileProvider', function($compileProvider) {
         	$compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|content):|data:image\//);
 }])
+.config(['$sceProvider', function($sceProvider) {
+	$sceProvider.enabled(false);
+}])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 	.state('app', {
@@ -29,14 +32,6 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 		abstract: true,
 		templateUrl: "templates/menu.html",
 		controller: 'AppCtrl'
-	})
-	.state('app.camera', {
-		url: "/camera",
-		views: {
-			'menuContent': {
-				templateUrl: "templates/camera.html"
-			}
-		}
 	})
 	.state('app.guides', {
 		url: "/guides",
@@ -49,6 +44,7 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 	})
 	.state('app.laos', {
 		url: "/guides/laos",
+		cache: false,
 		views: {
 			'menuContent': {
 				templateUrl: "templates/guides/laos.html",
@@ -65,14 +61,6 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 			}
 		}
 	})
-	.state('app.account', {
-		url: "/profile",
-		views: {
-			'menuContent': {
-				templateUrl: "templates/profile.html"
-			}
-		}
-	})
 	.state('app.purchase', {
 		url: "/guides/purchase",
 		views: {
@@ -82,7 +70,7 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 		}
 	})
 	.state('app.safety', {
-		url: "/travel-tips/safety",
+		url: "/travel/safety",
 		views: {
 			'menuContent': {
 				templateUrl: "templates/safety.html"
@@ -90,15 +78,26 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 		}
 	})
 	.state('app.phrasebook', {
-		url: "/travel-tips/phrasebook",
+		url: "/travel/phrasebook",
 		views: {
 			'menuContent': {
-				templateUrl: "templates/phrasebook.html"
+				templateUrl: "templates/phrasebook.html",
+				controller: "PhraseTipsController"
+			}
+		}
+	})
+	.state('app.profile', {
+		url: "/profile",
+		cache: false,
+		views: {
+			'menuContent': {
+				templateUrl: "templates/profile.html"
 			}
 		}
 	})
 	.state('app.lists', {
-		url: "/lists",
+		url: "/saved-lists",
+		cache: false,
 		views: {
 			'menuContent': {
 				templateUrl: "templates/lists.html"
@@ -115,6 +114,19 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
       query: {method:'GET', params:{dishId:'dishes'}, isArray:true}
     });
 }])
+.factory('audio', function($document){
+	var audioElement = $document[0].getElementById('player');
+	return {
+		audioElement: audioElement,
+		play: function(filename){
+			audioElement.src = filename;
+			audioElement.play();
+		},
+		pause: function(){
+			audioElement.pause();
+		}
+	}
+})
 .directive('saveDish', function(){
 	return {
 		restrict: 'E',
@@ -131,6 +143,12 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 	return {
 		restrict: 'E',
 		templateUrl: 'templates/partial/saved-list.html'
+	};
+})
+.directive('savedOrders', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'templates/partial/saved-orders.html'
 	};
 })
 .directive('triedList', function(){
@@ -167,6 +185,12 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 	return {
 		restrict: 'A',
 		templateUrl: 'templates/svg/svg-favorite.html'
+	};
+})
+.directive('svgSound', function(){
+	return {
+		restrict: 'A',
+		templateUrl: 'templates/svg/svg-sound.html'
 	};
 })
 .directive('toggleClass', function() {

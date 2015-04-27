@@ -3,8 +3,8 @@
         "title": "lahp",
 				"lang": "ລາບ",
 				"id": "lahp",
-				"name": "Spicy meat or fish salad.", 
-        "shortDescription": "A salad of minced meat, fish, seafood, or tofu. If there was a national dissh of Laos, Laap would be a strong contender.", 
+				"name": "Spicy meat or fish salad", 
+				"shortDescription": "One of Laos' most famous dishes. Lahp (also spelt larb or laap) is usually made with minced meat or fish Ingredients are variable depending on region, personal preferences, and whatever is readily available.",
         "keywords": [
 					{ "name": "local", "isTrue": "true" },
 					{ "name": "spicy", "isTrue": "true" },
@@ -15,15 +15,16 @@
         "adventurous": 6,
 				"images": [
           {
-            "full": ""
+            "full": "img/lahp/lahp.jpg"
           }
         ]
     },
     { 
         "title": "tam màk hung",
-        "id": "tam-mak-hung-papaya-salad",
-        "name": "tam-mak-hung-papaya-salad",
-        "shortDescription": "A quintessentially Lao dish: spicy papaya salad.", 
+				"lang": "ຕໍາໝາກຮຸ່ງ",
+        "id": "tam-mak-hung",
+        "name": "Sour and spicy green papaya salad",
+        "shortDescription": "One of the most common street-vendor foods, papaya salad can be eaten either as a snack, often with pork rinds, or as part of a meal.", 
         "keywords": [
 					{ "name": "local", "isTrue": "true" },
 					{ "name": "spicy", "isTrue": "true" },
@@ -34,7 +35,7 @@
         "adventurous": 5,
 				"images": [
           {
-            "full": ""
+            "full": "img/tam-mak-hung/papaya-salad.jpg"
           }
         ]
     },

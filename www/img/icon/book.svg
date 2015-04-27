@@ -1,0 +1,17 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px"
+	 height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+<g id="book">
+	<g display="inline">
+		<path fill="#FFFFFF" stroke="#4D4D4D" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M3.094,23.584
+			V5.177c0-0.597,0.486-1.083,1.083-1.083h9.741C14.516,4.095,15,4.58,15,5.177v18.407c0,0.597-0.484,1.082-1.083,1.082H4.176
+			C3.58,24.666,3.094,24.181,3.094,23.584z"/>
+		<path fill="#FFFFFF" stroke="#4D4D4D" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M15,23.584
+			V5.177c0-0.597,0.485-1.083,1.082-1.083h9.741c0.598,0,1.083,0.485,1.083,1.083v18.407c0,0.597-0.485,1.082-1.083,1.082h-9.741
+			C15.485,24.666,15,24.181,15,23.584z"/>
+		<path fill="none" stroke="#4D4D4D" stroke-linecap="square" stroke-linejoin="round" stroke-miterlimit="10" d="M16.953,24.666
+			h-0.871c-0.597,0-1.082,0.485-1.082,1.084v-2.839"/>
+		<path fill="none" stroke="#4D4D4D" stroke-linecap="square" stroke-linejoin="round" stroke-miterlimit="10" d="M12.86,24.666
+			h1.058c0.598,0,1.083,0.485,1.083,1.084v0.155"/>
+	</g>
+</g>
+</svg>

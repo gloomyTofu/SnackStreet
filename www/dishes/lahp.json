@@ -14,19 +14,19 @@
 	"adventurous": 6,
 	"images": [
 		{ 
-			"src": "img/laap/5799807438_b424c46e3a_z.jpg" 
+			"src": "img/lahp/5799807438_b424c46e3a_z.jpg" 
 		},
 		{ 
-			"src": "img/laap/14132395078_1135e6d532_z.jpg" 
+			"src": "img/lahp/14132395078_1135e6d532_z.jpg" 
 		},
 		{ 
-			"src": "img/laap/rasamalaysia-laap.jpg" 
+			"src": "img/lahp/rasamalaysia-laap.jpg" 
 		},
 		{ 
-			"src": "img/laap/seriouseats-laap.jpg" 
+			"src": "img/lahp/seriouseats-laap.jpg" 
 		},
 		{ 
-			"src": "img/laap/thehungrypup-laap.jpg"
+			"src": "img/lahp/thehungrypup-laap.jpg"
 		}
 	],
 	"tips": [
@@ -37,12 +37,14 @@
 		{ "name": "pork", "lang": "ໝູ", "pronounce": "mu" }, 
 		{ "name": "beef", "lang": "ຊີ້ນງົວ", "pronounce": "sinngua" }, 
 		{ "name": "fish", "lang": "ປາ", "pronounce": "pa" },
-		{ "name": "tofu", "lang": "ເຕົ້າຫູ້", "pronounce": "tofu" },
+		{ "name": "tofu", "lang": "ເຕົ້າຫູ້", "pronounce": "taohu" },
 		{ "name": "duck", "lang": "ເປັດ", "pronounce": "ped" }
 	],
 	"spice": [
+		{ "level": "not spicy", "lang": "ບໍ່ ເຜັດ", "pronounce": "bo phed" },
+		{ "level": "medium", "lang": "ເຜັດ ປານກາງ", "pronounce": "phed pankang" },
 		{ "level": "spicy", "lang": "ເຜັດ", "pronounce": "phed" },
-		{ "level": "not spicy", "lang": "ບໍ່ ເຜັດ", "pronounce": "bo phed" }
+		{ "level": "very spicy", "lang": "ເອົາ ເຜັດ ໆ", "pronounce": "au phed phed" }
 	],
 	"myOrder": [],
 	"myReview": [],
@@ -79,5 +81,6 @@
 		{
 			"src": "img/ingredients/minced-meat.jpg"
 		}
-	]
+	],
+	"lahp": "lahp"
 }

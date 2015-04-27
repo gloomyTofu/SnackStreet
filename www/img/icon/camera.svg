@@ -1,0 +1,17 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px"
+	 height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+<g id="camera">
+	<g display="inline">
+		<polyline fill="#FFFFFF" stroke="#4D4D4D" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			7.364,8.122 6.541,6.325 3.771,6.325 2.873,8.122 		"/>
+		<path fill="#FFFFFF" stroke="#4D4D4D" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M9.505,8.122
+			l1.455-3.22c0.069-0.032,0.146-0.058,0.21-0.093h9.336c0.054,0.023,0.103,0.05,0.16,0.07l1.19,3.242h2.134h4.785
+			c0.048,0.05,0.097,0.095,0.148,0.14v16.859c-0.024,0.023-0.05,0.045-0.073,0.069H1.216c-0.046-0.039-0.09-0.075-0.14-0.11V8.422
+			c0.088-0.094,0.167-0.193,0.238-0.3h1.559h4.492h1.573H9.505z"/>
+		
+			<circle fill="#FFFFFF" stroke="#4D4D4D" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="15.584" cy="16.303" r="5.479"/>
+		
+			<circle fill="#FFFFFF" stroke="#4D4D4D" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="25.03" cy="10.815" r="0.225"/>
+	</g>
+</g>
+</svg>

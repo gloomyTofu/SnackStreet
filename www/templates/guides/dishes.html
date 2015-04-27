@@ -15,7 +15,7 @@
 							<p class="no-margin margin-bottom">{{ dish.shortDescription }}</p>
 							<ul class="margin-bottom">
 								<li ng-repeat="tip in dish.tips">
-									<i class="icon {{tip.class}}"> <span>&nbsp;Avoid {{ tip.name }}</span></i>
+									<i class="icon {{tip.class}}" ng-show="tip.class"> <span>&nbsp;Avoid {{ tip.name }}</span></i>
 								</li>
 							</ul>
 					</div>
@@ -42,17 +42,20 @@
 						</div>
 							<select ng-model="orderCtrl.myOrder.protein" class="ion-input-select" ng-show="dish.proteins">
 								<option value="">protein</option>
-								<option ng-repeat="protein in dish.proteins" value="{{ protein.lang }}">{{ protein.name }}</option>
+								<option ng-repeat="protein in dish.proteins" value="{{ protein.pronounce }}">{{ protein.name }}</option>
 							</select>
 						</label>
 						<label class="item-order-dish" ng-show="dish.spice">
 								<select ng-model="orderCtrl.myOrder.spice" class="ion-input-select">
 									<option value="">spicy?</option>
-									<option ng-repeat="spicy in dish.spice" value="{{ spicy.lang }}">{{ spicy.level }}</option>
+									<option ng-repeat="spicy in dish.spice" value="{{ spicy.pronounce }}">{{ spicy.level }}</option>
 								</select>
 						</label>
 						<label class="item-order-dish">
-								<button type="submit" class="button button-light" ng-click="openModal()">
+								<!--<button type="submit" class="button button-light" ng-click="openModal()">
+									Translate <i class="ion-ios-arrow-right padding-left"></i> 
+								</button>-->
+								<button ng-controller="OrderCards" type="submit" class="button button-light" ng-click="openModalTwo()">
 									Translate <i class="ion-ios-arrow-right padding-left"></i> 
 								</button>
 						</label>

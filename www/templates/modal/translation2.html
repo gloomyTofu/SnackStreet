@@ -1,0 +1,39 @@
+<ion-modal-view class="modal open-modal translation">
+		<ion-tabs class="tabs-striped">
+			<ion-tab title="Order">
+				<div class="translation-card">
+					<div class="row">
+						<div class="col-content">
+							<h2>labsinngua sukpankang phed pankang</h2>
+							<p>minced beef salad medium spicy</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-buttons">
+							<audio id="player" ng-src="audio/beef-lahp.mp3"></audio>
+							<button class="button play"  onclick="document.getElementById('player').play()">
+								<svg svg-sound viewBox="1 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-right sound"></svg>
+							</button>
+							<button class="button icon-favorite favorite" ng-click="removed=!removed" toggle-class="save">
+								<svg svg-favorite viewBox="1 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-right favorite"></svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</ion-tab>
+			<ion-tab title="Translate">
+				<div class="translation-card lao">
+					<div class="row padding">
+						<div class="col-content">
+							<h1>ລາບຊີ້ນງົວ ສຸກປານກາງ ເຜັດ ປານກາງ</h1>
+						</div>
+					</div>
+				</div>
+			</ion-tab>
+		</ion-tabs>
+	</div>
+	<a class="tab-item close-modal-button" ng-click="closeModal()">
+		<i class="icon ion-ios-close-empty"></i>
+	</a>
+
+</ion-modal-view>

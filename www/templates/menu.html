@@ -9,7 +9,9 @@
         </button>
       </ion-nav-buttons>
       <ion-nav-buttons side="right" ng-controller="SnackController">
-        <button class="button button-icon button-clear ion-ios-camera-outline" ng-click="takePicture()"></button>
+        <button class="button button-icon button-clear svg-icon camera" ng-click="takePicture()">
+				
+				</button>
       </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
@@ -17,14 +19,16 @@
 
   <ion-side-menu side="left">
     <ion-content>
-      <div class="side-menu-profile margin">
-        <div class="profile-image">
-            <!--<img src="#">-->  
-        </div>
-        <div class="profile-name">
-            gloomyTofu  
-        </div>
-      </div>
+      <a nav-clear menu-close href="#/app/profile">
+				<div class="side-menu-profile margin">
+						<div class="profile-image">
+							<!--<img src="#">-->  
+						</div>
+					<div class="profile-name">
+							gloomyTofu  
+					</div>
+				</div>
+			</a>
       <ion-list>
         <div class="item-input-inset">
           <label class="item-input-wrapper">
@@ -34,22 +38,19 @@
         </div>
       </ion-list>
       <ion-list>
-        <!--<ion-item nav-clear menu-close ng-click="login()">
-          Login
-        </ion-item>-->
         <ion-item nav-clear menu-close href="#/app/guides">
-          <i class="icon icon-left ion-android-home"></i> Home
+          <i class="icon icon-left ion-android-home"></i> Guides
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/guides/laos">
           <i class="icon icon-left ion-android-restaurant"></i> Street Snacks
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/lists">
+        <ion-item nav-clear menu-close href="#/app/saved-lists">
           <i class="icon icon-left ion-ios-star"></i> Saved Lists
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/travel-tips/safety" class="item">
+        <ion-item nav-clear menu-close href="#/app/travel/safety" class="item">
 					<i class="icon icon-left ion-android-warning"></i> Food Safety Tips
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/travel-tips/phrasebook" class="item">
+        <ion-item nav-clear menu-close href="#/app/travel/phrasebook" class="item">
           <i class="icon icon-left ion-ios-book"></i> Phrasebook
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/profile">

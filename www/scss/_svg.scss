@@ -1,12 +1,38 @@
-svg.icon {
+.svg-icon {
 	display:block;
 	width: 30px;
   height: 30px;
+}
+
+.bar .button.button-icon.svg-icon .icon:before, .bar .button.button-icon.svg-icon.icon-left:before, .bar .button.button-icon.svg-icon.icon-right:before, .bar .button.button-icon.svg-icon:before {
+  vertical-align: top;
+	padding-right: 2px;
+  padding-left: 2px;
+}
+
+svg.icon {
+	@extend .svg-icon;
+}
+
+svg.icon.icon-right {
+  position: relative;
+  right: -5px;
 }
 
 svg.icon path {
 	display:inline;
 	fill:$base-background-color;
 	stroke:$base-color;
-	stroke-width:2;
+	stroke-width:1;
+}
+
+// account icon
+.bar-light .button.button-icon.svg-icon.login, .bar-light .button.button-clear.svg-icon.login, .bar-light.button.button-icon.svg-icon.login:before {
+	@include svg-icon(profile);
+	border-width:2px;
+}
+
+.bar-light .button.button-icon.svg-icon.camera, .bar-light .button.button-clear.svg-icon.camera, .bar-light.button.button-icon.svg-icon.camera:before {
+	@include svg-icon(camera);
+	border-width:0;
 }

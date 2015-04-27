@@ -1,0 +1,69 @@
+{
+	"title": "tam màk hung",
+	"lang": "ຕໍາໝາກຮຸ່ງ",
+	"id": "tam-mak-hung",
+	"name": "Sour and spicy green papaya salad",
+	"shortDescription": "One of the most common street-vendor foods, papaya salad can be eaten either as a snack, often with pork rinds, or as part of a meal. As each salad is generally made to order, it is easy to request no fish sauce or no MSG.",
+	"keywords": [
+		{ "name": "Local", "isTrue": "true", "class": "ion-location" },
+		{ "name": "Spicy", "isTrue": "true", "class": "ion-fireball" },
+		{ "name": "Vegetarian Option", "isTrue": "true", "class": "ion-ios-nutrition" }
+	],
+	"loves": 10,
+	"local": 10,
+	"adventurous": 6,
+	"images": [
+		{ 
+			"src": "img/tam-mak-hung/6585680099_2038e7c6d0_z.jpg" 
+		},
+		{ 
+			"src": "img/tam-mak-hung/8737390917_f7fe6965d2_z.jpg" 
+		},
+		{ 
+			"src": "img/tam-mak-hung/tai_7215_3.jpg"
+		}
+	],
+	"spice": [
+		{ "level": "not spicy", "lang": "ບໍ່ ເຜັດ", "pronounce": "bo phed" },
+		{ "level": "medium", "lang": "ເຜັດ ປານກາງ", "pronounce": "phed pankang" },
+		{ "level": "spicy", "lang": "ເຜັດ", "pronounce": "phed" },
+		{ "level": "very spicy", "lang": "ເອົາ ເຜັດ ໆ", "pronounce": "au phed phed" }
+	],
+	"myOrder": [],
+	"myReview": [],
+	"reviews": [
+		{
+			"user": "saodarly",
+			"note": "I love to eat Lao Green Papaya Salad, pretty much all year round.",
+			"helpful": 5
+		},
+		{
+			"user": "Alpha",
+			"note": "Spicy and pungent! Tried one with fermented crab, shrimp, and fish",
+			"helpful": 0
+		}
+	],
+	"ingredients": [
+		{
+			"src": "img/ingredients/green-onions.jpg"
+		},
+		{
+			"src": "img/ingredients/garlic.jpg"
+		},
+		{
+			"src": "img/ingredients/chili-peppers.jpg"
+		},
+		{
+			"id": "galangal",
+			"name": "Galangal",
+			"src": "img/ingredients/galangal.jpg",
+			"translation": "ຂ່າ",
+			"pronunciation": "ka",
+			"description": "A rhizome of plants in the ginger family. Galangal is related to and resembles ginger. While ginger tastes a little like galangal, most cooks who use both rhizomes would never substitute one for the other and expect the same flavor profile."
+		},
+		{
+			"src": "img/ingredients/minced-meat.jpg"
+		}
+	],
+	"tammakhung": "tam-mak-hung"
+}

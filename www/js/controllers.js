@@ -31,6 +31,23 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
+	$scope.takePicture = function() {
+		$scope.showModal('templates/modal/camera.html');
+	}
+	$scope.showModal = function(templateUrl) {
+		$ionicModal.fromTemplateUrl(templateUrl, {
+			scope: $scope,
+			animation: 'slide-in-up'
+		}).then(function(modal) {
+			$scope.modal = modal;
+			$scope.modal.show();
+		});
+	}
+	// Close the modal
+	$scope.closeModal = function() {
+		$scope.modal.hide();
+		$scope.modal.remove();
+	};
 })
 .controller('SafetyTipsController', function($scope, $ionicModal, $ionicSlideBoxDelegate){
 	$scope.safety = [
@@ -95,79 +112,79 @@ angular.module('starter.controllers', [])
 		$scope.modal.remove();
 	};
 })
-.controller('PhraseTipsController', function($scope) {
+.controller('PhraseTipsController', ['$scope', 'audio', '$cordovaMedia', '$ionicLoading', function($scope, audio, $cordovaMedia, $ionicLoading) {
 	$scope.phrases = [
 		{
 			"english": "Hello",
 			"lang": "ສະບາຍດີ",
 			"pronounce": "sabai di",
-			"sound": "#"
+			"sound": "audio/hello.mp3"
 		},
 		{
 			"english": "How much is this?",
-			"lang": "ຫຼາຍປານໃດ",
-			"pronounce": "rai pandai",
-			"sound": "#"
+			"lang": "ຕົກເປັນເງັນເທົາໃດ?",
+			"pronounce": "tobpen ngen thao dai",
+			"sound": "audio/how-much-is-this.mp3"
 		},
 		{
 			"english": "Can I order this?",
-			"lang": "ຫຼາຍປານໃດ",
-			"pronounce": "rai pandai",
-			"sound": "#"
+			"lang": "ຕອ້ງການອັນນີອີກ?",
+			"pronounce": "khew tngkan anan ek",
+			"sound": "audio/can-i-order-this.mp3"
 		},
 		{
 			"english": "Sticky rice",
-			"lang": "?? ກິນ ຊີ້ນ ??",
-			"pronounce": "baw sai phong su lot",
-			"sound": "#"
+			"lang": "ກັບເຂົ້າໜງວ",
+			"pronounce": "eu kao niao ek",
+			"sound": "audio/sticky-rice.mp3"
 		},
 		{
 			"english": "Not spicy",
 			"lang": "ບໍ່ ເຜັດ",
-			"pronounce": "bo  phed",
-			"sound": "#"
+			"pronounce": "bo phed",
+			"sound": "audio/no-spicy.mp3"
 		},
 		{
 			"english": "Medium spicy",
-			"lang": "ບໍ່ ເຜັດ",
-			"pronounce": "bo  phed",
-			"sound": "#"
+			"lang": "ເຜັດ ປານກາງ",
+			"pronounce": "phed pankang",
+			"sound": "audio/medium-spicy.mp3"
 		},
 		{
 			"english": "Very spicy",
-			"lang": "ບໍ່ ເຜັດ",
-			"pronounce": "bo  phed",
-			"sound": "#"
+			"lang": "ເອົາ ເຜັດ ໆ",
+			"pronounce": "au phed phed",
+			"sound": "audio/very-spicy.mp3"
 		},
 		{
 			"english": "I'm vegetarian",
-			"lang": "?? ກິນ ?? ຜັກ",
-			"pronounce": "khoi kin te phak",
-			"sound": "#"
+			"lang": "ຂອ້ຍ ບໍ່ ກີນຊີ້ນ",
+			"pronounce": "khoi bo kin sin",
+			"sound": "audio/vegetarian.mp3"
 		},
 		{
 			"english": "Without fish sauce",
-			"lang": "?? ກິນ ຊີ້ນ ??",
-			"pronounce": "baw sai nam pa",
-			"sound": "#"
+			"lang": "ບໍ່ ກີນນໍ້າປາ",
+			"pronounce": "baw sai nam bpaa",
+			"sound": "audio/no-fish-sauce.mp3"
 		},
 		{
 			"english": "Without MSG",
-			"lang": "?? ກິນ ຊີ້ນ ??",
-			"pronounce": "baw sai phong su lot",
-			"sound": "#"
+			"lang": "ບໍ່ ກີນແປ້ງນົວ",
+			"pronounce": "baw sai bang nuah",
+			"sound": "audio/no-msg.mp3"
 		},
 		{
 			"english": "Delicious!",
-			"lang": "ນົວ",
-			"pronounce": "saep",
-			"sound": "#"
+			"lang": "ແຊບຫລາຍ",
+			"pronounce": "aesb lai",
+			"sound": "audio/delicious.mp3"
 		},
 		{
 			"english": "Thank you",
-			"lang": "ຂໍຂອບໃຈທ່ານ",
-			"pronounce": "khokhobchaithan",
-			"sound": "#"
+			"lang": "ຂອບໃຈຫລາຍໆ",
+			"pronounce": "khowp jhai lai lai",
+			"sound": "audio/thank-you.mp3"
 		}
 	];
 	$scope.togglePhrase = function(phrase) {
@@ -180,7 +197,7 @@ angular.module('starter.controllers', [])
   $scope.isPhraseShown = function(phrase) {
     return $scope.shownPhrase === phrase;
   };
-})
+}])
 .controller('GuidesCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
   $scope.guides = [
     { 
@@ -265,4 +282,31 @@ angular.module('starter.controllers', [])
 	
 	console.log($scope.myOrder);
 })
+.controller('OrderCards', ['$scope', '$ionicModal', function($scope, $ionicModal) {
+	$scope.openModalOne = function() {
+		$scope.showModal('templates/modal/translation.html');
+	}
+	$scope.openModalTwo = function() {
+		$scope.showModal('templates/modal/translation2.html');
+	}
+	$scope.openModalThree = function() {
+		$scope.showModal('templates/modal/translation3.html');
+	}
+ 
+	$scope.showModal = function(templateUrl) {
+		$ionicModal.fromTemplateUrl(templateUrl, {
+			scope: $scope,
+			animation: 'slide-in-up'
+		}).then(function(modal) {
+			$scope.modal = modal;
+			$scope.modal.show();
+		});
+	}
+ 
+	// Close the modal
+	$scope.closeModal = function() {
+		$scope.modal.hide();
+		$scope.modal.remove();
+	};
+}])
 ;
