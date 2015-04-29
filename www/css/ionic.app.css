@@ -2257,7 +2257,7 @@ $dark: #444 !default;
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
  */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, .profile-name, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, fieldset, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, fieldset, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -2789,12 +2789,12 @@ cite {
 .text-center {
   text-align: center; }
 
-h1, h2, h3, h4, h5, .profile-name, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #000;
   font-weight: 500;
   font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
   line-height: 1.2; }
-  h1 small, h2 small, h3 small, h4 small, h5 small, h5 .profile-name, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
     font-weight: normal;
     line-height: 1; }
 
@@ -2806,7 +2806,7 @@ h1, .h1, h2, .h2, h3, .h3 {
   h1 + h1, h1 + .h1, h1 + h2, h1 + .h2, h1 + h3, h1 + .h3, .h1 + h1, .h1 + .h1, .h1 + h2, .h1 + .h2, .h1 + h3, .h1 + .h3, h2 + h1, h2 + .h1, h2 + h2, h2 + .h2, h2 + h3, h2 + .h3, .h2 + h1, .h2 + .h1, .h2 + h2, .h2 + .h2, .h2 + h3, .h2 + .h3, h3 + h1, h3 + .h1, h3 + h2, h3 + .h2, h3 + h3, h3 + .h3, .h3 + h1, .h3 + .h1, .h3 + h2, .h3 + .h2, .h3 + h3, .h3 + .h3 {
     margin-top: 10px; }
 
-h4, .h4, h5, .profile-name, .h5, h6, .h6 {
+h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 10px;
   margin-bottom: 10px; }
 
@@ -2822,7 +2822,7 @@ h3, .h3 {
 h4, .h4 {
   font-size: 18px; }
 
-h5, .profile-name, .h5 {
+h5, .h5 {
   font-size: 14px; }
 
 h6, .h6 {
@@ -4628,7 +4628,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
     text-align: center;
     text-overflow: ellipsis;
     font-size: 15px; }
-    .loading-container .loading h1, .loading-container .loading h2, .loading-container .loading h3, .loading-container .loading h4, .loading-container .loading h5, .loading-container .loading .profile-name, .loading-container .loading h6 {
+    .loading-container .loading h1, .loading-container .loading h2, .loading-container .loading h3, .loading-container .loading h4, .loading-container .loading h5, .loading-container .loading h6 {
       color: #fff; }
 
 /**
@@ -4657,14 +4657,14 @@ ion-tabs.tabs-color-active-dark .tab-item {
   .item h4 {
     margin: 0 0 4px 0;
     font-size: 12px; }
-  .item h5, .item .profile-name, .item h6 {
+  .item h5, .item h6 {
     margin: 0 0 3px 0;
     font-size: 10px; }
   .item p {
     color: #666;
     font-size: 14px;
     margin-bottom: 2px; }
-  .item h1:last-child, .item h2:last-child, .item h3:last-child, .item h4:last-child, .item h5:last-child, .item .profile-name:last-child, .item h6:last-child, .item p:last-child {
+  .item h1:last-child, .item h2:last-child, .item h3:last-child, .item h4:last-child, .item h5:last-child, .item h6:last-child, .item p:last-child {
     margin-bottom: 0; }
   .item .badge {
     display: -webkit-box;
@@ -4755,7 +4755,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
     border-color: #000;
     background-color: #262626; }
 
-.item, .item h1, .item h2, .item h3, .item h4, .item h5, .item .profile-name, .item h6, .item p, .item-content, .item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content .profile-name, .item-content h6, .item-content p {
+.item, .item h1, .item h2, .item h3, .item h4, .item h5, .item h6, .item p, .item-content, .item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -4790,11 +4790,11 @@ a.item-content {
   color: inherit;
   text-decoration: none; }
 
-.item-text-wrap .item, .item-text-wrap .item-content, .item-text-wrap, .item-text-wrap h1, .item-text-wrap h2, .item-text-wrap h3, .item-text-wrap h4, .item-text-wrap h5, .item-text-wrap .profile-name, .item-text-wrap h6, .item-text-wrap p, .item-complex.item-text-wrap .item-content, .item-body h1, .item-body h2, .item-body h3, .item-body h4, .item-body h5, .item-body .profile-name, .item-body h6, .item-body p {
+.item-text-wrap .item, .item-text-wrap .item-content, .item-text-wrap, .item-text-wrap h1, .item-text-wrap h2, .item-text-wrap h3, .item-text-wrap h4, .item-text-wrap h5, .item-text-wrap h6, .item-text-wrap p, .item-complex.item-text-wrap .item-content, .item-body h1, .item-body h2, .item-body h3, .item-body h4, .item-body h5, .item-body h6, .item-body p {
   overflow: visible;
   white-space: normal; }
 
-.item-complex.item-text-wrap, .item-complex.item-text-wrap h1, .item-complex.item-text-wrap h2, .item-complex.item-text-wrap h3, .item-complex.item-text-wrap h4, .item-complex.item-text-wrap h5, .item-complex.item-text-wrap .profile-name, .item-complex.item-text-wrap h6, .item-complex.item-text-wrap p {
+.item-complex.item-text-wrap, .item-complex.item-text-wrap h1, .item-complex.item-text-wrap h2, .item-complex.item-text-wrap h3, .item-complex.item-text-wrap h4, .item-complex.item-text-wrap h5, .item-complex.item-text-wrap h6, .item-complex.item-text-wrap p {
   overflow: visible;
   white-space: normal; }
 
@@ -5072,7 +5072,7 @@ a.item-content {
   padding: 16px;
   text-overflow: inherit;
   white-space: normal; }
-  .item-body h1, .item-body h2, .item-body h3, .item-body h4, .item-body h5, .item-body .profile-name, .item-body h6, .item-body p {
+  .item-body h1, .item-body h2, .item-body h3, .item-body h4, .item-body h5, .item-body h6, .item-body p {
     margin-top: 16px;
     margin-bottom: 16px; }
 
@@ -7662,6 +7662,9 @@ a.button {
 .no-margin {
   margin: 0 !important; }
 
+.no-margin-top {
+  margin-top: 0 !important; }
+
 .margin {
   margin: 1rem !important; }
 
@@ -7685,6 +7688,9 @@ a.button {
 
 .float-right {
   float: right !important; }
+
+.row + .row.ten {
+  margin-top: -10px !important; }
 
 .svg-icon, svg.icon {
   display: block;
@@ -7725,6 +7731,22 @@ svg.icon path {
   border-width: 0;
   margin-right: 5px; }
   .bar-light .button.button-icon.svg-icon.camera:hover, .bar-light svg.button.button-icon.camera.icon:hover, .bar-light .button.button-clear.svg-icon.camera:hover, .bar-light svg.button.button-clear.camera.icon:hover, .bar-light.button.button-icon.svg-icon.camera:before:hover, svg.bar-light.button.button-icon.camera.icon:before:hover {
+    fill: #808080; }
+
+.button.button-icon.svg-icon.images, svg.button.button-icon.images.icon, .button.button-icon.svg-icon.images:before, svg.button.button-icon.images.icon:before {
+  background-image: url('../img/icon/images.svg');
+  width: 30px;
+  height: 30px;
+  fill: #000; }
+  .button.button-icon.svg-icon.images:hover, svg.button.button-icon.images.icon:hover, .button.button-icon.svg-icon.images:before:hover, svg.button.button-icon.images.icon:before:hover {
+    fill: #808080; }
+
+.button.button-icon.svg-icon.blur, svg.button.button-icon.blur.icon, .button.button-icon.svg-icon.blur:before, svg.button.button-icon.blur.icon:before {
+  background-image: url('../img/icon/blur.svg');
+  width: 30px;
+  height: 30px;
+  fill: #000; }
+  .button.button-icon.svg-icon.blur:hover, svg.button.button-icon.blur.icon:hover, .button.button-icon.svg-icon.blur:before:hover, svg.button.button-icon.blur.icon:before:hover {
     fill: #808080; }
 
 .slide-in-right {
@@ -7779,7 +7801,7 @@ svg.icon path {
   text-align: center; }
 
 .profile-image {
-  background: #e5e5e5;
+  background: url('../img/users/user.png') no-repeat;
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
@@ -7787,7 +7809,8 @@ svg.icon path {
   .profile-image.user {
     width: 5rem;
     height: 5rem;
-    margin: 0 1rem 0 0.5rem; }
+    margin: 0 1rem 0 0.5rem;
+    background-image: none; }
 
 a {
   text-decoration: none; }
@@ -7801,6 +7824,14 @@ a h1 {
 .uppercase, .button-outline-headline {
   text-transform: uppercase !important;
   letter-spacing: 0.06em; }
+
+button.primary-button, .button.primary-button {
+  background-color: #007FC6;
+  color: #fff; }
+
+button.contrast-button, .button.contrast-button {
+  background-color: #FF8B00;
+  color: #fff; }
 
 span.small-text {
   position: relative;
@@ -7842,9 +7873,9 @@ ion-item.item.item-accordion {
 ion-option-button.button {
   min-width: 40px; }
   ion-option-button.button .button-positive {
-    border-color: #a0a0a0;
-    background-color: #404040;
-    background: #404040;
+    border-color: #63c8ff;
+    background-color: #007FC6;
+    background: #007FC6;
     color: #FFFFFF; }
 
 ion-option-button.button.button-info .ion-edit:before {
@@ -7881,9 +7912,6 @@ textarea.form-control {
   float: left; }
 
 fieldset.textarea .button.save-button {
-  background: #b4b4b4;
-  color: #000;
-  background: #b4b4b4;
   min-height: 40px;
   font-weight: 300;
   margin-right: 10px; }
@@ -7927,7 +7955,7 @@ i.icon.icon-right.removeGuide {
   left: 0 !important; }
 
 .open-modal .translation {
-  background-color: #404040; }
+  background-color: #007FC6; }
 
 .image-modal .fullscreen-image {
   max-width: 100%;
@@ -7938,7 +7966,7 @@ i.icon.icon-right.removeGuide {
   overflow: auto;
   position: fixed;
   right: 0;
-  top: 0; }
+  top: 5%; }
 
 .image-modal.camera-modal .fullscreen-image {
   left: -40%;
@@ -7979,24 +8007,8 @@ a.tab-item.close-modal-button .icon {
   margin-left: 15px;
   color: #a6a6a6; }
 
-.button.button-icon.svg-icon.images, svg.button.button-icon.images.icon {
-  background-image: url('../img/icon/images.svg');
-  width: 30px;
-  height: 30px;
-  fill: #000; }
-  .button.button-icon.svg-icon.images:hover, svg.button.button-icon.images.icon:hover {
-    fill: #808080; }
-
-.button.button-icon.svg-icon.blur, svg.button.button-icon.blur.icon {
-  background-image: url('../img/icon/blur.svg');
-  width: 30px;
-  height: 30px;
-  fill: #000; }
-  .button.button-icon.svg-icon.blur:hover, svg.button.button-icon.blur.icon:hover {
-    fill: #808080; }
-
 .camera-controls .button.circle-button {
-  background: #404040;
+  background: #007FC6;
   width: 5.5rem;
   height: 5.5rem;
   border-radius: 50%;
@@ -8004,7 +8016,7 @@ a.tab-item.close-modal-button .icon {
   border: 5px solid #D2D2D2; }
 
 .camera-controls .button.circle-button.activated {
-  background: #a0a0a0; }
+  background: #63c8ff; }
 
 a.purchase-guide.fade-in {
   top: 6%;
@@ -8023,7 +8035,7 @@ a.purchase-guide.fade-in {
   animation: slide-right 1s ease-in 2s; }
 
 a.purchase-guide h4 {
-  background: #404040;
+  background: #007FC6;
   color: #FFFFFF;
   padding: 1rem 2rem 1rem 1.5rem; }
 
@@ -8219,8 +8231,6 @@ a.purchase-guide h4 {
   border-color: #000; }
 
 .order-dish .button, .phrases .button {
-  background: #b4b4b4;
-  color: #000;
   font-weight: 300;
   display: inline;
   font-size: 1rem;
@@ -8271,7 +8281,7 @@ a.tab-item.highlightLoved {
   height: 48px; }
 
 .dishes .highlightSaved i.icon, .dishes .highlightTried i.icon, .dishes .highlightLoved i.icon, .dishes .small-text {
-  color: #b4b4b4; }
+  color: #FF8B00; }
 
 .dishes .unlove {
   position: relative;
@@ -8398,8 +8408,9 @@ img.image-list-thumb {
   text-align: center;
   vertical-align: baseline;
   white-space: nowrap;
-  color: #444;
-  border: 1px solid #b4b4b4;
+  color: #007FC6;
+  background-color: #Fff;
+  border: 1px solid #007FC6;
   position: relative;
   padding: 1px 6px;
   height: auto;
@@ -8412,7 +8423,8 @@ img.image-list-thumb {
   width: auto !important; }
 
 .profile-name {
-  margin-top: 2px; }
+  font-size: 16px;
+  margin-top: 5px; }
 
 .main-profile i.icon {
   font-size: 1.12rem;

@@ -39,3 +39,11 @@ svg.icon path {
 	border-width:0;
 	margin-right:5px;
 }
+
+// camera icon
+.button.button-icon.svg-icon.images, .button.button-icon.svg-icon.images:before {
+	@include svg-icon(images);
+}
+.button.button-icon.svg-icon.blur, .button.button-icon.svg-icon.blur:before {
+	@include svg-icon(blur);
+}

@@ -6,20 +6,14 @@ $image-placeholder:               #e5e5e5;
 
 $base-background-color:           rgb(245,245,245) !default;
 $base-color:                      #4D4D4D !default; // dark gray
-$primary-color:                   #404040 !default; // blue
-$primary-light-color:             rgba(64, 64, 64, 0.49) !default; // light blue
-$contrast-color:                  #b4b4b4 !default; // orange
+$primary-color:                   #007FC6 !default; // blue
+$contrast-color:                  #FF8B00 !default; // orange
 $base-light-color:                #D2D2D2 !default;  // light gray
-
-//$primary-color:                   #007FC6 !default; // blue
-//$primary-light-color:             #66B7E3 !default; // light blue
-//$contrast-color:                  #FF8B00 !default; // orange
-//$base-light-color:                #D2D2D2 !default;  // light gray
 
 // Base
 // -------------------------------
 
-$font-family-sans-serif:          "Helvetica Neue", "Roboto", sans-serif !default;
+$font-family-sans-serif:          "Open Sans", "Roboto", sans-serif !default;
 $font-family-light-sans-serif:    "HelveticaNeue-Light", "Roboto-Light", sans-serif-light !default;
 $font-family-serif:               serif !default;
 $font-family-monospace:           monospace !default;

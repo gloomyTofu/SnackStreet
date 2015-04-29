@@ -43,7 +43,7 @@
 	<fieldset class="form-group textarea">
 		<textarea ng-model="noteCtrl.myReview.note" class="form-control" placeholder="What did you think of the dish?" title="Food Notes">
 		</textarea>
-		<input class="float-right button button-light save-button" type="submit" value="Save">
+		<input class="float-right button contrast-button save-button" type="submit" value="Save">
 	</fieldset>
 </form>
 <div class="item item-divider">
@@ -53,7 +53,7 @@
 	<div class="row no-padding">
 		<div class="col no-padding">
 			<div class="profile-image user">
-					<!--<img src="#">-->  
+					<img ng-src="{{review.profile}}">
 			</div>
 		</div>
 		<div class="col col-67 no-padding">

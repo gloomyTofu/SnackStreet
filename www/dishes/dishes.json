@@ -40,25 +40,6 @@
         ]
     },
     { 
-        "title": "mók pa", 
-        "id": "mok-pa-fish-steamed-banana-leaves",
-        "name": "mok-pa-fish-steamed-banana-leaves",
-        "shortDescription": "Fish steamed in banana leaves. Well worth ordering if you can find it.", 
-        "keywords": [
-					{ "name": "local", "isTrue": "true" },
-					{ "name": "spicy", "isTrue": "false" },
-					{ "name": "vegetarian-option", "isTrue": "false" }
-				],
-        "loves": 3,
-        "local": 8,
-        "adventurous": 7,
-				"images": [
-					{
-						"full": ""
-					}
-				]
-    },
-    { 
         "title": "Waffle",
         "id": "waffle",
         "name": "waffle",
@@ -73,33 +54,35 @@
         "adventurous": 3,
 				"images": [
 					{
-						"full": ""
+						"full": "img/waffle/waffle.jpg"
 					}
 				]
     },
     { 
         "title": "pîng kai",
-        "id": "ping-kai-grilled-chicken", 
-        "name": "ping-kai-grilled-chicken",
+				"lang": "ປີ້ງ ໄກ່",
+        "id": "ping-kai", 
+        "name": "Basted grilled chicken",
         "shortDescription": "A grilled favorite.", 
         "keywords": [
 					{ "name": "local", "isTrue": "true" },
-					{ "name": "spicy", "isTrue": "true" },
-					{ "name": "vegetarian-option", "isTrue": "true" }
+					{ "name": "spicy", "isTrue": "false" },
+					{ "name": "vegetarian-option", "isTrue": "false" }
 				],
         "loves": 1,
         "local": 9,
         "adventurous": 5,
 				"images": [
 					{
-						"full": ""
+						"full": "img/ping-kai/fried-chicken.jpg"
 					}
 				]
     },
     { 
-        "title": "seen hang",
-        "id": "buffalo-jerky",
-        "name": "buffalo-jerky",
+        "title": "seen savanh",
+				"lang": "ຊີ້ນສະຫວັນ",
+        "id": "seen-savanh",
+        "name": "Sweet beef jerky",
         "shortDescription": "Beef jerky that has been flash fried.", 
         "keywords": [
 					{ "name": "local", "isTrue": "true" },
@@ -111,7 +94,27 @@
         "adventurous": 6,
 				"images": [
 					{
-						"full": ""
+						"full": "img/seen-savanh/beef-jerky.jpg"
+					}
+				]
+    },
+	{ 
+        "title": "som moo",
+				"lang": "ສົ້ມໝູ",
+        "id": "som-moo",
+        "name": "Sour pork sausage",
+        "shortDescription": "Sausage is left to 'sour' at room temperature for a couple of days. It uses cooked Lao sticky rice as an additional ingredient in the filling.", 
+        "keywords": [
+					{ "name": "local", "isTrue": "true" },
+					{ "name": "spicy", "isTrue": "false" },
+					{ "name": "vegetarian-option", "isTrue": "false" }
+				],
+        "loves": 4,
+        "local": 8,
+        "adventurous": 6,
+				"images": [
+					{
+						"full": "img/som-moo/lao-sausage.jpg"
 					}
 				]
     }

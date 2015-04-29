@@ -50,36 +50,58 @@
 	"myReview": [],
 	"reviews": [
 		{
-			"user": "nanto",
+			"user": "annren",
 			"note": "So good, but can be very spicy!!",
-			"helpful": 1
+			"helpful": 1,
+			"profile": "img/users/user_rank6.png"
 		},
 		{
 			"user": "Alpha",
 			"note": "Delicious with a bowl of rice :)",
-			"helpful": 2
+			"helpful": 2,
+			"profile": "img/users/user_rank7.png"
 		}
 	],
 	"ingredients": [
 		{
-			"src": "img/ingredients/green-onions.jpg"
+			"id": "garlic",
+			"name": "Garlic",
+			"src": "img/ingredients/garlic.jpg",
+			"lang": "ຫົວຜັກທຽມ",
+			"pronounce": "pak tiam",
+			"description": "A kitchen staple. Lao garlic has very small cloves and is used raw in jeow and other dishes."
 		},
 		{
-			"src": "img/ingredients/garlic.jpg"
+			"id": "lemon-grass",
+			"name": "Lemongrass",
+			"src": "img/ingredients/lemon-grass.jpg",
+			"lang": "",
+			"pronounce": "houa sikai",
+			"description": "Used in many Lao dishes including moke, soup, chicken sa and op (braised) dishes. When finely sliced, it is used raw in lahp or sa."
 		},
 		{
-			"src": "img/ingredients/chili-peppers.jpg"
+			"id": "chilli-peppers",
+			"name": "Chilli Peppers",
+			"src": "img/ingredients/chili-peppers.jpg",
+			"lang": "",
+			"pronounce": "mak pet nyai",
+			"description": "May be fried wth pork or used in other stir fried dishes. Use in jeow and raw as garnish."
 		},
 		{
 			"id": "galangal",
 			"name": "Galangal",
 			"src": "img/ingredients/galangal.jpg",
-			"translation": "ຂ່າ",
-			"pronunciation": "ka",
+			"lang": "ຂ່າ",
+			"pronounce": "ka",
 			"description": "A rhizome of plants in the ginger family. Galangal is related to and resembles ginger. While ginger tastes a little like galangal, most cooks who use both rhizomes would never substitute one for the other and expect the same flavor profile."
 		},
 		{
-			"src": "img/ingredients/minced-meat.jpg"
+			"id": "kaffir",
+			"name": "Caffre Lime Leaves",
+			"src": "img/ingredients/kaffir.jpg",
+			"lang": "",
+			"pronounce": "bai ke hoot",
+			"description": "Use fresh in soup, aw lahm, Thai curries and rice noodles."
 		}
 	],
 	"lahp": "lahp"

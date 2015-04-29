@@ -13,6 +13,7 @@
 .padding-bottom { padding-bottom:1rem !important; }
 
 .no-margin {margin: 0 !important; }
+.no-margin-top {margin-top: 0 !important; }
 .margin { margin:1rem !important; }
 .margin-top { margin-top:1rem !important; }
 .margin-bottom { margin-bottom:1rem !important; }
@@ -22,3 +23,7 @@
 
 .float-left { float:left !important; }
 .float-right { float:right !important; }
+
+.row+.row.ten {
+	  margin-top: -10px !important;
+}

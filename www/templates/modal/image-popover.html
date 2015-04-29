@@ -1,5 +1,5 @@
 <ion-modal-view class="modal image-modal">
-		<ion-slide-box on-slide-changed="slideChanged(index)" show-pager="true" active-slide="activeSlide">
+		<ion-slide-box on-slide-changed="slideChanged(index)" show-pager="true" active-slide="activeSlide" does-continue="true">
 			<ion-slide ng-repeat="ingredient in dish.ingredients">
 				<div class="fullscreen-image">
 					<div class="row">
@@ -9,11 +9,12 @@
 					</div>
 					<div class="row">
 						<div class="col">
-							<h3 class="subheadline">{{ingredient.name}}</h3>
+							<h3 class="subheadline no-margin">{{ingredient.name}}</h3>
 						</div>
 					</div>
 					<div class="row padding-horizontal">
 							<div class="col padding-left margin-horizontal">
+								<h4 class="no-margin-top">{{ingredient.lang}} {{ingredient.pronounce}}</h4>
 								<p>{{ingredient.description}}</p>
 							</div>
 					</div>

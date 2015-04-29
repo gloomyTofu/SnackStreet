@@ -37,7 +37,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     text-align:center;
 }
 .profile-image {
-    background:$image-placeholder;
+    background:url('../img/users/user.png')no-repeat;
     width:10rem;
     height:10rem;
     border-radius:50%;
@@ -46,6 +46,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 			width:5rem;
 			height:5rem;
 			margin:0 1rem 0 0.5rem;
+			background-image:none;
 		}
 }
 
@@ -57,6 +58,9 @@ a { text-decoration:none; }
 a.underline { text-decoration:underline; }
 a h1 { line-height:1; }
 .uppercase { text-transform:uppercase !important; letter-spacing:0.06em; }
+
+button.primary-button, .button.primary-button {background-color:$primary-color; color:#fff; }
+button.contrast-button, .button.contrast-button {background-color:$contrast-color; color:#fff; }
 
 span.small-text { position:relative; top:-4px; }
 .small-text { font-size:$font-size-small; }
@@ -124,8 +128,6 @@ ion-option-button.button.button-info .ion-edit:before {font-size:20px; }
 fieldset.form-group.textarea { border:0; padding-top:0.75rem; padding-left:1rem; }
 textarea.form-control { width:75%; height:30px; resize:none; float:left; }
 fieldset.textarea .button.save-button {
-	@include button-text-color($contrast-color);
-	background:$contrast-color;
 	min-height: 40px;
 	font-weight: 300;
 	margin-right:10px;
@@ -180,7 +182,7 @@ i.icon.icon-right.removeGuide {
     overflow: auto;
     position: fixed;
     right: 0;
-    top: 0;
+    top: 5%;
 }
 
 .image-modal.camera-modal .fullscreen-image {
@@ -228,14 +230,6 @@ a.tab-item.close-modal-button .icon {
   margin-top: 45px;
   margin-left: 15px;
 	color:scale-color($base-color,$lightness:65%);
-}
-
-// camera icon
-.button.button-icon.svg-icon.images {
-	@include svg-icon(images);
-}
-.button.button-icon.svg-icon.blur {
-	@include svg-icon(blur);
 }
 
 .camera-controls .button.circle-button {
@@ -335,7 +329,6 @@ a.purchase-guide h4 {
 }
 
 .order-dish .button, .phrases .button {
-	@include button-text-color($contrast-color);
 	font-weight:300;
 	display:inline;
 	font-size: 1rem;
@@ -544,8 +537,9 @@ img.image-list-thumb {
 		text-align:center;
 		vertical-align: baseline;
 		white-space: nowrap;
-		color:#444; 
-		border:1px solid $contrast-color;
+		color:$primary-color;
+		background-color:#Fff;
+		border:1px solid $primary-color;
 		position:relative;
 		padding:1px 6px;
 		height:auto;
@@ -560,8 +554,8 @@ img.image-list-thumb {
   width: auto !important; 
 }
 .profile-name {
-	@extend h5;
-	margin-top:2px;
+	font-size:16px;
+	margin-top:5px;
 }
 .main-profile i.icon {
 	font-size:1.12rem;

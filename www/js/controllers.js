@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicTabsDelegate) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicTabsDelegate, $location, $ionicHistory) {
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -34,6 +34,9 @@ angular.module('starter.controllers', [])
 	$scope.takePicture = function() {
 		$scope.showModal('templates/modal/camera.html');
 	}
+	$scope.photoResults = function() {
+		$scope.showModal('templates/modal/camera-results.html');
+	}
 	$scope.showModal = function(templateUrl) {
 		$ionicModal.fromTemplateUrl(templateUrl, {
 			scope: $scope,
@@ -62,33 +65,43 @@ angular.module('starter.controllers', [])
 			"src": "http://placehold.it/350x350"
 		},
 		{
-			"name": "Raw Fruits/Veggies",
-			"description": "Description",
+			"name": "Hot Foods",
+			"description": "How hot is the key to food safety, the number you need to remember is 160F (71C). This is the temperature that will kill ALL harmful bugs in your food.",
+			"src": "http://placehold.it/350x350"
+		},
+		{
+			"name": "Made to Order",
+			"description": " As the time passes from cooking, the amount of harmful bugs is growing. Fresh from the grill is the best, an hour or two isn’t ideal but unlikely to get you sick (assuming it’s cooked properly), half a day or overnight has a high potential to get you sick.",
+			"src": "http://placehold.it/350x350"
+		},
+		{
+			"name": "Clean/Orderly",
+			"description": "Look for vendors whos' station appears to be clean and orderly. All ingredients are stored separately. Avoid vendors with uncooked food next to already cooked items.",
+			"src": "http://placehold.it/350x350"
+		},
+		{
+			"name": "Too many options",
+			"description": "Look for stalls that only serve 1-2 things on the menu only. Too many options leads to slow turnover of food and it sitting longer and growing more food bugs.",
+			"src": "http://placehold.it/350x350"
+		},
+		{
+			"name": "Popular Stalls",
+			"description": "A popular vendor means two things: 1.) The food isn’t given time to grow enough bacteria to hurt you  2.) That it’s popular for a reason, the food probably tastes GOOD!",
 			"src": "http://placehold.it/350x350"
 		},
 		{
 			"name": "Peeled Fruit/Veggies",
-			"description": "Description",
+			"description": "As a general rule of thumb if you can peel it, you can eat it. Bananas, oranges, anything with nature’s very own wrapper, you are generally good to go. Any fruit where you eat the skin like most berries, apples, etc. you need to be cautious.",
 			"src": "http://placehold.it/350x350"
 		},
 		{
 			"name": "Dried Products",
-			"description": "Description",
+			"description": "bugs that get you sick need water in the food in order to grow. Dried foods won’t allow for the bug population to get big enough to hurt you. Dried fruits, all kinds of chips, seeds (pumpkin, watermelon, ect.), even dried bugs, like crickets, fit this category.",
 			"src": "http://placehold.it/350x350"
 		},
 		{
-			"name": "Title",
-			"description": "Description",
-			"src": "http://placehold.it/350x350"
-		},
-		{
-			"name": "Title",
-			"description": "Description",
-			"src": "http://placehold.it/350x350"
-		},
-		{
-			"name": "Title",
-			"description": "Description",
+			"name": "Soups",
+			"description": "soups and noodles soups are one of the safest meals because it is generally kept very hot. Typically you have a large pot with broth and ingredients that is kept at a good temp maybe not 160F (71C) but probably over 140F (60C)",
 			"src": "http://placehold.it/350x350"
 		}
 	];
@@ -251,7 +264,6 @@ angular.module('starter.controllers', [])
 	$scope.closeModal = function() {
 		$scope.modal.hide();
 		$scope.modal.remove();
-		$scope.myOrder = {};
 	};
 }])
 .controller('NoteController', function($scope) {
@@ -279,8 +291,6 @@ angular.module('starter.controllers', [])
 		dish.myOrder.push(this.myOrder);
 		this.myOrder = {};
 	};
-	
-	console.log($scope.myOrder);
 })
 .controller('OrderCards', ['$scope', '$ionicModal', function($scope, $ionicModal) {
 	$scope.openModalOne = function() {
@@ -315,9 +325,9 @@ angular.module('starter.controllers', [])
 		$ionicActionSheet.show({
 			titleText: 'SHARE',
 			buttons: [
-				{ text: '<i class="icon ion-social-facebook"></i> Facebook' },
-				{ text: '<i class="icon ion-social-twitter"></i> Twitter' },
-				{ text: '<i class="icon ion-ios-more"></i> More' }
+				{ text: '<i class="ion-social-facebook"></i> Facebook' },
+				{ text: '<i class="ion-social-twitter"></i> Twitter' },
+				{ text: '<i class="ion-ios-more"></i> More' }
 			],
 			cancelText: 'Cancel',
 			cancel: function() {
