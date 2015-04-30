@@ -22,12 +22,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 
 @import 
+	"www/scss/variables",
   "www/scss/mixins",
   "www/scss/menu",
 	"www/scss/positioning",
 	"www/scss/svg",
-	"www/scss/animations",
-	"www/scss/variables";
+	"www/scss/animations";
 
 
 // WIREFRAME STYLES
@@ -354,7 +354,7 @@ ion-item.item-icon-float-right.item.ng-binding.active {
 }
 
 .button.save svg.icon path#activated, .button.save.activated svg.icon polygon {
-	fill:$base-color;
+	fill:$contrast-color;
 }
 
 // Search
@@ -457,6 +457,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .condensed-keywords {
 	margin-top:18px; 
 	li {padding-left:5px; }
+	.small-text {
+		color:scale-color($base-color,$lightness:75%);
+	}
 }
 .keywords {
 	li {padding-right:5px; }
@@ -546,6 +549,11 @@ img.image-list-thumb {
 		font-size:0.9rem;
 		line-height:1.5;
 		margin-left:5px;
+}
+
+
+.dishes .item-image .list-img, .dishes .item-image img:first-child {
+	width:90%; 
 }
 
 // Saved List

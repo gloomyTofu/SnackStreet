@@ -51,6 +51,10 @@ angular.module('starter.controllers', [])
 		$scope.modal.hide();
 		$scope.modal.remove();
 	};
+	$ionicHistory.nextViewOptions({
+		disableAnimate: false,
+		disableBack: true
+	});
 })
 .controller('SafetyTipsController', function($scope, $ionicModal, $ionicSlideBoxDelegate){
 	$scope.safety = [
@@ -220,13 +224,26 @@ angular.module('starter.controllers', [])
         images: [
           {
             illustration: '',
-            photo: ''
+            photo: 'img/laos.jpg'
           }
         ],
         canDownload:true
     },
-    { title: 'Thailand', name: 'purchase', description: 'Five fundamental tastes are identified in Thai cuisine – spiciness, sourness, bitterness, saltiness and sweetness...', canDownload:false },
-    { title: 'Vietnam', name: 'purchase', description: 'Light, subtle in flavour and astonishing in their variety, Vietnamese dishes are boiled or steamed rather than stir-fried, and a huge emphasis is placed on herbs and seasoning.', canDownload:false }
+    { title: 'Thailand', name: 'purchase', description: 'Five fundamental tastes are identified in Thai cuisine – spiciness, sourness, bitterness, saltiness and sweetness...', 
+		 images: [
+          {
+            illustration: '',
+            photo: 'img/thailand.jpg'
+          }
+        ],
+		 canDownload:false },
+    { title: 'Vietnam', name: 'purchase', description: 'Light, subtle in flavour and astonishing in their variety, Vietnamese dishes are boiled or steamed rather than stir-fried, and a huge emphasis is placed on herbs and seasoning.',
+		 images: [
+          {
+            illustration: '',
+            photo: 'img/vietnam.jpg'
+          }
+        ], canDownload:false }
   ];
 })
 .controller('GuideCtrl', ['$scope', 'Dish', function($scope, Dish) {

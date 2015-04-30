@@ -22,9 +22,13 @@ svg.icon.icon-right {
 svg.icon path {
 	display:inline;
 	fill:$base-background-color;
-	stroke:$base-color;
+	stroke:$contrast-color;
 	stroke-width:1;
 }
+
+svg.icon path#activated {stroke:$contrast-color; }
+.button.play.activated svg.icon path#activated {fill:$contrast-color; }
+
 
 // account icon
 .bar-light .button.button-icon.svg-icon.login, .bar-light .button.button-clear.svg-icon.login, .bar-light.button.button-icon.svg-icon.login:before {

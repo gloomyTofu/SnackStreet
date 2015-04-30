@@ -7709,8 +7709,14 @@ svg.icon.icon-right {
 svg.icon path {
   display: inline;
   fill: #fff;
-  stroke: #000;
+  stroke: #FF8B00;
   stroke-width: 1; }
+
+svg.icon path#activated {
+  stroke: #FF8B00; }
+
+.button.play.activated svg.icon path#activated {
+  fill: #FF8B00; }
 
 .bar-light .button.button-icon.svg-icon.login, .bar-light svg.button.button-icon.login.icon, .bar-light .button.button-clear.svg-icon.login, .bar-light svg.button.button-clear.login.icon, .bar-light.button.button-icon.svg-icon.login:before, svg.bar-light.button.button-icon.login.icon:before {
   background-image: url('../img/icon/profile.svg');
@@ -7791,11 +7797,11 @@ svg.icon path {
   display: block !important; }
 
 .item-image {
-  background: #e5e5e5;
+  background: #fff;
   height: 15rem; }
 
 .dishes .slider {
-  background: #e5e5e5; }
+  background: #fff; }
 
 .side-menu-profile {
   text-align: center; }
@@ -8248,7 +8254,7 @@ ion-item.item-icon-float-right.item.ng-binding.active {
   padding: 0 0 0 3%; }
 
 .button.save svg.icon path#activated, .button.save svg.icon .button.icon-favorite, .button.save.activated svg.icon polygon, .button.save.activated svg.icon .activated.button.icon-favorite {
-  fill: #000; }
+  fill: #FF8B00; }
 
 .item-input-wrapper {
   padding-left: 25px; }
@@ -8342,6 +8348,8 @@ a.tab-item.highlightLoved {
   margin-top: 18px; }
   .condensed-keywords li {
     padding-left: 5px; }
+  .condensed-keywords .small-text {
+    color: #bfbfbf; }
 
 .keywords li {
   padding-right: 5px; }
@@ -8417,6 +8425,9 @@ img.image-list-thumb {
   font-size: 0.9rem;
   line-height: 1.5;
   margin-left: 5px; }
+
+.dishes .item-image .list-img, .dishes .item-image img:first-child {
+  width: 90%; }
 
 .item-image.saved-list .list-img, .item-image.saved-list img:first-child {
   height: 100% !important;
