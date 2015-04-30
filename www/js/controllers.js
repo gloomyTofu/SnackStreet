@@ -61,52 +61,22 @@ angular.module('starter.controllers', [])
 		{
 			"name": "Tap Water/Ice",
 			"description": "Do not drink river or tap water. Chinese tea made from boiled water is generally safe, but travellers should shun ice that doesn’t look factory-made.",
-			"src": "http://placehold.it/350x350"
+			"src": "img/safety/avoid-water.png"
 		},
 		{
 			"name": "Bottled Water",
 			"description": "Safe bottled water is available almost anywhere, though when buying, check that the seal is unbroken as bottles are occasionally refilled from the tap.",
-			"src": "http://placehold.it/350x350"
-		},
-		{
-			"name": "Hot Foods",
-			"description": "How hot is the key to food safety, the number you need to remember is 160F (71C). This is the temperature that will kill ALL harmful bugs in your food.",
-			"src": "http://placehold.it/350x350"
-		},
-		{
-			"name": "Made to Order",
-			"description": " As the time passes from cooking, the amount of harmful bugs is growing. Fresh from the grill is the best, an hour or two isn’t ideal but unlikely to get you sick (assuming it’s cooked properly), half a day or overnight has a high potential to get you sick.",
-			"src": "http://placehold.it/350x350"
-		},
-		{
-			"name": "Clean/Orderly",
-			"description": "Look for vendors whos' station appears to be clean and orderly. All ingredients are stored separately. Avoid vendors with uncooked food next to already cooked items.",
-			"src": "http://placehold.it/350x350"
+			"src": "img/safety/bottled-water.png"
 		},
 		{
 			"name": "Too many options",
 			"description": "Look for stalls that only serve 1-2 things on the menu only. Too many options leads to slow turnover of food and it sitting longer and growing more food bugs.",
-			"src": "http://placehold.it/350x350"
+			"src": "img/safety/options.png"
 		},
 		{
-			"name": "Popular Stalls",
-			"description": "A popular vendor means two things: 1.) The food isn’t given time to grow enough bacteria to hurt you  2.) That it’s popular for a reason, the food probably tastes GOOD!",
-			"src": "http://placehold.it/350x350"
-		},
-		{
-			"name": "Peeled Fruit/Veggies",
-			"description": "As a general rule of thumb if you can peel it, you can eat it. Bananas, oranges, anything with nature’s very own wrapper, you are generally good to go. Any fruit where you eat the skin like most berries, apples, etc. you need to be cautious.",
-			"src": "http://placehold.it/350x350"
-		},
-		{
-			"name": "Dried Products",
-			"description": "bugs that get you sick need water in the food in order to grow. Dried foods won’t allow for the bug population to get big enough to hurt you. Dried fruits, all kinds of chips, seeds (pumpkin, watermelon, ect.), even dried bugs, like crickets, fit this category.",
-			"src": "http://placehold.it/350x350"
-		},
-		{
-			"name": "Soups",
-			"description": "soups and noodles soups are one of the safest meals because it is generally kept very hot. Typically you have a large pot with broth and ingredients that is kept at a good temp maybe not 160F (71C) but probably over 140F (60C)",
-			"src": "http://placehold.it/350x350"
+			"name": "Made to Order",
+			"description": " As the time passes from cooking, the amount of harmful bugs is growing. Fresh from the grill is the best, an hour or two isn’t ideal but unlikely to get you sick (assuming it’s cooked properly), half a day or overnight has a high potential to get you sick.",
+			"src": "img/safety/order.png"
 		}
 	];
 	$scope.showImages = function(index) {
