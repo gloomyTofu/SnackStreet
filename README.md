@@ -1,2 +1,2 @@
 Mobile Hybrid App
-Demo: http://eatstreetsnacks.com/app/
+Prototype: http://eatstreetsnacks.com/app/
