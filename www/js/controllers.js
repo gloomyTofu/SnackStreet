@@ -51,10 +51,10 @@ angular.module('starter.controllers', [])
 		$scope.modal.hide();
 		$scope.modal.remove();
 	};
-	$ionicHistory.nextViewOptions({
-		disableAnimate: false,
-		disableBack: true
-	});
+	$scope.closeModalTwo = function() {
+		$scope.modal.hide();
+		$scope.modal.remove();
+	};
 })
 .controller('SafetyTipsController', function($scope, $ionicModal, $ionicSlideBoxDelegate){
 	$scope.safety = [

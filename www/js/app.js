@@ -127,6 +127,19 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 		}
 	}
 })
+.directive('navClear', ['$ionicHistory', function($ionicHistory) {
+  return {
+    restrict: 'AC',
+    link: function($scope, $element, $attr) {
+      $element.bind('click', function(){
+        $ionicHistory.nextViewOptions({
+          disableAnimate: true,
+          disableBack: true
+        });
+      });
+    }
+  };
+}])
 .directive('saveDish', function(){
 	return {
 		restrict: 'E',
@@ -191,6 +204,18 @@ var snackApp = angular.module('starter', ['ionic', 'ngResource', 'ngCordova', 's
 	return {
 		restrict: 'A',
 		templateUrl: 'templates/svg/svg-sound.html'
+	};
+})
+.directive('svgProfile', function(){
+	return {
+		restrict: 'A',
+		templateUrl: 'templates/svg/svg-profile.html'
+	};
+})
+.directive('svgCamera', function(){
+	return {
+		restrict: 'A',
+		templateUrl: 'templates/svg/svg-camera.html'
 	};
 })
 .directive('toggleClass', function() {

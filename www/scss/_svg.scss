@@ -19,15 +19,17 @@ svg.icon.icon-right {
   right: -5px;
 }
 
-svg.icon path {
-	display:inline;
-	fill:$base-background-color;
-	stroke:$contrast-color;
-	stroke-width:1;
+svg.icon {
+	path, circle, polyline {
+		display: inline;
+		fill: #fff;
+		stroke-width: 1;
+		stroke: $primary-color;
+	}
 }
 
-svg.icon path#activated {stroke:$contrast-color; }
-.button.play.activated svg.icon path#activated {fill:$contrast-color; }
+svg.icon path#activated {stroke: $contrast-color; }
+.button.play.activated svg.icon path#activated {fill: $contrast-color; }
 
 
 // account icon

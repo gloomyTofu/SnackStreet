@@ -7,7 +7,7 @@
 			<ion-item class="item-accordion item-icon-float-right" ng-show="isPhraseShown(phrase)">
 				<span class="large-text">{{phrase.lang}} <a class="underline" href="#" ng-click="{active: isPhraseShow(phrase)}"> {{phrase.pronounce}}</a></span>		
 				<button class="button save" onclick="document.getElementById('player').play()">
-					<svg svg-sound viewBox="1 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-right sound"></svg>
+					<svg svg-sound viewBox="1 0 30 30" xmlns="http://www.w3.org/2000/svg" class="icon icon-right sound"></svg>
 				</button>
 				<audio id="player" ng-src="{{phrase.sound}}"></audio>
 			</ion-item>

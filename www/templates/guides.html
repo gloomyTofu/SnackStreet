@@ -1,6 +1,7 @@
 <ion-view view-title="Guides" class="guides">
 	<ion-nav-buttons side="left">
-		<button class="button button-icon button-clear svg-icon login" ng-click="login()">
+		<button class="button button-icon button-clear" ng-click="login()">
+			<svg svg-profile viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" class="icon svg-icon login"></svg>
 		</button>
 	</ion-nav-buttons>
     <ion-content scrollbar-x="false" has-bouncing="false">
@@ -8,7 +9,7 @@
 				<ion-slide-box show-pager="true" on-slide-changed="slideHasChanged($index)">
 					<ion-slide ng-repeat="guide in guides">
 						<div class="list card padding-bottom">
-							<a class="item center" href="#/app/guides/{{guide.name}}">
+							<a nav-clear class="item center" href="#/app/guides/{{guide.name}}">
 								<div class="item item-image">
 									<img ng-src="{{guide.images[0].photo}}">
 								</div>
@@ -27,7 +28,7 @@
 						<a class="tab-item download-cancel" ng-show="guide.canDownload" href="#">
 								<i class="icon icon-right" ng-click="removed=!removed" toggle-class="removeGuide"></i>
 						</a>
-						<a class="purchase-guide fade-in" ng-hide="guide.canDownload" ng-href="#/app/guides/{{guide.name}}">
+						<a nav clear class="purchase-guide fade-in" ng-hide="guide.canDownload" ng-href="#/app/guides/{{guide.name}}">
 								<h4 class="purchase-guide">$1.99</h4>  
 						</a>
 					</ion-slide>
