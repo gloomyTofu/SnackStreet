@@ -31,15 +31,15 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 
 // WIREFRAME STYLES
-.item-image {background:$image-placeholder; height:15rem; }
+.item-image {background:$image-placeholder; }
 .dishes .slider {background:$image-placeholder; }
 .side-menu-profile {
     text-align:center;
 }
 .profile-image {
     background:url('../img/users/user.png')no-repeat;
-    width:10rem;
-    height:10rem;
+    width:9rem;
+    height:9rem;
     border-radius:50%;
     margin:3rem auto 0;
 	  &.user {
@@ -132,6 +132,12 @@ fieldset.textarea .button.save-button {
 	font-weight: 300;
 	margin-right:10px;
 }
+
+.menu.menu-left {
+	.list {
+		width: 98%; 
+	}
+}
 .item-my-reviews p, .item-user-reviews p {padding-top:0.12rem; padding-bottom:0.5rem; }
 
 button.button.button-icon.button-clear.ion-navicon.menu-toggle {
@@ -139,13 +145,16 @@ button.button.button-icon.button-clear.ion-navicon.menu-toggle {
 	z-index:11;
 	cursor:pointer;
 }
+.bar-light .button.button-clear {
+	color: $primary-color;
+}
 
 // Download/Remove Guides
 // -------------------------------
 a.tab-item.download-cancel, a.purchase-guide.fade-in {
   position: absolute;
-  top: 7%;
-  right: 9%;
+  top: 6%;
+  right: 11%;
   height: auto;
   z-index: 2;
 }
@@ -186,9 +195,10 @@ i.icon.icon-right.removeGuide {
 }
 
 .image-modal.camera-modal .fullscreen-image {
-	left: -40%;
+	left: -60%;
 	overflow:visible;
 	position:relative;
+	height: 380px;
 }
  
 .image-modal .slider {
@@ -196,6 +206,9 @@ i.icon.icon-right.removeGuide {
     height: 100%;
 }
 
+.slider-slide {
+	margin: 0 0 -22px;
+}
 .slider-slides img.dish {
   width: 100% !important;
 }
@@ -213,10 +226,14 @@ a.close-modal-button {
 a.tab-item.close-modal-button .icon {
 	font-size:50px;
 	height:35px;
-	color:$base-color;
+	color:$primary-color;
 }
 
 .camera-modal {}
+.camera-controls {
+	background-color: #fff;
+	position: relative;
+}
 .camera-controls .left-side svg-icon {
   font-size: 3rem;
   float: right;
@@ -234,10 +251,10 @@ a.tab-item.close-modal-button .icon {
 
 .camera-controls .button.circle-button {
 	background:$primary-color;
-	width:5.5rem;
-	height:5.5rem;
+	width:3.5rem;
+	height:3.5rem;
 	border-radius:50%;
-	margin:0.5rem auto 0;
+	margin:0.25rem auto 0;
 	border:5px solid $base-light-color; 
 }
 .camera-controls .button.circle-button.activated {
@@ -321,11 +338,11 @@ a.purchase-guide h4 {
 .button-outline-headline {
     @extend .button-outline;
     @extend .uppercase;
-    padding:0.25rem 2rem;
+    padding:0.2rem 2rem;
     font-size:1.25rem;
-    color:$base-color;
+    color:$primary-color;
     font-weight:bold;
-    border-color:$base-color;
+    border-color:$primary-color;
 }
 
 .order-dish .button, .phrases .button {
@@ -365,7 +382,13 @@ ion-item.item-icon-float-right.item.ng-binding.active {
 
 // Guides Page
 // -------------------------------
-.guides .slider-pager { bottom:0; margin-bottom:2px; }
+.guides .slider-pager { 
+	bottom:0; 
+	margin-bottom:2px;
+	.slider-pager-page {
+		color: $primary-color;
+	}
+}
 .guides .slider-slide {
     .item.activated {
         background-color:transparent;
@@ -404,7 +427,7 @@ a.tab-item.highlightLoved {
 .dishes .highlightLoved i.icon,
 .dishes .small-text { color:$contrast-color; }
 .dishes .unlove {position:relative; width:42px; height:44px; top:-28px; left:1px; }
-.unlove .small-text {position:absolute; left:6px; top:25px; }
+.unlove .small-text {position:absolute; left:0; top:25px; }
 
 .dish-image {
 	width:100%;
@@ -434,7 +457,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .dishes .over-image-info-share {
 	position:absolute;
-  top: 195px;
+  top: 140px;
   left: 5px;
 	z-index:3; 
 }
@@ -574,7 +597,7 @@ img.image-list-thumb {
 	top:292px;
 }
 
-.profile .list {margin-top:36px; }
+.profile .list {margin-top:55px; }
 .profile h2 {padding-top:3px; }
 .profile a.item-content {padding-top:12px; }
 

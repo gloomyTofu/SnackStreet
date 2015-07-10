@@ -7797,8 +7797,7 @@ svg.icon path#activated {
   display: block !important; }
 
 .item-image {
-  background: #fff;
-  height: 15rem; }
+  background: #fff; }
 
 .dishes .slider {
   background: #fff; }
@@ -7808,8 +7807,8 @@ svg.icon path#activated {
 
 .profile-image {
   background: url('../img/users/user.png') no-repeat;
-  width: 10rem;
-  height: 10rem;
+  width: 9rem;
+  height: 9rem;
   border-radius: 50%;
   margin: 3rem auto 0; }
   .profile-image.user {
@@ -7922,6 +7921,9 @@ fieldset.textarea .button.save-button {
   font-weight: 300;
   margin-right: 10px; }
 
+.menu.menu-left .list {
+  width: 98%; }
+
 .item-my-reviews p, .item-user-reviews p {
   padding-top: 0.12rem;
   padding-bottom: 0.5rem; }
@@ -7931,10 +7933,13 @@ button.button.button-icon.button-clear.ion-navicon.menu-toggle {
   z-index: 11;
   cursor: pointer; }
 
+.bar-light .button.button-clear {
+  color: #007FC6; }
+
 a.tab-item.download-cancel, a.purchase-guide.fade-in {
   position: absolute;
-  top: 7%;
-  right: 9%;
+  top: 6%;
+  right: 11%;
   height: auto;
   z-index: 2; }
 
@@ -7975,13 +7980,17 @@ i.icon.icon-right.removeGuide {
   top: 5%; }
 
 .image-modal.camera-modal .fullscreen-image {
-  left: -40%;
+  left: -60%;
   overflow: visible;
-  position: relative; }
+  position: relative;
+  height: 380px; }
 
 .image-modal .slider {
   width: 100%;
   height: 100%; }
+
+.slider-slide {
+  margin: 0 0 -22px; }
 
 .slider-slides img.dish {
   width: 100% !important; }
@@ -7997,7 +8006,11 @@ a.close-modal-button {
 a.tab-item.close-modal-button .icon {
   font-size: 50px;
   height: 35px;
-  color: #000; }
+  color: #007FC6; }
+
+.camera-controls {
+  background-color: #fff;
+  position: relative; }
 
 .camera-controls .left-side svg-icon {
   font-size: 3rem;
@@ -8015,10 +8028,10 @@ a.tab-item.close-modal-button .icon {
 
 .camera-controls .button.circle-button {
   background: #007FC6;
-  width: 5.5rem;
-  height: 5.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
-  margin: 0.5rem auto 0;
+  margin: 0.25rem auto 0;
   border: 5px solid #D2D2D2; }
 
 .camera-controls .button.circle-button.activated {
@@ -8230,11 +8243,11 @@ a.purchase-guide h4 {
     opacity: 1; } }
 
 .button-outline-headline {
-  padding: 0.25rem 2rem;
+  padding: 0.2rem 2rem;
   font-size: 1.25rem;
-  color: #000;
+  color: #007FC6;
   font-weight: bold;
-  border-color: #000; }
+  border-color: #007FC6; }
 
 .order-dish .button, .phrases .button {
   font-weight: 300;
@@ -8262,6 +8275,8 @@ ion-item.item-icon-float-right.item.ng-binding.active {
 .guides .slider-pager {
   bottom: 0;
   margin-bottom: 2px; }
+  .guides .slider-pager .slider-pager-page {
+    color: #007FC6; }
 
 .guides .slider-slide .item.activated {
   background-color: transparent; }
@@ -8298,7 +8313,7 @@ a.tab-item.highlightLoved {
 
 .unlove .small-text {
   position: absolute;
-  left: 6px;
+  left: 0;
   top: 25px; }
 
 .dish-image {
@@ -8326,7 +8341,7 @@ a.tab-item.highlightLoved {
 
 .dishes .over-image-info-share {
   position: absolute;
-  top: 195px;
+  top: 140px;
   left: 5px;
   z-index: 3; }
 
@@ -8448,7 +8463,7 @@ img.image-list-thumb {
   top: 292px; }
 
 .profile .list {
-  margin-top: 36px; }
+  margin-top: 55px; }
 
 .profile h2 {
   padding-top: 3px; }
