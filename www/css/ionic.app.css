@@ -8435,8 +8435,10 @@ img.image-list-thumb {
 
 .dishes h1, .dishes .h1 {
   font-size: 30px; }
-.dishes .list .item fieldset {
-  padding: 12px; }
+.dishes .list .item {
+  padding: 10px; }
+  .dishes .list .item.item-my-reviews {
+    padding: 0; }
 .dishes .tab-item .icon {
   font-size: 28px; }
 .dishes .button {

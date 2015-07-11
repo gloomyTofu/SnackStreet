@@ -568,7 +568,14 @@ img.image-list-thumb {
 
 .dishes {
 	h1, .h1 {font-size: 30px; }
-	.list .item fieldset {padding: 12px; }
+	.list {
+		.item {
+			padding: 10px;
+			&.item-my-reviews {
+				padding: 0;
+			}
+		}
+	}
 	.tab-item {
 		.icon {
 			font-size: 28px;
