@@ -72,7 +72,7 @@ angular.module('starter.controllers', [])
 	}
 	$scope.closeModal = function() {
 		$scope.photoResultsModal.hide();
-		$scope.takePictureModal.remove();
+		$scope.takePictureModal.hide();
     $scope.photoResultsModal.remove();
 	};
 	

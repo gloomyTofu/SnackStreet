@@ -34,24 +34,33 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .item-image {background:$image-placeholder; }
 .dishes .slider {background:$image-placeholder; }
 .side-menu-profile {
-    text-align:center;
-}
-.profile-image {
-    background:url('../img/users/user.png')no-repeat;
-    width:9rem;
-    height:9rem;
-    border-radius:50%;
-    margin:3rem auto 0;
-	  &.user {
-			width:5rem;
-			height:5rem;
-			margin:0 1rem 0 0;
-			background-image:none;
-			img {
-				width: 100%; 
+  text-align:center;
+	&.main-profile {
+		.tab-nav {
+			&.tabs {
+				bottom: 35%; 
 			}
 		}
+	}
 }
+.profile-image {
+	background:url('../img/users/user.png')no-repeat;
+	width:9rem;
+	height:9rem;
+	border-radius:50%;
+	margin:3rem auto 0;
+	&.user {
+		width:5rem;
+		height:5rem;
+		margin:0 1rem 0 0;
+		background-image:none;
+		img {
+			width: 100%; 
+		}
+	}
+}
+
+.profile .tabs-top>.tabs, .profile .tabs.tabs-top { top: 270px; }
 
 .tabs-striped .tab-item.tab-item-active {
 	border-color: $contrast-color; 
@@ -220,6 +229,12 @@ i.icon.icon-right.removeGuide {
     height: 100%;
 }
 
+.image-modal {
+	.slider-pager {
+		position: relative;
+	}
+}
+
 .slider-slide {
 	margin: 0 0 -22px;
 }
@@ -243,7 +258,13 @@ a.tab-item.close-modal-button .icon {
 	color:$primary-color;
 }
 
-.camera-modal {}
+.camera-modal, .savedList, .savedOrders {
+	.item-content {
+		h2, p {
+			white-space:normal; 
+		}
+	}
+}
 .camera-controls {
 	background-color: #fff;
 	position: absolute;
@@ -589,12 +610,6 @@ img.image-list-thumb {
 				padding-right: 10px; 
 			}
 		}
-		.list-inset.search-box {
-			margin: 15px 10px; 
-			.item {
-				padding: 0 10px;
-			}
-		}
 	}
 	.tab-item {
 		.icon {
@@ -608,6 +623,17 @@ img.image-list-thumb {
 	}
 	fieldset.form-group.textarea {
 		background-color: #fff; 
+	}
+}
+
+.list {
+	&.list-inset {
+		&.search-box {
+			margin: 15px 10px; 
+			.item {
+				padding: 0 10px;
+			}
+		}
 	}
 }
 
@@ -653,9 +679,6 @@ img.image-list-thumb {
 	color:$primary-color;
 }
 .profile .has-tabs-top {top:0; }
-.profile .tabs-top>.tabs, .profile .tabs.tabs-top {
-	top:292px;
-}
 
 .profile .list {margin-top:55px; }
 .profile h2 {padding-top:3px; }

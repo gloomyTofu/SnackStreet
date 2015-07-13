@@ -7809,6 +7809,8 @@ svg path#activated {
 
 .side-menu-profile {
   text-align: center; }
+  .side-menu-profile.main-profile .tab-nav.tabs {
+    bottom: 35%; }
 
 .profile-image {
   background: url('../img/users/user.png') no-repeat;
@@ -7823,6 +7825,9 @@ svg path#activated {
     background-image: none; }
     .profile-image.user img {
       width: 100%; }
+
+.profile .tabs-top > .tabs, .profile .tabs.tabs-top {
+  top: 270px; }
 
 .tabs-striped .tab-item.tab-item-active {
   border-color: #FF8B00; }
@@ -8017,6 +8022,9 @@ i.icon.icon-right.removeGuide {
   width: 100%;
   height: 100%; }
 
+.image-modal .slider-pager {
+  position: relative; }
+
 .slider-slide {
   margin: 0 0 -22px; }
 
@@ -8035,6 +8043,9 @@ a.tab-item.close-modal-button .icon {
   font-size: 50px;
   height: 35px;
   color: #007FC6; }
+
+.camera-modal .item-content h2, .camera-modal .item-content p, .savedList .item-content h2, .savedList .item-content p, .savedOrders .item-content h2, .savedOrders .item-content p {
+  white-space: normal; }
 
 .camera-controls {
   background-color: #fff;
@@ -8463,10 +8474,6 @@ img.image-list-thumb {
     padding: 0; }
   .dishes .list .item.item-complex .item-content {
     padding-right: 10px; }
-.dishes .list .list-inset.search-box {
-  margin: 15px 10px; }
-  .dishes .list .list-inset.search-box .item {
-    padding: 0 10px; }
 .dishes .tab-item .icon {
   font-size: 28px; }
 .dishes .button {
@@ -8475,6 +8482,11 @@ img.image-list-thumb {
   line-height: 2.5; }
 .dishes fieldset.form-group.textarea {
   background-color: #fff; }
+
+.list.list-inset.search-box {
+  margin: 15px 10px; }
+  .list.list-inset.search-box .item {
+    padding: 0 10px; }
 
 .item-my-reviews .tab-item .icon, .item-user-reviews .tab-item .icon {
   font-size: 1rem;
@@ -8517,9 +8529,6 @@ img.image-list-thumb {
 
 .profile .has-tabs-top {
   top: 0; }
-
-.profile .tabs-top > .tabs, .profile .tabs.tabs-top {
-  top: 292px; }
 
 .profile .list {
   margin-top: 55px; }

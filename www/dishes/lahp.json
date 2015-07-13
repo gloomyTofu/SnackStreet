@@ -89,7 +89,7 @@
 			"src": "img/ingredients/lemon-grass.jpg",
 			"lang": "",
 			"pronounce": "houa sikai",
-			"description": "Used in many Lao dishes including moke, soup, chicken sa and op (braised) dishes. When finely sliced, it is used raw in lahp or sa."
+			"description": "Used in many Lao dishes including moke, soup, chicken sa and op (braised) dishes."
 		},
 		{
 			"id": "chilli-peppers",
@@ -105,7 +105,7 @@
 			"src": "img/ingredients/galangal.jpg",
 			"lang": "ຂ່າ",
 			"pronounce": "ka",
-			"description": "A rhizome of plants in the ginger family. Galangal is related to and resembles ginger. While ginger tastes a little like galangal, most cooks who use both rhizomes would never substitute one for the other and expect the same flavor profile."
+			"description": "A rhizome of plants in the ginger family. Galangal is related to and resembles ginger."
 		},
 		{
 			"id": "kaffir",
