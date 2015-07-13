@@ -1,13 +1,25 @@
 <ion-view class="dishes dish-detail">
 	<ion-nav-title>{{ dish.title }} {{ dish.lang }}</ion-nav-title>
   <ion-content has-bouncing="false">
-		<ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="activeSlide" show-pager="false">
-  		<ion-slide class="dish-image" ng-repeat="image in dish.images" ng-init="updateSlider()">
-				<div class="item item-image">
-					<img class="dish" ng-src="{{image.src}}">
-				</div>
-			</ion-slide>
-		</ion-slide-box>
+		<div class="slide-box-wrap">
+			<ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="activeSlide" show-pager="false" ng-click="enlargeImages($index)">
+				<ion-slide class="dish-image" ng-repeat="image in dish.images" ng-init="updateSlider()">
+					<div class="item item-image">
+						<img class="dish" ng-src="{{image.src}}">
+					</div>
+				</ion-slide>
+			</ion-slide-box>
+			<div class="over-image-info padding">
+				<p>
+					<i class="icon ion-ios-heart"></i> {{ count + dish.loves }} Loved This
+				</p>
+			</div>
+			<div ng-controller="ShareDish" class="over-image-info-share">
+				<button class="button-icon" ng-click="showActionsheet()">
+					<i class="icon ion-ios-upload-outline"></i>				
+				</button>
+			</div>
+		</div>
 		<div class="item item-body no-padding-vertical fade-in-repeat">
 			<save-dish></save-dish>
 			<div class="row">
@@ -23,16 +35,6 @@
 			<div class="keywords margin-bottom padding-horizontal">
 				<keywords-list></keywords-list>
 			</div>
-		</div>
-		<div class="over-image-info padding">
-			<p>
-				<i class="icon ion-ios-heart"></i> {{ count + dish.loves }} Loved This
-			</p>
-		</div>
-		<div ng-controller="ShareDish" class="over-image-info-share">
-			<button class="button-icon" ng-click="showActionsheet()">
-				<i class="icon ion-ios-upload-outline"></i>				
-			</button>
 		</div>
 		<div class="list">
 			<div class="item item-divider">

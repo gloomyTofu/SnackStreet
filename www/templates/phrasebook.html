@@ -5,9 +5,9 @@
 				{{phrase.english}} <i class="icon icon-right" ng-class="isPhraseShown(phrase) ? 'ion-ios-arrow-down' : 'ion-ios-arrow-right'"></i>
 			</ion-item>
 			<ion-item class="item-accordion item-icon-float-right" ng-show="isPhraseShown(phrase)">
-				<span class="large-text">{{phrase.lang}} <a class="underline" href="#" ng-click="{active: isPhraseShow(phrase)}"> {{phrase.pronounce}}</a></span>		
+				<span class="large-text float-left">{{phrase.lang}} <a class="underline display-block" href="#" ng-click="{active: isPhraseShow(phrase)}"> {{phrase.pronounce}}</a></span>		
 				<button class="button save" onclick="document.getElementById('player').play()">
-					<svg svg-sound viewBox="1 0 30 30" xmlns="http://www.w3.org/2000/svg" class="icon icon-right sound"></svg>
+					<div svg-sound class="icon icon-right sound"></div>
 				</button>
 				<audio id="player" ng-src="{{phrase.sound}}"></audio>
 			</ion-item>

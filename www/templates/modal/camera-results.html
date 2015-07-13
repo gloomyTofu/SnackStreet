@@ -1,4 +1,4 @@
-<ion-modal-view class="modal image-modal camera-modal">
+<ion-modal-view removeElem class="modal image-modal camera-modal">
 	  <ion-header-bar>
     <h1 class="title">Dish Results</h1>
 		<a class="tab-item close-modal-button" ng-click="closeModal()">
@@ -10,7 +10,7 @@
 			<img ng-src="img/tam-mak-hung/tai_7215_3.jpg">
 		</div>
 	<ion-list>
-		<ion-item class="item-thumbnail-left" href="#/app/guides/laos/tam-mak-hung">
+		<ion-item nav-clear ng-click="closeModal()" class="item-thumbnail-left close-modal-button" href="#/app/guides/laos/tam-mak-hung">
 				<div class="item item-image saved-list">
 					<img src="img/tam-mak-hung/6585680099_2038e7c6d0_z.jpg">
 				</div>

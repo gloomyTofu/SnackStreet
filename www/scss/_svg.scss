@@ -10,26 +10,31 @@
   padding-left: 2px;
 }
 
-svg.icon {
+.icon svg {
 	@extend .svg-icon;
 }
 
-svg.icon.icon-right {
+.icon.icon-right svg {
   position: relative;
   right: -5px;
 }
 
-svg.icon {
+.icon svg {
 	path, circle, polyline {
 		display: inline;
 		fill: #fff;
 		stroke-width: 1;
 		stroke: $primary-color;
 	}
+	#sound {
+		path, circle, polyline {
+			stroke: $contrast-color;
+		}
+	}
 }
 
-svg.icon path#activated {stroke: $contrast-color; }
-.button.play.activated svg.icon path#activated {fill: $contrast-color; }
+svg path#activated {stroke: $contrast-color; }
+.button.play.activated svg path#activated {fill: $contrast-color; }
 
 
 // account icon

@@ -1,0 +1,28 @@
+<ion-modal-view class="modal image-modal">
+		<ion-slide-box on-slide-changed="slideChanged(index)" show-pager="true" active-slide="activeSlide" does-continue="true">
+			<ion-slide ng-repeat="image in dish.images">
+				<div class="fullscreen-image">
+					<div class="row">
+						<div class="col center overflow-hidden">
+							<img class="responsive" ng-src="{{image.src}}">
+						</div>
+					</div>
+					<div class="row padding-horizontal">
+							<div class="col">
+								<p class="no-margin large-text">
+									<strong>
+										<a ng-href="{{image.author-link}}">{{image.author}}</a>
+									</strong>
+								</p>
+								<p class="no-margin">
+									<a ng-href="{{image.title-link}}">{{image.title}}</a> via <a href="{{image.license-link}}">{{image.license}}</a>
+								</p>
+							</div>
+					</div>
+				</div>
+			</ion-slide>
+	</ion-slide-box>
+	<a class="tab-item close-modal-button" ng-click="closeModal()">
+		<i class="icon ion-ios-close-empty"></i>
+	</a>
+</ion-modal-view>

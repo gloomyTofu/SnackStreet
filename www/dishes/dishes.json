@@ -38,7 +38,8 @@
             "full": "img/tam-mak-hung/papaya-salad.jpg"
           }
         ]
-    },
+    }
+		,
     { 
         "title": "Waffle",
         "id": "waffle",

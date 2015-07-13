@@ -14,19 +14,31 @@
 	"adventurous": 6,
 	"images": [
 		{ 
-			"src": "img/lahp/5799807438_b424c46e3a_z.jpg" 
+			"src": "img/lahp/5799807438_b424c46e3a_z.jpg",
+			"title": "Larb Gai with Rice",
+			"title-link": "https://www.flickr.com/photos/avlxyz/5799807438/in/photolist-qw1J7q-ohLQpg-nS4Js3-i8Sp1z-dLrsdy-dLrrU7-dLkW96-dLrt2W-9QvwFY-adrigB-bCpXCf-c4Heb3-g8iRGK-4BsQ3G-ntiuUm-nc5Szz-pRgrhd-bh8Yce-sKdkb-dLkWpp-d6YY7N-8HeXNn",
+			"author": "Alpha",
+			"author-link": "https://www.flickr.com/photos/avlxyz/",
+			"license": "CC BY-SA 2.0",
+			"license-link": "https://creativecommons.org/licenses/by-sa/2.0/"
 		},
 		{ 
-			"src": "img/lahp/14132395078_1135e6d532_z.jpg" 
+			"src": "img/lahp/14132395078_1135e6d532_z.jpg",
+			"title": "Lao Food",
+			"title-link": "https://www.flickr.com/photos/julialive/14132395078/in/photolist-nR7E7k-nMhqn3-nwQoE4-nwQmni-nwQdG7-nMh9Zj-bCpXCf-7TQNRS-c4Heb3-9vKLtk-faqJZb-5MfyyS-9eetig-ntiuUm-nc5Szz-929Ppx-cCyEMj-sKdkb-9GwTZP-9GheVT-g8iRGK-qw1J7q-ohLQpg-aX4ooz-FZ5vY-svDKA-dcn9sr-4BsQ3G-pRgrhd-skMTD-nS4Js3-skP6S-bh8Yce-i8Sp1z-skN5W-61e3d6-dLkWpp-8tXr4C-aivZHe-m3ZAQF-bywJrw-7ZeehL-LR26z-dZtsw2-d6YY7N-8HeXNn-dLrsdy-dLrrU7-dLkW96-dLrt2W",
+			"author": "Jules",
+			"author-link": "https://www.flickr.com/photos/julialive/",
+			"license": "CC BY-NC-ND 2.0",
+			"license-link": "https://creativecommons.org/licenses/by-nc-nd/2.0/"
 		},
 		{ 
-			"src": "img/lahp/rasamalaysia-laap.jpg" 
-		},
-		{ 
-			"src": "img/lahp/seriouseats-laap.jpg" 
-		},
-		{ 
-			"src": "img/lahp/thehungrypup-laap.jpg"
+			"src": "img/lahp/5061197877_d91489fb96_z.jpg",
+			"title": "IMG_1119",
+			"title-link": "https://www.flickr.com/photos/crimsonninjagirl/5061197877/in/photolist-nR7E7k-nMhqn3-nwQoE4-nwQmni-nwQdG7-nMh9Zj-bCpXCf-7TQNRS-c4Heb3-9vKLtk-faqJZb-5MfyyS-9eetig-ntiuUm-nc5Szz-929Ppx-cCyEMj-sKdkb-9GwTZP-9GheVT-g8iRGK-qw1J7q-ohLQpg-aX4ooz-FZ5vY-svDKA-dcn9sr-4BsQ3G-pRgrhd-skMTD-nS4Js3-skP6S-bh8Yce-i8Sp1z-skN5W-61e3d6-dLkWpp-8tXr4C-aivZHe-m3ZAQF-bywJrw-7ZeehL-LR26z-dZtsw2-d6YY7N-8HeXNn-dLrsdy-dLrrU7-dLkW96-dLrt2W",
+			"author": "Christina Xu",
+			"author-link": "https://www.flickr.com/photos/crimsonninjagirl/",
+			"license": "CC BY 2.0",
+			"license-link": "https://creativecommons.org/licenses/by/2.0/"
 		}
 	],
 	"tips": [

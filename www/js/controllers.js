@@ -31,13 +31,7 @@ angular.module('starter.controllers', [])
       $scope.closeLogin();
     }, 1000);
   };
-	$scope.takePicture = function() {
-		$scope.showModal('templates/modal/camera.html');
-	}
-	$scope.photoResults = function() {
-		$scope.showModal('templates/modal/camera-results.html');
-	}
-	$scope.showModal = function(templateUrl) {
+	/*$scope.showModal = function(templateUrl) {
 		$ionicModal.fromTemplateUrl(templateUrl, {
 			scope: $scope,
 			animation: 'slide-in-up'
@@ -46,15 +40,46 @@ angular.module('starter.controllers', [])
 			$scope.modal.show();
 		});
 	}
-	// Close the modal
-	$scope.closeModal = function() {
-		$scope.modal.hide();
-		$scope.modal.remove();
-	};
+	$scope.takePicture = function() {
+		$scope.showModal('templates/modal/camera.html');
+	}
+	$scope.photoResults = function() {
+		$scope.showModal('templates/modal/camera-results.html');
+	}
+	*/
+	
+	$ionicModal.fromTemplateUrl('templates/modal/camera.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.takePictureModal = modal;
+  });
+	
+	$scope.takePicture = function() {
+		$scope.takePictureModal.show();
+	}
 	$scope.closeModalTwo = function() {
-		$scope.modal.hide();
-		$scope.modal.remove();
+		$scope.takePictureModal.hide();
 	};
+	
+	$ionicModal.fromTemplateUrl('templates/modal/camera-results.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.photoResultsModal = modal;
+  });
+	
+	$scope.photoResults = function() {
+		$scope.photoResultsModal.show();
+	}
+	$scope.closeModal = function() {
+		$scope.photoResultsModal.hide();
+		$scope.takePictureModal.remove();
+    $scope.photoResultsModal.remove();
+	};
+	
+	 $scope.$on('$destroy', function() {
+    $scope.takePictureModal.remove();
+    $scope.photoResultsModal.remove();
+  });
 })
 .controller('SafetyTipsController', function($scope, $ionicModal, $ionicSlideBoxDelegate){
 	$scope.safety = [
@@ -231,6 +256,11 @@ angular.module('starter.controllers', [])
 	$scope.showImages = function(index) {
 		$scope.activeSlide = index;
 		$scope.showModal('templates/modal/image-popover.html');
+	}
+	
+	$scope.enlargeImages = function(index) {
+		$scope.activeSlide = index;
+		$scope.showModal('templates/modal/enlarge-popover.html');
 	}
 	
 	$scope.openModal = function() {

@@ -13,14 +13,41 @@
 	"local": 10,
 	"adventurous": 6,
 	"images": [
-		{ 
-			"src": "img/tam-mak-hung/6585680099_2038e7c6d0_z.jpg" 
+		{
+			"src": "img/tam-mak-hung/6585680099_2038e7c6d0_z.jpg",
+			"title": "Papaya Salad",
+			"title-link": "https://www.flickr.com/photos/bill_roehl/6585680099/in/photolist-b2XkfB-da2KRa-5L1CW4-6Ew1ax-VTTe-6kM2q9-NAgmK-s9xiWT-dg7U2q-2TTstq-a5K8sV-cjTmoJ-bHkvHg-4MiDyB-4HuFhG-8bnwbh-x2APR-dRGYvt-uZZ3F-4xZEvS-6xUmom-6vwEGW-dvLTY3-5dQrmX-5hyzeu-epoBd-7jrner-4SveJZ-oAqXvA-aCpHG-osk1m-d9ZPHA-7auKuV-7ayyBW-dtbHWf-rwH3UY-rwGvsZ-28TTQ-4vqmcM-abuaQE-9bvgvB-9tvUsY-6TTrK2-nMBP7x-ngKBaK-9FDuy5-7mcbHN-5JZNCj-jQ7wce-6frHKE",
+			"author": "Bill Roehl",
+			"author-link": "https://www.flickr.com/photos/bill_roehl/",
+			"license": "CC BY-NC-ND 2.0",
+			"license-link": "https://creativecommons.org/licenses/by-nc-nd/2.0/"
 		},
-		{ 
-			"src": "img/tam-mak-hung/8737390917_f7fe6965d2_z.jpg" 
+		{
+			"src": "img/tam-mak-hung/10120947726_f2af544801_z.jpg",
+			"title": "Papaya Salad",
+			"title-link": "https://www.flickr.com/photos/skrb/10120947726/in/photolist-gqmv9J-b2XkfB-da2KRa-5L1CW4-6Ew1ax-VTTe-6kM2q9-NAgmK-s9xiWT-dg7U2q-2TTstq-a5K8sV-cjTmoJ-bHkvHg-4MiDyB-4HuFhG-8bnwbh-x2APR-dRGYvt-uZZ3F-4xZEvS-6xUmom-6vwEGW-dvLTY3-5dQrmX-5hyzeu-epoBd-7jrner-4SveJZ-oAqXvA-aCpHG-osk1m-d9ZPHA-7auKuV-7ayyBW-dtbHWf-rwH3UY-rwGvsZ-28TTQ-4vqmcM-abuaQE-9bvgvB-9tvUsY-6TTrK2-nMBP7x-ngKBaK-9FDuy5-7mcbHN-5JZNCj-jQ7wce",
+			"author": "Yuichi Sakuraba",
+			"author-link": "https://www.flickr.com/photos/skrb/",
+			"license": "CC BY-NC 2.0",
+			"license-link": "https://creativecommons.org/licenses/by-nc/2.0/"
 		},
-		{ 
-			"src": "img/tam-mak-hung/tai_7215_3.jpg"
+		{
+			"src": "img/tam-mak-hung/5259826150_b77ae0b901_z.jpg",
+			"title": "Making Papaya Salad",
+			"title-link": "https://www.flickr.com/photos/bill_roehl/5259826150/in/photolist-91MZ4L-efYGGZ-rLs9rV-e6UHWp-bs9Sst-9R6rpg-dKRP37-dQ5HQK-61eWGj-dnq886-7jgZGD-pDsudP-rR4us-7JDsYJ-dgcnR3-8XpbFk-bBQe4S-74LGGR-boHtBt-5DcEiZ-ayMs3o-j3WVW-9B3czJ-dPG4r3-vDqHJe-qbh7ej-aycdSt-sJ64tP-7aoAUq-adRCUJ-8vkA1u-7aoKm9-5JhTak-7JhAVq-91gQAK-oWJMqv-6mmTmU-dkmJj5-dQ5GXv-9UR5u9-aacCnD-VTSZ-87SjJ1-8XZbei-9eiFUx-6KFdkm-82WPRz-opBjPx-imsVem-sk8Yzu",
+			"author": "Bill Roehl",
+			"author-link": "https://www.flickr.com/photos/bill_roehl/",
+			"license": "CC BY-NC-ND 2.0",
+			"license-link": "https://creativecommons.org/licenses/by-nc-nd/2.0/"
+		},
+		{
+			"src": "img/tam-mak-hung/13961747689_28b7a38466_z.jpg",
+			"title": "Green Papaya salad",
+			"title-link": "https://www.flickr.com/photos/aliarda/13961747689/in/photolist-ngKBaK-9FDuy5-7mcbHN-5JZNCj-jQ7wce-6frHKE-57b4AZ-ruvQe5-bjUjQD-bjUjCg-4NhijA-cg4yZ1-A5PDG-2bqxCE-wpJCw-R4TQ-cyuA7j-qDv8WW-qpkR42-qpnkjB-nETrRn-jQ7rdM-jQ8mWg-jQ8dYH-jQ7oAn-jQ8WCL-CYtan-qzP3DN-4pCSwJ-4v32Qs-nSuYJK-nSudR6-o9FfTg-obKJrp-obKJyP-obKJw4-7EpNKo-7EkWZX-udhQH-6HHCkU-6HHC6o-7EpNBJ-cbUsjs-tH4AR-zXMaM-brwFSS-9jX6aj-6xRZVV-dJbh7o-qWwSQ6",
+			"author": "Ali Eminov",
+			"author-link": "https://www.flickr.com/photos/aliarda/",
+			"license": "CC BY-NC 2.0",
+			"license-link": "https://creativecommons.org/licenses/by-nc/2.0/"
 		}
 	],
 	"spice": [
