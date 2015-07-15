@@ -60,7 +60,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 	}
 }
 
-.profile .tabs-top>.tabs, .profile .tabs.tabs-top { top: 270px; }
+.profile .tabs-top>.tabs, .profile .tabs.tabs-top, .platform-ios.platform-cordova:not(.fullscreen) .bar-subheader, .platform-ios.platform-cordova:not(.fullscreen) .has-header, .platform-ios.platform-cordova:not(.fullscreen) .tabs-top>.tabs, .platform-ios.platform-cordova:not(.fullscreen) .tabs.tabs-top { top: 270px; }
 
 .tabs-striped .tab-item.tab-item-active {
 	border-color: $contrast-color; 
@@ -68,6 +68,13 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 
 // PROTOTYPE STYLES
+
+.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader)>* {
+	margin-top: 0; 
+}
+.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) {
+	height: 50px; 
+}
 
 // Styling
 // -------------------------------
@@ -461,13 +468,14 @@ ion-item.item-icon-float-right.item.ng-binding.active {
 // -------------------------------
 a.tab-item.highlightLoved {
   height: 48px;
+	position: relative;
 }
 .dishes .highlightSaved i.icon,
 .dishes .highlightTried i.icon,
 .dishes .highlightLoved i.icon,
 .dishes .small-text { color:$contrast-color; }
 .dishes .unlove {position:relative; width:42px; height:44px; top:-28px; left:1px; }
-.unlove .small-text {position:absolute; left:0; top:25px; }
+.unlove .small-text {position:absolute; left:0; top:57px; }
 
 .dish-image {
 	width:100%;
@@ -505,7 +513,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .dishes .over-image-info-share {
   bottom: 0;
   left: 5px;
-	z-index:3; 
+	z-index:3;
+	height: 35px;
 }
 .over-image-info-share.base-color {
 	top: 8px;

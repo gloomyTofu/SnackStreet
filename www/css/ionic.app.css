@@ -7720,7 +7720,7 @@ a.button {
 svg path#activated {
   stroke: #FF8B00; }
 
-.button.play.activated svg path#activated {
+.save svg path#activated {
   fill: #FF8B00; }
 
 .bar-light .button.button-icon.svg-icon.login, .bar-light .icon svg.button.button-icon.login, .icon .bar-light svg.button.button-icon.login, .bar-light .button.button-clear.svg-icon.login, .bar-light .icon svg.button.button-clear.login, .icon .bar-light svg.button.button-clear.login, .bar-light.button.button-icon.svg-icon.login:before, .icon svg.bar-light.button.button-icon.login:before {
@@ -7826,11 +7826,17 @@ svg path#activated {
     .profile-image.user img {
       width: 100%; }
 
-.profile .tabs-top > .tabs, .profile .tabs.tabs-top {
+.profile .tabs-top > .tabs, .profile .tabs.tabs-top, .platform-ios.platform-cordova:not(.fullscreen) .bar-subheader, .platform-ios.platform-cordova:not(.fullscreen) .has-header, .platform-ios.platform-cordova:not(.fullscreen) .tabs-top > .tabs, .platform-ios.platform-cordova:not(.fullscreen) .tabs.tabs-top {
   top: 270px; }
 
 .tabs-striped .tab-item.tab-item-active {
   border-color: #FF8B00; }
+
+.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
+  margin-top: 0; }
+
+.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) {
+  height: 50px; }
 
 a {
   text-decoration: none;
@@ -8344,7 +8350,8 @@ ion-item.item-icon-float-right.item.ng-binding.active {
   visibility: visible; }
 
 a.tab-item.highlightLoved {
-  height: 48px; }
+  height: 48px;
+  position: relative; }
 
 .dishes .highlightSaved i.icon, .dishes .highlightTried i.icon, .dishes .highlightLoved i.icon, .dishes .small-text {
   color: #FF8B00; }
@@ -8359,7 +8366,7 @@ a.tab-item.highlightLoved {
 .unlove .small-text {
   position: absolute;
   left: 0;
-  top: 25px; }
+  top: 57px; }
 
 .dish-image {
   width: 100%;
@@ -8391,7 +8398,8 @@ a.tab-item.highlightLoved {
 .dishes .over-image-info-share {
   bottom: 0;
   left: 5px;
-  z-index: 3; }
+  z-index: 3;
+  height: 35px; }
 
 .over-image-info-share.base-color {
   top: 8px;
