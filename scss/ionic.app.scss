@@ -60,7 +60,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 	}
 }
 
-.profile .tabs-top>.tabs, .profile .tabs.tabs-top, .platform-ios.platform-cordova:not(.fullscreen) .bar-subheader, .platform-ios.platform-cordova:not(.fullscreen) .has-header, .platform-ios.platform-cordova:not(.fullscreen) .tabs-top>.tabs, .platform-ios.platform-cordova:not(.fullscreen) .tabs.tabs-top { top: 270px; }
+.profile .tabs-top>.tabs, .profile .tabs.tabs-top, .platform-ios.platform-cordova:not(.fullscreen) .tabs-top>.tabs, .platform-ios.platform-cordova:not(.fullscreen) .tabs.tabs-top { top: 270px; }
 
 .tabs-striped .tab-item.tab-item-active {
 	border-color: $contrast-color; 
